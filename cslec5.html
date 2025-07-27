@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSEN/CSIS 102 Lecture 5: Iterative Algorithms with Lists</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                packages: {'[+]': ['ams']}
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="lecture-page">
+    <h1>CSEN/CSIS 102 Lecture 5: Iterative Algorithms with Lists</h1>
+
+    <p class="intro-text">
+        This lecture introduces Python lists, a fundamental data structure for organizing collections of data, and explores iterative algorithms used to process their elements.
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>Outline</h2>
+    <p>This lecture covers the following key topics:</p>
+    <ul>
+        <li>Introduction to Python Lists</li>
+        <li>Understanding Iteration over Lists</li>
+        <li>Practical examples of iterative algorithms with lists</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>Python Lists</h2>
+    <p>A list in Python is a versatile and ordered collection of data items. Lists are denoted using square brackets `[]` and can contain items of different data types (e.g., integers, floats, strings, or even other lists).</p>
+
+    <h3>Key Characteristics of Python Lists:</h3>
+    <ul>
+        <li>**Collection of Data:** Lists serve as containers for multiple pieces of data.</li>
+        <li>**Denoted by Square Brackets:** When defining a list, elements are enclosed within `[]`. For example, `my_list = [1, 2, "hello", 4.5]`.</li>
+        <li>**Indexed Access:** Each item in a list has a specific position, known as an index. Python uses zero-based indexing, meaning the first element is at index `0`, the second at `1`, and so on. An expression like `A[i]` corresponds to the value of the item in position `i` within list `A`. For instance, in the list `[5, -6, 10, 11, -5]`, `list[0]` is `5`, and `list[4]` is `-5`.</li>
+        <li>**Taking List Input:** To take a list of `n` elements as input from the user, you can use the `eval(input())` function. For example: `A = eval(input())` which expects a valid Python list string (e.g., `[1, 2, 3]`).</li>
+        <li>**Getting List Length:** The length of a list (the number of elements it contains) can be obtained using the `len()` function. For example: `n = len(A)`.</li>
+    </ul>
+    <p><em>Example:</em> Consider a list `temperatures = [22, 25, 19, 23, 20]`. Here, `temperatures[0]` is `22`, and `len(temperatures)` is `5`. If a user inputs `["apple", "banana", "cherry"]`, then `fruits = eval(input())` would store this list in `fruits`, and `len(fruits)` would be `3`.</p>
+
+    <hr class="section-divider">
+
+    <h2>Iteration over Lists</h2>
+    <p>Iteration is the process of repeating a sequence of instructions over each item in a list. This is fundamental for processing, analyzing, or modifying data stored in lists.</p>
+
+    <h3>Common Iterative Algorithms:</h3>
+
+    <h4>Example 1: Median</h4>
+    <p>The median of a list of numbers is the middle value when the numbers are sorted in ascending order. If the list has an odd number of elements, the median is the single middle element. If it has an even number of elements, the median is typically the average of the two middle elements.</p>
+    <p><strong>Problem:</strong> Write a Python program that takes as input a list of integers, computes the median, and prints it out.</p>
+    <p><strong>Approach:</strong>
+    <ol>
+        <li>Take the list of integers as input.</li>
+        <li>Sort the list in ascending order.</li>
+        <li>Find the length of the list.</li>
+        <li>Check if the length is odd or even:
+            <ul>
+                <li>If odd, the median is the element at the index `(length // 2)`.</li>
+                <li>If even, the median is the average of elements at indices `(length // 2) - 1` and `(length // 2)`.</li>
+            </ul>
+        </li>
+        <li>Print the calculated median.</li>
+    </ol>
+    <em>Example:</em> For `[1, 5, 2, 8, 3]`, after sorting it becomes `[1, 2, 3, 5, 8]`. The length is 5 (odd), so the median is at index `5 // 2 = 2`, which is `3`. For `[10, 40, 20, 30]`, after sorting it becomes `[10, 20, 30, 40]`. The length is 4 (even), so the median is `(20 + 30) / 2 = 25`.</p>
+
+    <h4>Example 2: Average</h4>
+    <p>The average (or mean) of a list of numbers is the sum of all elements divided by the number of elements.</p>
+    <p><strong>Problem:</strong> Write a Python program that takes as input a list of integers, computes the average of the list, and prints it out.</p>
+    <p><strong>Approach:</strong>
+    <ol>
+        <li>Take the list of integers as input.</li>
+        <li>Initialize a `sum` variable to `0`.</li>
+        <li>Iterate through each element in the list, adding its value to the `sum`.</li>
+        <li>After iterating through all elements, divide the `sum` by the length of the list.</li>
+        <li>Print the calculated average.</li>
+    </ol>
+    <em>Example:</em> For `[10, 20, 30, 40]`, the sum is `10+20+30+40 = 100`. The length is `4`. The average is `100 / 4 = 25`.</p>
+
+    <h4>Example 3: Maximum and Minimum</h4>
+    <p>Finding the maximum and minimum values in a list involves iterating through the elements and keeping track of the largest and smallest values encountered so far, along with their positions.</p>
+    <p><strong>Problem:</strong> Write a Python program that takes as input a list of integers, computes the maximum and minimum of the list, and prints them out with their positions in the input list.</p>
+    <p><strong>Approach:</strong>
+    <ol>
+        <li>Take the list of integers as input.</li>
+        <li>Initialize `max_value` and `min_value` with the first element of the list.</li>
+        <li>Initialize `max_pos` and `min_pos` to `0`.</li>
+        <li>Iterate through the list starting from the second element (index 1):
+            <ul>
+                <li>If the current element is greater than `max_value`, update `max_value` and `max_pos`.</li>
+                <li>If the current element is less than `min_value`, update `min_value` and `min_pos`.</li>
+            </ul>
+        </li>
+        <li>Print the `max_value`, `max_pos`, `min_value`, and `min_pos`.</li>
+    </ol>
+    <em>Example:</em> For `[5, -6, 10, 11, -5]`:
+    Initially, `max_value = 5`, `min_value = 5`, `max_pos = 0`, `min_pos = 0`.
+    - When iterating to `-6` (index 1): `-6` is less than `5`, so `min_value = -6`, `min_pos = 1`.
+    - When iterating to `10` (index 2): `10` is greater than `5`, so `max_value = 10`, `max_pos = 2`.
+    - When iterating to `11` (index 3): `11` is greater than `10`, so `max_value = 11`, `max_pos = 3`.
+    - When iterating to `-5` (index 4): `-5` is greater than `-6` but less than `11`.
+    Final output: Max is 11 at position 3, Min is -6 at position 1.</p>
+
+    <h4>Example 4: Check Sorted</h4>
+    <p>To check if a list is sorted in ascending order, you need to compare adjacent elements. If any element is greater than its subsequent element, the list is not sorted.</p>
+    <p><strong>Problem:</strong> Write a Python program that takes as input a list of integers, prints out `True` if the list is sorted in ascending order, and `False` otherwise.</p>
+    <p><strong>Approach:</strong>
+    <ol>
+        <li>Take the list of integers as input.</li>
+        <li>Iterate through the list from the first element up to the second-to-last element (as you need to compare `list[i]` with `list[i+1]`).</li>
+        <li>Inside the loop, check if `list[i] > list[i+1]`.</li>
+        <li>If this condition is ever true, the list is not sorted, so immediately print `False` and exit.</li>
+        <li>If the loop completes without finding any such condition, it means the list is sorted, so print `True`.</li>
+    </ol>
+    <em>Example:</em> For `[1, 5, 8, 10]`, the program would print `True`. For `[1, 8, 5, 10]`, when comparing `8` and `5`, it would find `8 > 5`, print `False`, and stop.</p>
+
+    <h4>Example 5: Phone Book Search</h4>
+    <p>This problem involves searching for a specific item (venue name) in one list and, if found, retrieving corresponding information (phone number) from another list at the same index.</p>
+    <p><strong>Problem:</strong> Write a Python program that takes as input a list of strings of names of venues, a list of integers representing their phone numbers, and a string representing the name of a particular venue. Your program should print out the phone number of the given venue if it exists, and "Not found" otherwise.</p>
+    <p><strong>Approach:</strong>
+    <ol>
+        <li>Take two lists as input: `venue_names` (strings) and `phone_numbers` (integers).</li>
+        <li>Take the `search_venue` string as input.</li>
+        <li>Iterate through the `venue_names` list using an index (e.g., using `range(len(venue_names))`).</li>
+        <li>Inside the loop, check if `venue_names[i]` is equal to `search_venue`.</li>
+        <li>If a match is found:
+            <ul>
+                <li>Print `phone_numbers[i]`.</li>
+                <li>Exit the search (e.g., using a `break` statement or a flag).</li>
+            </ul>
+        </li>
+        <li>If the loop completes without finding a match (i.e., the `search_venue` was not in the `venue_names` list), print "Not found".</li>
+    </ol>
+    <em>Example:</em> If `venue_names = ["Cafe A", "Restaurant B", "Bar C"]` and `phone_numbers = [111222, 333444, 555666]`.
+    - If `search_venue = "Restaurant B"`, the program would find it at index 1 and print `333444`.
+    - If `search_venue = "Hotel D"`, the program would iterate through all names, not find a match, and print "Not found".</p>
+
+</body>
+</html>

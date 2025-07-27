@@ -70,7 +70,7 @@ h1 {
 /* --- Social Icons and "Made with love" for index.html --- */
 .footer-corner {
     position: absolute;
-    bottom: 0; /* Set to 0 to place it at the very bottom */
+    bottom: 30px; /* Increased from 0 to 30px to move it up */
     left: 50%; /* Start at the horizontal center */
     transform: translateX(-50%); /* Shift left by half its width to truly center */
     text-align: center; /* Center text and inline elements within the footer */
@@ -78,7 +78,7 @@ h1 {
     z-index: 10; /* Ensure footer is on top */
     font-size: 0.9em;
     width: 100%; /* Allows text-align: center to work across the page */
-    padding-bottom: 20px; /* Add padding to lift content slightly from the very edge */
+    padding-bottom: 0px; /* Removed padding-bottom as bottom property now controls vertical position */
 }
 
 .footer-corner p {
