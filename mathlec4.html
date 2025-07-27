@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATH103 for Engineering: Lecture #4 Summary</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']], // Defines how inline math is delimited
+                packages: {'[+]': ['ams']} // Explicitly load ams package for commands like \mathbb
+            },
+            svg: {
+                fontCache: 'global' // Optimizes font loading
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+</head>
+<body class="lecture-page">
+    <h1>MATH103 for Engineering: Lecture #4 Summary</h1>
+
+    <p class="intro-text">
+        This lecture is a continuation of Chapter 1, "Basics: Types of Functions," from Lectures #2 and #3, and covers logarithmic functions, trigonometric functions, and a summary of domain rules.
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>6. Logarithmic Function</h2>
+
+    <ul>
+        <li><strong>Definition</strong>: For any positive number $a \ne 1$, the function $f(x) = \log_a(x)$ is defined as the inverse function of $a^x$. This means that $y = \log_a(x)$ if and only if $x = a^y$.</li>
+        <li><strong>Interpretation</strong>: $\log_a(x)$ can be thought of as "the power of '$a$' that gives $x$".
+            <ul>
+                <li>Example: $\log_2(32) = 5$, because $2^5 = 32$.</li>
+                <li>Examples: $\log_2(2) = 1$ and $\log_2(1) = 0$.</li>
+            </ul>
+        </li>
+        <li><strong>Graphs</strong>: The graph of $y = \log_a(x)$ is the reflection of $y=a^x$ about the line $y=x$.</li>
+        <li><strong>Main Conclusions</strong>:
+            <ul>
+                <li>The domain of all logarithmic functions $\log_a(u)$ is $(u > 0)$.</li>
+                <li>$\log_a(1) = 0$ for any positive base 'a'.</li>
+            </ul>
+        </li>
+        <li><strong>Sketching Transformed Logarithmic Functions</strong>: To sketch a function like $f(x) = 1 - \log_2(x+3)$:
+            <ol>
+                <li>Start with the basic graph of $\log_2(x)$.</li>
+                <li>Reflect it across the x-axis (due to the negative sign before $\log_2$).</li>
+                <li>Shift it left by 3 units (due to $x+3$).</li>
+                <li>Shift it up by 1 unit (due to $+1$).</li>
+            </ol>
+        </li>
+        <li><strong>Special Cases</strong>:
+            <ul>
+                <li><strong>Natural Logarithmic Function</strong>: Base is the number $e \approx 2.71828...$, denoted as $f(x) = \ln x$. Its graph is similar to other logarithmic functions with base > 1.</li>
+                <li><strong>Common Logarithmic Function</strong>: Base is 10, denoted as $f(x) = \log x$.</li>
+            </ul>
+        </li>
+        <li><strong>Inverse Equations for $a^x$ and $\log_a x$</strong>:
+            <ul>
+                <li>$a^{\log_a x} = x$ (for $x > 0$).</li>
+                <li>$\log_a(a^x) = x$ (for all x).</li>
+                <li>Special cases for natural logarithm: $e^{\ln x} = x$ (for $x > 0$) and $\ln(e^x) = x$ (for all x).</li>
+            </ul>
+        </li>
+        <li><strong>Rules of Logarithms</strong> (for $x > 0$ and $y > 0$):
+            <ol>
+                <li>**Product Rule**: $\log_a(xy) = \log_a x + \log_a y$ and $\ln(xy) = \ln x + \ln y$.</li>
+                <li>**Quotient Rule**: $\log_a \frac{x}{y} = \log_a x - \log_a y$ and $\ln \frac{x}{y} = \ln x - \ln y$.</li>
+                <li>**Reciprocal Rule**: $\log_a \frac{1}{y} = -\log_a y$ and $\ln \frac{1}{y} = -\ln y$.</li>
+                <li>**Power Rule**: $\log_a x^y = y \log_a x$ and $\ln x^y = y \ln x$.</li>
+            </ol>
+        </li>
+        <li><strong>Change of Base Formula</strong>: A useful relation is available for changing the base of logarithms.</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>Exercises</h2>
+
+    <p>The lecture provides several equations to solve, involving exponential and logarithmic functions:</p>
+    <ol>
+        <li>$4(3x - 2) = 256$</li>
+        <li>$5 = \log_3(9x)$</li>
+        <li>$\log_3(x - 12) = 2$</li>
+        <li>$2 - \log(x) = \log(2)$</li>
+        <li>$\log_4(x - 2) + 2 \log_4(x) = 1 + \log_4(2x)$</li>
+        <li>$3^{(x-2)} = 2^{(-x)}$</li>
+    </ol>
+
+    <hr class="section-divider">
+
+    <h2>Summary for Domains</h2>
+
+    <p>The domain rules for various function types were summarized:</p>
+    <ol>
+        <li>For sums, differences, or products of functions ($f \pm g$, $f \cdot g$), the domain is the intersection of their individual domains ($D_f \cap D_g$).</li>
+        <li>For a polynomial function ($f$ is a polynomial), the domain is all real numbers ($\mathbb{R}$).</li>
+        <li>For a rational function $f(x) = \frac{p(x)}{q(x)}$, the domain is all real numbers except where the denominator $q(x) = 0$.</li>
+        <li>For $f(x) = \frac{1}{q^n(x)}$, the domain excludes values where $q(x) = 0$.</li>
+        <li>For $f(x) = \sqrt{\Box}$, the domain requires the expression inside the square root to be greater than or equal to zero ($\Box \ge 0$).</li>
+        <li>For $f(x) = \frac{1}{\sqrt{\Box}}$, the domain requires the expression inside the square root to be strictly greater than zero ($\Box > 0$).</li>
+        <li>For an exponential function $f(x) = e^{\Box}$, the domain is the domain of $\Box$.</li>
+        <li>For logarithmic functions $f(x) = \log_a(\Box)$ or $f(x) = \ln(\Box)$, the domain requires the argument to be strictly greater than zero ($\Box > 0$).</li>
+    </ol>
+
+    <hr class="section-divider">
+
+    <h2>7. Trigonometric Functions</h2>
+
+    <ul>
+        <li><strong>Definition of an Angle</strong>: An angle is formed by the rotation of a ray from its initial position (OA) to its terminal position (OB) about its initial point (O). Angles in standard position have the initial ray along the positive x-axis.</li>
+        <li><strong>Measures of Angles</strong>: Angles can be measured in degrees (deg) or radians (rad).
+            <ul>
+                <li>A complete revolution is $360^\circ$ or $2\pi$ radians.</li>
+            </ul>
+        </li>
+        <li><strong>Conversion Formulas</strong>:
+            <ul>
+                <li>1 degree = $\frac{\pi}{180}$ radians ($\approx 0.02$ radians). To convert degrees to radians, multiply by $\frac{\pi}{180}$.</li>
+                <li>1 radian = $\frac{180}{\pi}$ degrees ($\approx 57$ degrees). To convert radians to degrees, multiply by $\frac{180}{\pi}$.</li>
+            </ul>
+        </li>
+        <li><strong>Definition for Acute Angle $\theta$</strong>: The six trigonometric functions (sine, cosine, tangent, cosecant, secant, cotangent) are defined as ratios of the lengths of sides of a right-angled triangle.</li>
+        <li><strong>Periodic Functions</strong>: Trigonometric functions are periodic, meaning they repeat their values over a regular interval. The period is the smallest value 'p' such that $f(x+p) = f(x)$ for all x in the domain. The basic trigonometric functions like sine and cosine have a period of $2\pi$.
+            <ul>
+                <li>For functions like $\sin(ax+b)$ and $\cos(ax+b)$, the period is $\frac{2\pi}{|a|}$ and their graphs are shifted by $\frac{b}{a}$.</li>
+            </ul>
+        </li>
+        <li><strong>Basic Trigonometric Identities</strong>: For any angle $\theta$, $\sin^2\theta + \cos^2\theta = 1$.</li>
+        <li><strong>ASTC-Rule (Quadrant Rule)</strong>: This rule helps determine the sign (positive or negative) of trigonometric functions in each of the four quadrants.
+            <ul>
+                <li><strong>A</strong>ll functions are positive in Quadrant I.</li>
+                <li><strong>S</strong>ine is positive in Quadrant II.</li>
+                <li><strong>T</strong>angent is positive in Quadrant III.</li>
+                <li><strong>C</strong>osine is positive in Quadrant IV.</li>
+            </ul>
+        </li>
+        <li><strong>Finding Values of Non-Acute Angles</strong>: To find the value of a trigonometric function for a non-acute angle:
+            <ol>
+                <li>Determine the sign based on the ASTC rule.</li>
+                <li>Find the reference angle (the acute angle between the x-axis and the terminal side of the given angle).</li>
+                <li>Use the sign and the trigonometric value of the reference angle to find the required value.</li>
+            </ol>
+        </li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>Inverse Trigonometric Functions</h2>
+
+    <ul>
+        <li>The lecture introduces inverse trigonometric functions, specifically the inverse sine function, $\sin^{-1}(x)$ or $\arcsin x$, which represents the angle whose sine is x.</li>
+        <li>$\sin x$ becomes 1-1 on a restricted domain, allowing for the definition of its inverse.</li>
+    </ul>
+
+</body>
+</html>

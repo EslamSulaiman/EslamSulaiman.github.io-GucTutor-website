@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSEN102 Introduction to Computer Science: Lecture 10 Summary</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                packages: {'[+]': ['ams']}
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+</head>
+<body class="lecture-page">
+    <h1>CSEN102 Introduction to Computer Science: Lecture 10: File I/O (Input/Output)</h1>
+
+    <p class="intro-text">
+        This lecture for CSEN102: Introduction to Computer Science, given by Milad Ghantous, PhD, covers the essential topic of File Input/Output (I/O), which allows programs to interact with files on a computer's storage system.
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>10.1 Why File I/O?</h2>
+    <p>So far, our programs have mostly dealt with data that is input directly by the user (e.g., from the keyboard) or is hardcoded into the program, and output displayed to the screen. However, for many real-world applications, it's necessary to store data permanently and process large amounts of information. File I/O provides the capability to:</p>
+    <ul>
+        <li><strong>Persistent Storage:</strong> Store data that remains even after the program terminates.</li>
+        <li><strong>Process Large Data Sets:</strong> Read and write data that is too large to fit in memory or to be input manually.</li>
+        <li><strong>Data Sharing:</strong> Exchange data between different programs or users.</li>
+        <li><strong>Configuration:</strong> Read settings and configurations from files.</li>
+        <li><strong>Logging:</strong> Record program activities or errors for debugging and analysis.</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>10.2 Types of Files</h2>
+    <p>Files are generally categorized into two main types based on how their data is stored and interpreted:</p>
+    <ul>
+        <li><strong>Text Files:</strong>
+            <ul>
+                <li>Contain human-readable characters (text, numbers, symbols).</li>
+                <li>Each line typically ends with a special character (newline character).</li>
+                <li>Can be opened and read with a simple text editor (e.g., Notepad, VS Code).</li>
+                <li>Examples: `.txt`, `.csv`, `.html`, `.py` source code files.</li>
+            </ul>
+        </li>
+        <li><strong>Binary Files:</strong>
+            <ul>
+                <li>Contain data in raw binary format (sequences of 0s and 1s).</li>
+                <li>Not directly human-readable without a specific program to interpret them.</li>
+                <li>Often used for images, audio, video, executable programs, or compressed data.</li>
+                <li>Examples: `.jpg`, `.mp3`, `.exe`, `.zip`, `.pdf`.</li>
+            </ul>
+        </li>
+    </ul>
+    <p>This lecture will primarily focus on text file I/O.</p>
+
+    <hr class="section-divider">
+
+    <h2>10.3 Basic File Operations</h2>
+    <p>Regardless of the programming language, the fundamental steps for performing file I/O are typically the same:</p>
+
+    <h3>1. Opening a File:</h3>
+    <p>Before you can read from or write to a file, you must open it. When opening, you specify the file's name (and path if it's not in the current directory) and the mode in which you want to open it (e.g., read, write, append).</p>
+    <ul>
+        <li><strong>Read Mode (`'r'`):</strong> Opens the file for reading. If the file doesn't exist, an error usually occurs.</li>
+        <li><strong>Write Mode (`'w'`):</strong> Opens the file for writing. If the file exists, its contents are truncated (erased). If it doesn't exist, a new file is created.</li>
+        <li><strong>Append Mode (`'a'`):</strong> Opens the file for writing. If the file exists, new data is written to the end of the file without overwriting existing content. If it doesn't exist, a new file is created.</li>
+        <li><strong>Read/Write Mode (`'r+'`, `'w+'`, `'a+'`):</strong> Allows both reading and writing.</li>
+    </ul>
+
+    <h3>2. Reading from a File:</h3>
+    <p>Once opened in read mode, data can be read from the file. You can read the entire file, read it line by line, or read a specified number of characters.</p>
+
+    <h3>3. Writing to a File:</h3>
+    <p>Once opened in write or append mode, data can be written to the file. This data typically comes from variables or expressions within your program.</p>
+
+    <h3>4. Closing a File:</h3>
+    <p>It is crucial to close a file after you have finished reading from or writing to it. Closing a file ensures that all buffered data is written to the disk and that the file resources are released, preventing data corruption or resource leaks.</p>
+
+    <hr class="section-divider">
+
+    <h2>10.4 Example (Conceptual Python File I/O)</h2>
+    <p>Here's a conceptual example using Python, which provides a simplified way to handle files with the `with` statement, ensuring files are automatically closed.</p>
+
+    <h3>Writing to a file:</h3>
+    <pre><code>with open("my_data.txt", "w") as file:
+    file.write("Hello, world!\n")
+    file.write("This is a new line.\n")
+print("Data written to my_data.txt")
+    </code></pre>
+
+    <h3>Reading from a file:</h3>
+    <pre><code>with open("my_data.txt", "r") as file:
+    content = file.read() # Reads entire file content
+    print(content)
+
+# Alternatively, read line by line:
+with open("my_data.txt", "r") as file:
+    for line in file:
+        print(line.strip()) # .strip() removes newline characters
+    </code></pre>
+
+    <p>File I/O is a fundamental skill for any programmer, enabling programs to interact with persistent data and perform more complex and practical tasks.</p>
+
+    <p>Thank you</p>
+
+</body>
+</html>

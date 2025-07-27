@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSEN102 Introduction to Computer Science: Lecture 7 Summary</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                packages: {'[+]': ['ams']}
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+</head>
+<body class="lecture-page">
+    <h1>CSEN102 Introduction to Computer Science: Lecture 7: Functions</h1>
+
+    <p class="intro-text">
+        This lecture for CSEN102: Introduction to Computer Science, given by Milad Ghantous, PhD, introduces the concept of functions in programming and their importance for structuring complex programs.
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>7.1 Introduction to Functions</h2>
+    <p>As programs grow larger and more complex, it becomes essential for programmers to structure their code in a way that is more readable, manageable, and reusable. Functions (also known as methods, subroutines, or procedures in different programming contexts) are fundamental building blocks that help achieve this modularity and organization.</p>
+
+    <h3>What is a Function?</h3>
+    <p>A function is a self-contained block of code that performs a specific task. It can take inputs (called arguments or parameters), perform computations, and produce an output (a return value).</p>
+
+    <h3>Why Use Functions?</h3>
+    <ul>
+        <li><strong>Modularity:</strong> Functions break down a large program into smaller, manageable, and organized pieces, making the code easier to understand and debug.</li>
+        <li><strong>Reusability:</strong> Once a function is written, it can be called and reused multiple times throughout the program or even in different programs, avoiding code duplication.</li>
+        <li><strong>Readability:</strong> Functions make the code cleaner and easier to follow, as each function has a clear purpose.</li>
+        <li><strong>Easier Debugging:</strong> If an error occurs, it's often easier to isolate and fix the problem within a specific function rather than searching through an entire monolithic program.</li>
+        <li><strong>Abstraction:</strong> Functions allow you to hide the complex details of an operation behind a simple name, letting you focus on what the function does rather than how it does it.</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>7.2 Defining and Calling Functions (Conceptual)</h2>
+    <p>Before a function can be used, it must be defined. A function definition specifies the function's name, its parameters, and the code it executes. After definition, the function can be called (executed) from other parts of the program.</p>
+
+    <h3>Function Definition Structure (Conceptual):</h3>
+    <pre><code>return_type function_name(parameter1_type parameter1, parameter2_type parameter2, ...) {
+    // Body of the function
+    // Code to perform the task
+    return value; // Optional: returns a value of return_type
+}
+</code></pre>
+
+    <ul>
+        <li><strong><code>return_type</code>:</strong> The data type of the value that the function will return. If the function does not return any value, a `void` return type is used (in languages like C++).</li>
+        <li><strong><code>function_name</code>:</strong> A unique identifier for the function.</li>
+        <li><strong><code>parameters</code>:</strong> Variables that receive values passed to the function when it is called. These are optional.</li>
+        <li><strong><code>function body</code>:</strong> The set of statements that define what the function does.</li>
+        <li><strong><code>return</code> statement:</strong> Used to send a value back to the caller and terminate the function.</li>
+    </ul>
+
+    <h3>Function Call (Conceptual):</h3>
+    <p>To use a function, you call it by its name, providing the necessary arguments (actual values for the parameters).</p>
+    <pre><code>// Example of calling a function that returns a value
+result = function_name(argument1, argument2); 
+
+// Example of calling a function that does not return a value
+function_name(argument1, argument2);
+</code></pre>
+
+    <hr class="section-divider">
+
+    <h2>7.3 Parameters and Arguments</h2>
+    <ul>
+        <li><strong>Parameters:</strong> These are variables listed inside the parentheses in the function definition. They act as placeholders for the values the function expects to receive.</li>
+        <li><strong>Arguments:</strong> These are the actual values that are passed to the function when it is called. The arguments are matched to the parameters in order.</li>
+    </ul>
+    <h4>Example (Conceptual):</h4>
+    <pre><code>// Function Definition
+int add(int a, int b) { // 'a' and 'b' are parameters
+    return a + b;
+}
+
+// Function Call
+int sum = add(5, 3); // 5 and 3 are arguments
+</code></pre>
+
+    <hr class="section-divider">
+
+    <h2>7.4 Local and Global Variables</h2>
+    <ul>
+        <li><strong>Local Variables:</strong> Variables declared inside a function are local to that function. They can only be accessed from within that function. They are created when the function is called and destroyed when the function finishes.</li>
+        <li><strong>Global Variables:</strong> Variables declared outside of any function are global. They can be accessed from anywhere in the program, including inside functions. While convenient, overuse of global variables can make code harder to debug and maintain.</li>
+    </ul>
+
+    <p>Thank you</p>
+
+</body>
+</html>

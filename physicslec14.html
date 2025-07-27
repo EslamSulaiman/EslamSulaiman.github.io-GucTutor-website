@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics 101 Lecture 14: Equilibrium and Elasticity</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                packages: {'[+]': ['ams']}
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="lecture-page">
+    <h1>Physics 101 Lecture 14: Equilibrium and Elasticity</h1>
+
+    <p class="intro-text">
+        This lecture, presented by Dr. Ahmed Maarouf, covers the conditions for dynamic and static equilibrium of rigid extended objects, the concept of the center of gravity, and a systematic approach to solving equilibrium problems. [cite_start]It then introduces elasticity, defining stress, strain, and different elastic moduli, along with practical applications like prestressed concrete. [cite: 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99]
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>Dynamic Equilibrium – Rigid Extended Object</h2>
+    <p>
+        [cite_start]For an extended rigid object to be in dynamic equilibrium, two conditions must be satisfied: [cite: 92]
+    </p>
+    <ol>
+        [cite_start]<li>The net external force on the object must be zero. [cite: 93, 94, 95]
+            [cite_start]\[ \sum\vec{F}_{ext}=0 \] [cite: 94, 95]
+            [cite_start]This implies translational equilibrium, meaning the acceleration of the object's center of mass is zero ($a_{CM}=0$), so its center of mass moves with a constant velocity ($V_{CM}$) or is at rest. [cite: 106, 107]
+        </li>
+        [cite_start]<li>The net external torque about any axis on the object must be zero. [cite: 93, 96]
+            [cite_start]\[ \sum\vec{\tau}_{ext}=0 \] [cite: 96, 105]
+            [cite_start]This implies rotational equilibrium, meaning the angular acceleration of the object is zero ($\alpha=0$), so it rotates with a constant angular velocity ($\omega$) or is at rest. [cite: 105, 108]
+        </li>
+    </ol>
+    <p>
+        [cite_start]Zero net force and zero net torque do not necessarily mean the object is at rest; it can be moving with constant velocity or rotating with constant angular velocity. [cite: 103, 104, 105, 106]
+    </p>
+    <p>
+        [cite_start]For applications restricted to forces lying in the xy-plane (coplanar forces), these two vector conditions reduce to three scalar equations: [cite: 116, 117, 118]
+    </p>
+    <ul>
+        [cite_start]<li>$\sum F_{x}=0$ [cite: 119]</li>
+        [cite_start]<li>$\sum F_{y}=0$ [cite: 119]</li>
+        [cite_start]<li>$\sum\tau_{z}=0$ [cite: 120]</li>
+    </ul>
+    <p>
+        [cite_start]The location of the pivot for calculating torque is arbitrary and can be chosen to simplify calculations. [cite: 121, 185, 186] [cite_start]A force acting along a line passing through the chosen pivot produces zero torque. [cite: 187]
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>Static Equilibrium – Rigid Extended Object</h2>
+    <p>
+        [cite_start]Static equilibrium is a special case of dynamic equilibrium where, in addition to the conditions for dynamic equilibrium, the object is not moving at all. [cite: 126]
+    </p>
+    <ul>
+        [cite_start]<li>Its center of mass is at rest: $v_{CM}=0$. [cite: 127, 129]</li>
+        [cite_start]<li>It does not rotate: $\omega=0$. [cite: 127, 129]</li>
+    </ul>
+    <p>
+        [cite_start]The conditions for static equilibrium are the same as for dynamic equilibrium: [cite: 130, 132, 133]
+        [cite_start]\[ \sum\vec{F}_{ext}=0 \] [cite: 132]
+        [cite_start]\[ \sum\vec{\tau}_{ext}=0 \] [cite: 133]
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>More About Center of Gravity (CG)</h2>
+    <p>
+        [cite_start]All gravitational forces acting on different mass elements of an object are equivalent to a single gravitational force ($\vec{F}_g = M\vec{g}_{CG}$) acting through a single point called the center of gravity (CG). [cite: 10, 150]
+    </p>
+    <p>
+        [cite_start]The coordinates of the center of gravity for a system of particles are: [cite: 12]
+        [cite_start]\[ x_{CG}=\frac{m_{1}x_{1}+m_{2}x_{2}+m_{3}x_{3}+\cdot\cdot\cdot}{m_{1}+m_{2}+m_{3}+\cdot\cdot\cdot}=\frac{\sum_{i}m_{i}x_{i}}{\sum_{i}m_{i}} \] [cite: 140]
+        [cite_start]Similar expressions apply for the y and z coordinates. [cite: 151]
+    </p>
+    <p>
+        [cite_start]If an object is homogeneous, symmetric, and has a uniform mass distribution, its center of mass coincides with its geometric center. [cite: 13, 153]
+
+    <hr class="section-divider">
+
+    <h2>How to Solve Equilibrium Problems</h2>
+    <p>
+        [cite_start]A systematic approach for solving equilibrium problems involves the following steps: [cite: 158]
+    </p>
+    <ol>
+        [cite_start]<li><strong>Conceptualize:</strong> [cite: 159]
+            [cite_start]Think about the object, identify all forces acting on it, and imagine their effect on rotation. [cite: 160, 161]
+        </li>
+        [cite_start]<li><strong>Categorize:</strong> [cite: 162]
+            [cite_start]Confirm that the object is a rigid object in equilibrium (zero translational and angular acceleration). [cite: 163, 164]
+        </li>
+        [cite_start]<li><strong>Analyze:</strong> [cite: 169]
+            <ul>
+                <li>Draw a diagram showing the actual object (not a dot) and label all external forces, including their points of application. [cite_start]Guess directions if unknown. [cite: 19, 20, 22, 23]</li>
+                [cite_start]<li>Establish a convenient coordinate system. [cite: 181]</li>
+                [cite_start]<li>Find the components of the forces along the axes. [cite: 182]</li>
+                [cite_start]<li>Apply the first condition for equilibrium: $\sum F_x = 0$ and $\sum F_y = 0$. [cite: 26, 198]</li>
+                [cite_start]<li>Choose a convenient pivot axis for calculating torques, often one where an unknown force acts to eliminate it from the torque equation. [cite: 27, 28, 29]</li>
+                [cite_start]<li>Apply the second condition for equilibrium: $\sum \tau_z = 0$. [cite: 30, 197]</li>
+                [cite_start]<li>Solve the resulting system of equations simultaneously. [cite: 31]</li>
+            </ul>
+        </li>
+        [cite_start]<li><strong>Finalize:</strong> [cite: 194]
+            Check if results are consistent with the diagram. A negative sign for a force indicates it acts in the opposite direction to what was initially drawn. [cite_start]Verify that $\sum F_x = 0$, $\sum F_y = 0$, and $\sum \tau_z = 0$. [cite: 32, 33, 195, 196, 197, 198]
+        </li>
+    </ol>
+    <h3>Example: Seasaw</h3>
+    <p>
+        A seesaw of uniform board mass $M$ and length $l$ supports a father ($m_f$) and daughter ($m_d$). The support (fulcrum) is under the center of gravity of the board. The father is a distance $d$ from the center, and the daughter is a distance $l/2$ from the center. [cite_start]The task is to determine the magnitude of the upward normal force ($\vec{n}$) exerted by the support on the board. [cite: 202]
+    </p>
+    <p>
+        To solve this, apply the conditions for static equilibrium:
+        <ul>
+            <li>Sum of forces in the y-direction equals zero: $\sum F_y = n - M\vec{g} - m_f\vec{g} - m_d\vec{g} = 0$.</li>
+            <li>Sum of torques about the fulcrum equals zero: $\sum \tau = (\text{torque due to father}) + (\text{torque due to daughter}) = 0$.</li>
+        </ul>
+        [cite_start]The weight of the board ($M\vec{g}$) and the normal force ($\vec{n}$) produce zero torque about the fulcrum since they act through it. [cite: 29]
+    </p>
+    <p>
+        [cite_start]The other examples mentioned, such as a horizontal beam and a ladder, follow the same problem-solving methodology, applying the two conditions of equilibrium. [cite: 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46]
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>Elasticity</h2>
+    <p>
+        **Elasticity** is the ability of an object to recover its original shape after a deforming external force is removed. [cite_start]All materials are deformable to some extent due to internal forces that resist deformation. [cite: 46, 47, 48]
+    </p>
+    <p>
+        [cite_start]Deformation is described by two quantities: [cite: 49]
+    </p>
+    <ul>
+        <li>**Stress:** The external force acting on the object per unit cross-sectional area. [cite_start]It is a measure of the action causing deformation. [cite: 50]</li>
+        [cite_start]<li>**Strain:** The resulting deformation, defined as the fractional change in dimensions. [cite: 51]</li>
+    </ul>
+    <h3>Elastic Modulus</h3>
+    <p>
+        [cite_start]The **elastic modulus** is the ratio between stress and strain. [cite: 51] [cite_start]It depends on the material and the nature of the deformation. [cite: 52] [cite_start]It relates the action on a solid object to its response. [cite: 53]
+    </p>
+    <p>
+        [cite_start]There are three main types of elastic moduli: [cite: 54]
+    </p>
+    <ul>
+        [cite_start]<li>**Young’s Modulus ($Y$):** Measures resistance to change in length. [cite: 54]
+            [cite_start]\[ Y = \frac{\text{tensile stress}}{\text{tensile strain}} = \frac{F/A}{\Delta L/L_0} \] [cite: 55, 56]
+            [cite_start]Units: N/m². [cite: 56]
+        </li>
+        [cite_start]<li>**Shear Modulus ($S$):** Measures resistance to motion of planes within a solid parallel to each other (change in shape). [cite: 54, 59]
+            [cite_start]\[ S = \frac{\text{shear stress}}{\text{shear strain}} = \frac{F/A}{\Delta x/h} \] [cite: 61, 62, 64]
+            [cite_start]Units: N/m². [cite: 65]
+        </li>
+        [cite_start]<li>**Bulk Modulus ($B$):** Measures resistance of solids or liquids to changes in their volume (under uniform pressure). [cite: 54, 65, 66]
+            [cite_start]\[ B = \frac{\text{volume stress}}{\text{volume strain}} = \frac{\Delta P}{\Delta V/V_0} = -\frac{F/A}{\Delta V/V_0} \] [cite: 67, 68, 69]
+            [cite_start]The negative sign indicates that an increase in pressure (positive $\Delta P$) causes a decrease in volume (negative $\Delta V$). [cite: 70]
+            [cite_start]Both solids and liquids have a bulk modulus. [cite: 72]
+        </li>
+    </ul>
+    <p>
+        [cite_start]**Compressibility** is the inverse of the bulk modulus. [cite: 71]
+    </p>
+    <h3>Stress vs. Strain Curve</h3>
+    <p>
+        For certain stresses, stress is directly proportional to strain (elastic behavior). The **elastic limit** is the maximum stress a substance can withstand before it becomes permanently deformed. Beyond this, it enters the plastic deformation region, and the relationship is no longer linear. [cite_start]With further stress, the material eventually breaks. [cite: 57, 58]
+    </p>
+    <h3>Prestressed Concrete</h3>
+    <p>
+        Concrete is typically brittle in thin sections and stronger under compression than tension. To strengthen it, steel rods are used. **Prestressed concrete** further increases shear strength by holding steel rods under tension while the concrete cures. [cite_start]When the external forces are released, the tension in the steel creates a permanent compressive stress on the concrete, allowing it to support much heavier loads. [cite: 74, 75, 76, 77, 78, 79, 80, 81, 82]
+    </p>
+
+</body>
+</html>

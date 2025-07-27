@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATH103 for Engineering: Lecture #9 Summary</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']], // Defines how inline math is delimited
+                packages: {'[+]': ['ams']} // Explicitly load ams package for commands like \mathbb
+            },
+            svg: {
+                fontCache: 'global' // Optimizes font loading
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+</head>
+<body class="lecture-page">
+    <h1>MATH103 for Engineering: Lecture #9 Summary</h1>
+
+    <p class="intro-text">
+        This lecture introduces Chapter 3 of MATH103 for Engineering, focusing on the applications of limits: differentiation of functions.
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>Chapter 3: Applications of Limits: Differentiation of Functions</h2>
+
+    <h3>Course Outlines Reminder</h3>
+    <p>A quick overview of the course structure:
+    <ul>
+        <li>Limits and Continuity & its applications: 6 Lectures</li>
+        <li>Basic functions: 2 Lectures</li>
+        <li>Derivative and Integration: 8 Lectures</li>
+        <li>Differentiation Applications: 4 lectures</li>
+    </ul></p>
+
+    <h3>Main Objectives of this Chapter</h3>
+    <p>This chapter aims to:
+    <ul>
+        <li>Introduce the formal definition of the derivative of a function.</li>
+        <li>Study the geometric meaning of the derivative as the slope of the tangent line to a curve.</li>
+        <li>Interpret the derivative as the rate of change of a varying quantity.</li>
+        <li>Introduce some basic rules of differentiation.</li>
+    </ul></p>
+
+    <hr class="section-divider">
+
+    <h2>Derivative of Functions: Methods</h2>
+    <p>We will cover the following methods and rules for finding derivatives:
+    <ol>
+        <li>By Definition.</li>
+        <li>Power function rule.</li>
+        <li>Square root function rule.</li>
+        <li>Absolute value function rule.</li>
+        <li>Product of two functions rule.</li>
+        <li>Quotient of two functions rule.</li>
+        <li>Exponential function rule.</li>
+        <li>Logarithmic function rule.</li>
+        <li>Trigonometric functions rules and their inverses.</li>
+        <li>Hyperbolic functions rules and their inverses.</li>
+    </ol></p>
+
+    <hr class="section-divider">
+
+    <h2>1. The Concept "Definition" of the Derivative</h2>
+    <p>For a function $f(x)$, we define the derivative of this function at any $x$ in $D_f$ by:
+    $$f^{\prime}(x)=\lim_{h\rightarrow0}\frac{f(x+h)-f(x)}{h}$$
+    if the limit exists.</p>
+    <p><strong>Note:</strong> If the limit Does Not Exist or equals to $\pm\infty$, then we say that the function "is not differentiable" or "has no derivative" at $x$.</p>
+    <p>The derivative is sometimes denoted by:
+    $y^{\prime}=\frac{dy}{dx}$ or $D_x f(x)=f^{\prime}(x)=\frac{df}{dx}$.</p>
+    <p>Notice that: Since $f$ is a function of $x$, then its derivative $f'$ is also a function of $x$.</p>
+
+    <h4>Example 1: Use the definition of derivative to find $f^{\prime}(x)$, if $f(x)=x^{2}$.</h4>
+    <p><strong>Solution:</strong>
+    Given $f(x)=x^{2}$, then $f(x+h)=(x+h)^{2}$.
+    $$f^{\prime}(x)=\lim_{h\rightarrow0}\frac{f(x+h)-f(x)}{h}$$
+    $$=\lim_{h\rightarrow0}\frac{(x+h)^{2}-x^{2}}{h}$$
+    $$=\lim_{h\rightarrow0}\frac{x^{2}+2xh+h^{2}-x^{2}}{h}$$
+    $$=\lim_{h\rightarrow0}\frac{2xh+h^{2}}{h}$$
+    $$=\lim_{h\rightarrow0}\frac{h(2x+h)}{h}$$
+    $$=\lim_{h\rightarrow0}(2x+h)=2x$$
+    So, $f^{\prime}(x)=2x$.</p>
+
+    <hr class="section-divider">
+
+    <h2>3. Derivative of Square Root Function</h2>
+    <h4>Example 2: Use the definition of derivative to find $f^{\prime}(x)$, if $f(x)=\sqrt{x}$.</h4>
+    <p><strong>Solution:</strong>
+    Given $f(x)=\sqrt{x}$, then $f(x+h)=\sqrt{x+h}$.
+    $$f^{\prime}(x)=\lim_{h\rightarrow0}\frac{f(x+h)-f(x)}{h}$$
+    $$=\lim_{h\rightarrow0}\frac{\sqrt{x+h}-\sqrt{x}}{h}$$
+    Multiply by the conjugate:
+    $$=\lim_{h\rightarrow0}\frac{\sqrt{x+h}-\sqrt{x}}{h}\cdot\frac{\sqrt{x+h}+\sqrt{x}}{\sqrt{x+h}+\sqrt{x}}$$
+    $$=\lim_{h\rightarrow0}\frac{(x+h)-(x)}{h(\sqrt{x+h}+\sqrt{x})}$$
+    $$=\lim_{h\rightarrow0}\frac{h}{h(\sqrt{x+h}+\sqrt{x})}$$
+    $$=\lim_{h\rightarrow0}\frac{1}{\sqrt{x+h}+\sqrt{x}}$$
+    $$=\frac{1}{\sqrt{x+0}+\sqrt{x}}=\frac{1}{2\sqrt{x}}$$
+    So, $f^{\prime}(x)=\frac{1}{2\sqrt{x}}$.</p>
+
+    <hr class="section-divider">
+
+    <h2>4. Derivative of Absolute Value Function</h2>
+    <h4>Example 3: Use the definition of derivative to find $f^{\prime}(x)$ for $f(x)=|x|$ for any $x\ne0$.</h4>
+    <p><strong>Solution:</strong> We now find the derivative of $|x|$ at any $x\ne0$.
+    $$f^{\prime}(x)=\lim_{h\rightarrow0}\frac{f(x+h)-f(x)}{h}$$
+    Since $x \ne 0$:
+    <ul>
+        <li>If $x>0$, then $|x|=x$ and for small $h$, $|x+h|=x+h$.
+            $f^{\prime}(x)=\lim_{h\rightarrow0}\frac{(x+h)-x}{h}=\lim_{h\rightarrow0}\frac{h}{h}=1$.</li>
+        <li>If $x<0$, then $|x|=-x$ and for small $h$, $|x+h|=-(x+h)$.
+            $f^{\prime}(x)=\lim_{h\rightarrow0}\frac{-(x+h)-(-x)}{h}=\lim_{h\rightarrow0}\frac{-x-h+x}{h}=\lim_{h\rightarrow0}\frac{-h}{h}=-1$.</li>
+    </ul>
+    Therefore, $f^{\prime}(x)=\frac{x}{|x|}$.
+    Note that at $x=0$, the derivative does not exist as the left and right limits of the difference quotient are $-1$ and $1$ respectively.</p>
+
+    <p>Thank you</p>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATH103 for Engineering: Lecture #19 Summary</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']], // Defines how inline math is delimited
+                packages: {'[+]': ['ams']} // Explicitly load ams package for commands like \mathbb
+            },
+            svg: {
+                fontCache: 'global' // Optimizes font loading
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+</head>
+<body class="lecture-page">
+    <h1>MATH103 for Engineering: Lecture #19 Summary</h1>
+
+    <p class="intro-text">
+        This lecture continues Chapter 4 of MATH103 for Engineering, introducing the definite integral and the Fundamental Theorem of Calculus.
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>Chapter 4: Basics: Not So Short Introduction to Calculus of Integration</h2>
+
+    <h3>Applications of Integration</h3>
+    <p>This lecture covers:</p>
+    <ul>
+        <li>Area under the curve.</li>
+        <li>The Definite Integral.</li>
+        <li>The Fundamental Theorem of Calculus.</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>Area under the Curve</h2>
+    <p>We start by asking: How can we find the area of a region with a curved boundary?</p>
+    <p>We consider a continuous and non-negative function $y=f(x)$ over a closed interval $[a, b]$. We want to find the area of the region bounded by $y=f(x)$, the x-axis, and the vertical lines $x=a$ and $x=b$.</p>
+
+    <h3>Steps to approximate the area:</h3>
+    <ol>
+        <li>Divide the interval $[a, b]$ into $n$ subintervals of equal width $\Delta x = \frac{b-a}{n}$.
+        These subintervals are $[x_0, x_1], [x_1, x_2], \dots, [x_{n-1}, x_n]$, where $x_0=a$ and $x_n=b$.</li>
+        <li>On each subinterval, construct a rectangle whose height is determined by the function value at a chosen point within that subinterval (e.g., left endpoint, right endpoint, or midpoint).</li>
+        <li>Sum the areas of these $n$ rectangles. This sum is called a Riemann Sum.</li>
+    </ol>
+
+    <p><strong>Example: Right-endpoint sum</strong>
+    The height of the rectangle on the $k$-th subinterval $[x_{k-1}, x_k]$ is $f(x_k)$.
+    The area of the $k$-th rectangle is $A_k = f(x_k)\Delta x$.
+    The approximate total area is $A \approx \sum_{k=1}^{n} f(x_k)\Delta x$.</p>
+
+    <p>To get the exact area, we take the limit as the number of rectangles approaches infinity:
+    $$A = \lim_{n\to\infty} \sum_{k=1}^{n} f(x_k)\Delta x$$</p>
+
+    <hr class="section-divider">
+
+    <h2>2. The Definite Integral</h2>
+    <p>The limit of the Riemann sum (if it exists) is called the definite integral of $f$ from $a$ to $b$, and is denoted by $\int_{a}^{b} f(x) dx$.
+    $$ \int_{a}^{b} f(x) dx = \lim_{n\to\infty} \sum_{k=1}^{n} f(x_k^*)\Delta x $$
+    where $x_k^*$ is any sample point in the $k$-th subinterval.</p>
+    <ul>
+        <li>$a$: lower limit of integration.</li>
+        <li>$b$: upper limit of integration.</li>
+        <li>$\int$: integral sign.</li>
+        <li>$f(x)$: integrand.</li>
+        <li>$dx$: differential (indicates variable of integration).</li>
+    </ul>
+    <p><strong>Note:</strong> The definite integral is a number, while the indefinite integral is a family of functions.</p>
+
+    <h3>Properties of Definite Integrals:</h3>
+    <ul>
+        <li>Order of Integration: $\int_{b}^{a} f(x) dx = -\int_{a}^{b} f(x) dx$.</li>
+        <li>Zero Width Interval: $\int_{a}^{a} f(x) dx = 0$.</li>
+        <li>Constant Multiple: $\int_{a}^{b} k f(x) dx = k \int_{a}^{b} f(x) dx$.</li>
+        <li>Sum and Difference: $\int_{a}^{b} [f(x)\pm g(x)] dx = \int_{a}^{b} f(x) dx \pm \int_{a}^{b} g(x) dx$.</li>
+        <li>Additivity: $\int_{a}^{c} f(x) dx + \int_{c}^{b} f(x) dx = \int_{a}^{b} f(x) dx$.</li>
+        <li>Max-Min Inequality: If $min f \le f(x) \le max f$ on $[a,b]$, then $min f \cdot (b-a) \le \int_{a}^{b} f(x) dx \le max f \cdot (b-a)$.</li>
+        <li>Domination:
+            <ul>
+                <li>If $f(x)\ge g(x)$ on $[a, b]$, then $\int_{a}^{b} f(x) dx \ge \int_{a}^{b} g(x) dx$.</li>
+                <li>If $f(x)\ge 0$ on $[a, b]$, then $\int_{a}^{b} f(x) dx \ge 0$.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>3. The Fundamental Theorem of Calculus (FTC)</h2>
+    <h3>Part 1 (Relationship between differentiation and integration):</h3>
+    <p>If $f$ is continuous on $[a, b]$, then the function $F(x)=\int_{a}^{x} f(t) dt$ has a derivative at every point $x$ in $[a, b]$, and
+    $$ \frac{d}{dx} \int_{a}^{x} f(t) dt = f(x) $$</p>
+    <p>This means that differentiation "undoes" integration.</p>
+
+    <h4>Examples:</h4>
+    <p>1. Find $\frac{dy}{dx}$ if $y=\int_{0}^{x} \sqrt{1+t^{2}} dt$.
+        <br><strong>Solution:</strong> $\frac{dy}{dx}=\sqrt{1+x^{2}}$.</p>
+    <p>2. Find $\frac{dy}{dx}$ if $y=\int_{x}^{5} (t\sin t) dt$.
+        <br><strong>Solution:</strong> $y=-\int_{5}^{x} (t\sin t) dt \Rightarrow \frac{dy}{dx}=-(x\sin x)$.</p>
+    <p>3. Find $\frac{dy}{dx}$ if $y=\int_{0}^{x^{2}} \cos(t^{2}) dt$.
+        <br>Let $u=x^{2}$, then $y=\int_{0}^{u} \cos(t^{2}) dt$.
+        <br>Using the Chain Rule, $\frac{dy}{dx}=\frac{dy}{du}\frac{du}{dx}$.
+        <br>$\frac{dy}{du}=\cos(u^{2})=\cos((x^{2})^{2})=\cos(x^{4})$.
+        <br>$\frac{du}{dx}=2x$.
+        <br>So, $\frac{dy}{dx}=\cos(x^{4})\cdot 2x$.</p>
+
+    <h3>Part 2 (The Evaluation Theorem):</h3>
+    <p>If $f$ is continuous on $[a, b]$ and $F$ is any antiderivative of $f$ on $[a, b]$, then
+    $$ \int_{a}^{b} f(x) dx = F(b)-F(a) $$
+    This part provides a method for evaluating definite integrals without using the limit of Riemann sums.</p>
+
+    <h4>Examples:</h4>
+    <p>1. Evaluate $\int_{-1}^{2} x^{2} dx$.
+        <br><strong>Solution:</strong> An antiderivative of $x^{2}$ is $\frac{x^{3}}{3}$.
+        <br>$\int_{-1}^{2} x^{2} dx = \left[\frac{x^{3}}{3}\right]_{-1}^{2} = \frac{2^{3}}{3}-\frac{(-1)^{3}}{3}=\frac{8}{3}-(-\frac{1}{3})=\frac{8}{3}+\frac{1}{3}=\frac{9}{3}=3$.</p>
+    <p>2. Evaluate $\int_{0}^{\pi/2} \sin x dx$.
+        <br><strong>Solution:</strong> An antiderivative of $\sin x$ is $-\cos x$.
+        <br>$\int_{0}^{\pi/2} \sin x dx = [-\cos x]_{0}^{\pi/2} = -\cos(\frac{\pi}{2})-(-\cos(0)) = -0-(-1)=1$.</p>
+    <p>3. Evaluate $\int_{0}^{1} e^{x} dx$.
+        <br><strong>Solution:</strong> An antiderivative of $e^{x}$ is $e^{x}$.
+        <br>$\int_{0}^{1} e^{x} dx = [e^{x}]_{0}^{1} = e^{1}-e^{0}=e-1$.</p>
+
+    <hr class="section-divider">
+
+    <h2>Applications of Definite Integrals</h2>
+    <ul>
+        <li>Area between curves.</li>
+        <li>Volume of solids of revolution.</li>
+        <li>Length of a plane curve.</li>
+        <li>Surface of revolution.</li>
+        <li>Applications in physics and engineering (e.g., work, fluid force, center of mass).</li>
+    </ul>
+
+    <p>Thank you</p>
+
+</body>
+</html>

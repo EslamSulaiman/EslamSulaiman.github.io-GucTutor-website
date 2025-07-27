@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics 101 Lectures 9 & 10: Linear Momentum & Collisions</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                packages: {'[+]': ['ams']}
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="lecture-page">
+    <h1>Physics 101 Lectures 9 & 10: Linear Momentum & Collisions</h1>
+
+    <p class="intro-text">
+        This lecture (covering both Lecture 9 and 10) introduces the concepts of linear momentum and impulse, which are essential for analyzing situations where forces and accelerations vary over time, particularly in collisions and rocket propulsion. It develops momentum versions of analysis models for both isolated and non-isolated systems. [cite_start]This lecture is presented by Dr. Ahmed Maarouf. [cite: 279, 280, 281, 284, 285, 286, 287]
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>Introduction to Linear Momentum</h2>
+    <p>
+        In situations where forces and accelerations are not constant, traditional motion models (like particle under constant acceleration or constant force) and energy models might be insufficient due to lack of information about forces, accelerations, work, or energy. [cite_start]A new quantity, linear momentum, is introduced to handle such scenarios. [cite: 291, 294, 295, 296, 297, 298, 301, 302]
+    </p>
+
+    <h3>Definition of Linear Momentum</h3>
+    <p>
+        [cite_start]The linear momentum ($\vec{p}$) of a particle or an object (modeled as a particle) of mass ($m$) moving with a velocity ($\vec{v}$) is defined as the product of its mass and velocity. [cite: 323, 324]
+        \[ \vec{p} \equiv m\vec{v} \]
+        [cite_start]Linear momentum is a vector quantity, and its direction is the same as the direction of the velocity. [cite: 326, 327]
+    </p>
+    <ul>
+        [cite_start]<li>Dimensions: $ML/T$ [cite: 328]</li>
+        [cite_start]<li>SI Units: kg·m/s [cite: 329]</li>
+        <li>Component form:
+            <ul>
+                [cite_start]<li>$p_x = m v_x$ [cite: 332]</li>
+                [cite_start]<li>$p_y = m v_y$ [cite: 334]</li>
+                [cite_start]<li>$p_z = m v_z$ [cite: 335]</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>Momentum and Kinetic Energy</h3>
+    <p>
+        [cite_start]Both momentum and kinetic energy involve mass and velocity, but they are fundamentally different: [cite: 339, 340]
+    </p>
+    <ul>
+        [cite_start]<li>Kinetic energy is a scalar, while momentum is a vector. [cite: 341]</li>
+        [cite_start]<li>Kinetic energy can be transformed into other types of energy, but there is only one type of linear momentum, so no similar transformations exist. [cite: 342, 343]</li>
+        [cite_start]<li>Analysis models based on momentum are distinct from those based on energy, providing an independent tool for solving problems. [cite: 344, 345]</li>
+    </ul>
+
+    <h3>Newton's Second Law and Momentum</h3>
+    <p>
+        [cite_start]Newton's Second Law can be expressed in terms of momentum: the time rate of change of the linear momentum of a particle is equal to the net force acting on the particle. [cite: 350, 351, 352]
+        \[ \sum \vec{F} = \frac{d\vec{p}}{dt} \]
+        [cite_start]This is a more general form of Newton's Second Law, which also accounts for changes in mass. [cite: 353, 354, 355]
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>Conservation of Linear Momentum (Isolated Systems)</h2>
+    <p>
+        [cite_start]In an isolated system, where no external forces act, the total momentum of the system remains constant. [cite: 360, 363] [cite_start]This means the sum of "m v" for the system is a constant. [cite: 318]
+        [cite_start]For a system of two particles, this can be derived from Newton's Third Law ($\vec{F}_{12} = -\vec{F}_{21}$): [cite: 308, 309]
+        \[ \frac{d}{dt}(m_1\vec{v}_1 + m_2\vec{v}_2) = 0 \implies \frac{d}{dt}(\vec{p}_1 + \vec{p}_2) = 0 \]
+        [cite_start]Therefore, the total momentum of the system ($\vec{p}_{tot}$) is constant. [cite: 370, 371]
+        \[ \vec{p}_{1i} + \vec{p}_{2i} = \vec{p}_{1f} + \vec{p}_{2f} \]
+        [cite_start]This is the mathematical statement of the isolated system (momentum) model. [cite: 373]
+    </p>
+    <p>
+        [cite_start]In component form, the total momenta in each direction are independently conserved: [cite: 374, 375, 376]
+        \[ p_{1ix} + p_{2ix} = p_{1fx} + p_{2fx} \]
+        \[ p_{1iy} + p_{2iy} = p_{1fy} + p_{2fy} \]
+        \[ p_{1iz} + p_{2iz} = p_{1fz} + p_{2fz} \]
+    </p>
+    <p>
+        [cite_start]The power of this model lies in the fact that there are no restrictions on the types of internal forces (conservative or non-conservative, constant or varying) as long as they are internal to the system. [cite: 386, 387, 388, 389, 390]
+    </p>
+
+    <h3>Example: Archer on Frictionless Ice</h3>
+    <p>
+        A 60-kg archer stands at rest on frictionless ice and fires a 0.50-kg arrow horizontally at 50 m/s. [cite_start]We need to find the velocity with which the archer moves across the ice after firing the arrow. [cite: 292, 293]
+    </p>
+    <ul>
+        [cite_start]<li><strong>Conceptualize:</strong> This problem involves an interaction where initial and final states of motion are important, but forces/accelerations or energy information is not readily available or easily determined. [cite: 294, 295, 296, 297, 298, 301]</li>
+        [cite_start]<li><strong>Categorize:</strong> Define the system as the archer (with bow) and the arrow. [cite: 397] [cite_start]In the horizontal (x) direction, there are no external forces (due to frictionless ice), so the system is isolated in terms of momentum in the x-direction. [cite: 399] [cite_start]Therefore, the isolated system (momentum) model can be applied. [cite: 400]</li>
+        <li><strong>Analyze:</strong>
+            <ul>
+                [cite_start]<li>Initial state: The archer and arrow are initially at rest, so the total initial momentum is zero. [cite: 401]
+                    \[ \vec{p}_{initial, total} = m_{archer} \vec{v}_{archer, initial} + m_{arrow} \vec{v}_{arrow, initial} = (60 \, \text{kg})(0) + (0.50 \, \text{kg})(0) = 0 \]
+                </li>
+                <li>Final state: Let the archer be particle 1 ($m_1 = 60 \, \text{kg}$) and the arrow be particle 2 ($m_2 = 0.50 \, \text{kg}$). The arrow is fired at $v_{2f} = 50 \, \text{m/s}$ (let's assume in the positive x-direction). We need to find $v_{1f}$.
+                    [cite_start]Apply conservation of momentum in the x-direction: [cite: 404]
+                    \[ \vec{p}_{1i} + \vec{p}_{2i} = \vec{p}_{1f} + \vec{p}_{2f} \]
+                    \[ 0 = m_1 \vec{v}_{1f} + m_2 \vec{v}_{2f} \]
+                    \[ 0 = (60 \, \text{kg}) \vec{v}_{1f} + (0.50 \, \text{kg}) (50 \, \text{m/s}) \]
+                    \[ (60 \, \text{kg}) \vec{v}_{1f} = - (0.50 \, \text{kg}) (50 \, \text{m/s}) \]
+                    \[ \vec{v}_{1f} = - \frac{25 \, \text{kg} \cdot \text{m/s}}{60 \, \text{kg}} \]
+                    \[ \vec{v}_{1f} = -0.417 \, \text{m/s} \]
+                </li>
+            </ul>
+        </li>
+        <li><strong>Finalize:</strong> The negative sign indicates that the archer moves in the opposite direction to the arrow. The archer's velocity is much smaller than the arrow's velocity due to their much larger mass. [cite_start]This problem, which would be difficult with other models, is straightforward using the momentum model. [cite: 402, 403]</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>Impulse (Non-Isolated Systems)</h2>
+    <p>
+        The momentum of a system changes if a net external force acts on it for a period of time. [cite_start]Such a system is considered non-isolated for momentum considerations. [cite: 405, 406]
+    </p>
+    <p>
+        From Newton's Second Law, $\sum \vec{F} = \frac{d\vec{p}}{dt}$. [cite_start]Rearranging and integrating over a time interval $\Delta t$: [cite: 407]
+        \[ d\vec{p} = \sum \vec{F} dt \]
+        \[ \Delta \vec{p} = \vec{p}_f - \vec{p}_i = \int_{t_i}^{t_f} \sum \vec{F} dt \]
+        [cite_start]The integral $\int_{t_i}^{t_f} \sum \vec{F} dt$ is defined as the **impulse** ($\vec{I}$) of the net force acting on the object over $\Delta t$. [cite: 408]
+        \[ \vec{I} \equiv \int_{t_i}^{t_f} \sum \vec{F} dt \]
+    </p>
+
+    <h3>Impulse-Momentum Theorem</h3>
+    <p>
+        [cite_start]The **Impulse-Momentum Theorem** states that the change in the momentum of a particle is equal to the impulse of the net force acting on the particle. [cite: 409]
+        \[ \Delta \vec{p} = \vec{I} \]
+        This theorem is equivalent to Newton's Second Law and applies to non-isolated systems. [cite_start]It represents the mathematical statement of the non-isolated system (momentum) model. [cite: 410, 411, 412]
+    </p>
+    <ul>
+        [cite_start]<li>Impulse is a vector quantity. [cite: 414]</li>
+        [cite_start]<li>The magnitude of the impulse is equal to the area under the force-time curve. [cite: 415]</li>
+        [cite_start]<li>Dimensions: $ML/T$ (same as momentum). [cite: 416]</li>
+        [cite_start]<li>Impulse is not a property of the particle, but a measure of the change in momentum of the particle. [cite: 416]</li>
+        [cite_start]<li>The impulse can also be found using the time-averaged force ($\vec{F}_{avg}$): [cite: 406]
+            \[ \vec{I} = \vec{F}_{avg} \Delta t \]
+        </li>
+    </ul>
+
+    <h3>Example: Crash Test</h3>
+    <p>
+        In a crash test, a car of mass $1500 \, \text{kg}$ collides with a wall. The initial velocity is $\vec{v}_i = -15.0 \, \hat{i} \, \text{m/s}$ and the final velocity is $\vec{v}_f = 2.60 \, \hat{i} \, \text{m/s}$. [cite_start]If the collision lasts $0.15 \, \text{s}$, find the impulse caused by the collision and the average net force exerted on the car. [cite: 206, 207, 208]
+    </p>
+    <ul>
+        <li><strong>Conceptualize:</strong> The collision time is very short, implying large forces are involved. [cite_start]The car rapidly changes direction and speed. [cite: 209, 210]</li>
+        <li><strong>Categorize:</strong> The system is the car. The net force from the wall and ground friction during the collision is significant, making it a non-isolated system. Gravitational and normal forces are perpendicular to the horizontal motion, so they don't affect horizontal momentum. The impulse approximation can be used. [cite_start]Thus, the non-isolated system (momentum) model is applicable. [cite: 211, 212, 213, 214, 215]</li>
+        <li><strong>Analyze:</strong>
+            <ul>
+                [cite_start]<li>Mass of the car ($m$) = $1500 \, \text{kg}$ [cite: 206]</li>
+                [cite_start]<li>Initial velocity ($\vec{v}_i$) = $-15.0 \, \hat{i} \, \text{m/s}$ [cite: 207]</li>
+                [cite_start]<li>Final velocity ($\vec{v}_f$) = $2.60 \, \hat{i} \, \text{m/s}$ [cite: 207]</li>
+                [cite_start]<li>Time interval ($\Delta t$) = $0.15 \, \text{s}$ [cite: 208]</li>
+            </ul>
+            <p><strong>1. [cite_start]Calculate Initial and Final Momentum:</strong> [cite: 216]</p>
+            \[ \vec{p}_i = m\vec{v}_i = (1500 \, \text{kg})(-15.0 \, \hat{i} \, \text{m/s}) = -22500 \, \hat{i} \, \text{kg} \cdot \text{m/s} \]
+            \[ \vec{p}_f = m\vec{v}_f = (1500 \, \text{kg})(2.60 \, \hat{i} \, \text{m/s}) = 3900 \, \hat{i} \, \text{kg} \cdot \text{m/s} \]
+            <p><strong>2. [cite_start]Calculate Impulse ($\vec{I}$):</strong> [cite: 216]</p>
+            Using the Impulse-Momentum Theorem: $\vec{I} = \Delta \vec{p} = \vec{p}_f - \vec{p}_i$
+            \[ \vec{I} = (3900 \, \hat{i} \, \text{kg} \cdot \text{m/s}) - (-22500 \, \hat{i} \, \text{kg} \cdot \text{m/s}) \]
+            \[ \vec{I} = 26400 \, \hat{i} \, \text{kg} \cdot \text{m/s} \]
+            <p><strong>3. [cite_start]Calculate Average Net Force ($\vec{F}_{avg}$):</strong> [cite: 216]</p>
+            Using $\vec{I} = \vec{F}_{avg} \Delta t \implies \vec{F}_{avg} = \frac{\vec{I}}{\Delta t}$
+            \[ \vec{F}_{avg} = \frac{26400 \, \hat{i} \, \text{kg} \cdot \text{m/s}}{0.15 \, \text{s}} \]
+            \[ \vec{F}_{avg} = 176000 \, \hat{i} \, \text{N} \]
+        </li>
+        <li><strong>Finalize:</strong> The large positive force indicates the significant impact force exerted by the wall on the car to reverse its momentum. [cite_start]The velocities' signs are consistent with the physical scenario. [cite: 217, 218]</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>Collisions</h2>
+    <p>
+        [cite_start]A collision is an event where two or more particles come close to each other and interact through forces. [cite: 218]
+    </p>
+    <ul>
+        [cite_start]<li>Collisions may or may not involve physical contact. [cite: 219]</li>
+        <li>The interaction forces (impulsive forces) during a collision are assumed to be much greater than any external forces, allowing the use of the **impulse approximation**. [cite_start]These impulsive forces are internal to the system. [cite: 219, 220]</li>
+        [cite_start]<li>For both direct-contact and no-contact collisions, the total momentum of the system is always conserved. [cite: 221, 222]</li>
+    </ul>
+
+    <h3>Types of Collisions</h3>
+    <p>
+        [cite_start]Collisions are categorized based on whether kinetic energy is conserved: [cite: 222]
+    </p>
+    <ul>
+        <li><strong>Elastic Collisions:</strong>
+            <ul>
+                [cite_start]<li>Both momentum and kinetic energy are conserved. [cite: 226]</li>
+                [cite_start]<li>$K_{after} = K_{before}$ [cite: 222]</li>
+                [cite_start]<li>Perfectly elastic collisions primarily occur at the microscopic level; macroscopic collisions can be approximately elastic. [cite: 222]</li>
+                [cite_start]<li>For an isolated system, both energy and momentum conservation models are used. [cite: 223]</li>
+                <li>Equations for elastic collisions (for two particles, 1 and 2):
+                    \[ m_1 \vec{v}_{1i} + m_2 \vec{v}_{2i} = m_1 \vec{v}_{1f} + m_2 \vec{v}_{2f} \]
+                    \[ \frac{1}{2}m_1 v_{1i}^2 + \frac{1}{2}m_2 v_{2i}^2 = \frac{1}{2}m_1 v_{1f}^2 + \frac{1}{2}m_2 v_{2f}^2 \]
+                </li>
+                [cite_start]<li>Special cases of 1D elastic collisions: [cite: 228, 229, 230]
+                    <ul>
+                        <li>If $m_1 = m_2$: The particles exchange velocities.</li>
+                        <li>Heavy particle ($m_1$) collides head-on with light particle ($m_2$) at rest: Heavy particle continues with almost no change in velocity, light particle rebounds with approximately twice the initial speed of the heavy particle.</li>
+                        <li>Light particle ($m_1$) collides head-on with heavy particle ($m_2$) at rest: Light particle's velocity is reversed, heavy particle remains approximately at rest.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><strong>Inelastic Collisions:</strong>
+            <ul>
+                <li>Momentum is conserved, but kinetic energy is **not** conserved ($K_{after} < K_{before}$). [cite_start]Some kinetic energy is converted into other forms, like internal energy (heat, sound, deformation). [cite: 222]</li>
+                [cite_start]<li><strong>Perfectly Inelastic Collisions:</strong> Occur when objects stick together after the collision and move with a common final velocity. [cite: 223, 225]
+                    \[ m_1 \vec{v}_{1i} + m_2 \vec{v}_{2i} = (m_1 + m_2) \vec{v}_{f} \]
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>Example: Ballistic Pendulum</h3>
+    <p>
+        [cite_start]A projectile embeds into a block of wood suspended as a pendulum, causing the pendulum to swing upwards to a certain height. [cite: 239]
+    </p>
+    <ul>
+        [cite_start]<li><strong>Conceptualize:</strong> The collision involves momentum transfer, and then the combined mass swings up, converting kinetic energy into potential energy. [cite: 239]</li>
+        <li><strong>Categorize:</strong>
+            <ul>
+                [cite_start]<li>The collision phase (projectile + block) is an isolated system in terms of momentum, but it's a perfectly inelastic collision (bullet embeds). [cite: 240, 241]</li>
+                [cite_start]<li>The subsequent swing of the pendulum (combined mass + Earth) is an isolated system where mechanical energy is conserved (assuming negligible air resistance). [cite: 242]</li>
+            </ul>
+        </li>
+        <li><strong>Analyze:</strong>
+            <ul>
+                <li>Use conservation of momentum for the collision to relate the initial bullet velocity to the velocity of the combined bullet-block system immediately after the collision. [cite_start]This equation will have two unknowns (bullet's initial velocity and the combined velocity). [cite: 242]</li>
+                <li>Use conservation of mechanical energy for the pendulum's swing to relate the combined system's velocity (just after collision) to the maximum height it reaches. [cite_start]This allows finding the combined velocity. [cite: 242]</li>
+                [cite_start]<li>Finally, substitute the combined velocity back into the momentum conservation equation to find the initial speed of the bullet. [cite: 243]</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>Two-Dimensional Collisions</h3>
+    <p>
+        [cite_start]In two-dimensional collisions, momentum is conserved in all directions (x, y, and z if applicable). [cite: 246]
+    </p>
+    <ul>
+        [cite_start]<li>If the collision is elastic, use the conservation of kinetic energy as a second equation. [cite: 247] [cite_start](Note: the simpler 1D elastic collision equations cannot be used for 2D). [cite: 248]</li>
+        [cite_start]<li>For example, if particle 1 moves at $\vec{v}_{1i}$ and particle 2 is at rest, and after collision they move at angles $\theta$ and $\phi$ respectively: [cite: 245, 249]
+            <ul>
+                <li>Initial momentum in x: $m_1 v_{1ix}$</li>
+                <li>Initial momentum in y: $0$ (if particle 1 is moving along x-axis)</li>
+                <li>Final momentum in x: $m_1 v_{1f} \cos \theta + m_2 v_{2f} \cos \phi$</li>
+                <li>Final momentum in y: $m_1 v_{1f} \sin \theta - m_2 v_{2f} \sin \phi$ (negative if $\phi$ is below x-axis)</li>
+            </ul>
+        </li>
+        <li>If the collision is elastic, also apply the kinetic energy equation:
+            \[ \frac{1}{2}m_1 v_{1i}^2 = \frac{1}{2}m_1 v_{1f}^2 + \frac{1}{2}m_2 v_{2f}^2 \]
+        </li>
+    </ul>
+    <h3>Example: Two-Dimensional Car-Truck Collision</h3>
+    <p>
+        [cite_start]A car and a truck collide and stick together (perfectly inelastic collision). [cite: 251, 253]
+    </p>
+    <ul>
+        [cite_start]<li><strong>Conceptualize:</strong> The vehicles move together after impact, and the collision occurs over a very short time. [cite: 251]</li>
+        <li><strong>Categorize:</strong> Model the system of two vehicles as isolated in terms of momentum (ignoring friction during the brief collision) and as particles. [cite_start]The collision is perfectly inelastic. [cite: 252, 253]</li>
+        <li><strong>Analyze:</strong>
+            <ul>
+                [cite_start]<li>Initial momentum in x-direction: Only the car has momentum in x (if it's moving along x-axis initially). [cite: 254, 255]</li>
+                [cite_start]<li>Initial momentum in y-direction: Only the truck has momentum in y (if it's moving along y-axis initially). [cite: 256]</li>
+                [cite_start]<li>After collision, the wreckage (combined mass) moves with a final speed $v_f$ at an angle $\theta$ with respect to the x-axis. [cite: 257]</li>
+                <li>Apply conservation of momentum independently for x and y components:
+                    \[ (m_{car}) v_{car, initial, x} = (m_{car} + m_{truck}) v_{f} \cos \theta \]
+                    \[ (m_{truck}) v_{truck, initial, y} = (m_{car} + m_{truck}) v_{f} \sin \theta \]
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>The Center of Mass</h2>
+    <p>
+        [cite_start]The **center of mass (CM)** is a special point in a system or object that moves as if all of the mass of the system is concentrated at that point. [cite: 258]
+    </p>
+    <ul>
+        [cite_start]<li>The system will move as if an external force were applied to a single particle of total mass $M$ located at the center of mass. [cite: 259, 260]</li>
+        [cite_start]<li>Coordinates of the center of mass for a system of particles: [cite: 261]
+            \[ x_{CM} = \frac{\sum_i m_i x_i}{M} \]
+            \[ y_{CM} = \frac{\sum_i m_i y_i}{M} \]
+            \[ z_{CM} = \frac{\sum_i m_i z_i}{M} \]
+            [cite_start]Where $M = \sum_i m_i$ is the total mass of the system. [cite: 260]
+        </li>
+        [cite_start]<li>The center of mass of any symmetric object of uniform density lies on an axis of symmetry and on any plane of symmetry. [cite: 264]</li>
+    </ul>
+
+    <h3>Center of Gravity</h3>
+    <p>
+        The **center of gravity** is the point through which the net effect of all gravitational forces on an extended object acts. [cite_start]If the gravitational acceleration ($\vec{g}$) is constant over the mass distribution, the center of gravity coincides with the center of mass. [cite: 266, 267]
+    </p>
+
+    <h3>Motion of a System of Particles</h3>
+    <ul>
+        <li>The net force on a system of particles caused by external forces only is related to the total linear momentum of the system. [cite_start]Internal forces cancel out. [cite: 268]</li>
+        [cite_start]<li>The total linear momentum of the system ($\vec{P}_{tot}$) equals the total mass ($M$) multiplied by the velocity of the center of mass ($\vec{v}_{CM}$): [cite: 268]
+            \[ \vec{P}_{tot} = M\vec{v}_{CM} \]
+        </li>
+        <li>Newton's Second Law for the center of mass:
+            \[ \sum \vec{F}_{ext} = M \vec{a}_{CM} = \frac{d\vec{P}_{tot}}{dt} \]
+        </li>
+        [cite_start]<li>If the external force ($\sum \vec{F}_{ext}$) is zero (isolated system), then $\vec{a}_{CM} = 0$, meaning $\vec{v}_{CM}$ is constant. [cite: 269, 270]
+            [cite_start]This implies that for an isolated system of particles, both the total momentum and the velocity of the center of mass are constant in time. [cite: 270]
+        </li>
+    </ul>
+
+    <h3>Example: Exploding Projectile</h3>
+    <p>
+        A projectile is fired into the air and explodes into fragments. [cite_start]The center of mass of the fragments continues to follow the same parabolic path that the projectile would have followed if it had not exploded. [cite: 271, 272]
+    </p>
+    <ul>
+        [cite_start]<li><strong>Example Scenario:</strong> If a projectile lands at a distance R from its launch point, and it explodes into two pieces of equal mass, and one piece lands at 2R, where does the other piece land? [cite: 273, 274, 275]
+        [cite_start]<li><strong>Analysis:</strong> The center of mass of the system (the two fragments) must still land at R. If one piece (half the mass) lands at 2R, then for the center of mass to be at R, the other half of the mass must land at a distance of 0 (the launch point) from the origin. [cite: 276]
+            \[ x_{CM} = \frac{m_1 x_1 + m_2 x_2}{m_1 + m_2} \]
+            Let $M$ be the total mass, so $m_1 = m_2 = M/2$. $x_{CM} = R$. $x_1 = 2R$.
+            \[ R = \frac{(M/2)(2R) + (M/2)x_2}{M} \]
+            \[ R = \frac{MR + (M/2)x_2}{M} \]
+            \[ R = R + \frac{1}{2}x_2 \]
+            \[ \frac{1}{2}x_2 = 0 \implies x_2 = 0 \]
+        </li>
+    </ul>
+
+</body>
+</html>

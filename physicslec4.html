@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics 101 Lecture 4: Dynamics – More about Forces and Motion</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                packages: {'[+]': ['ams']}
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="lecture-page">
+    <h1>Physics 101 Lecture 4: Dynamics – More about Forces and Motion</h1>
+
+    <p class="intro-text">
+        This lecture delves into dynamics, which is the study of why objects move, focusing on forces and their effect on motion. The lecture is presented by Dr. Amr Aboshousha. This builds on kinematics by investigating the causes of motion changes.
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>4.1 Introduction to Dynamics</h2>
+    <p>Dynamics is the branch of classical mechanics that examines the relationship between motion and the forces that cause it. Unlike kinematics, which merely describes motion, dynamics seeks to understand *why* objects accelerate or change their state of motion. It is fundamentally governed by Newton's three laws of motion.</p>
+
+    <hr class="section-divider">
+
+    <h2>4.2 Forces and Their Interactions</h2>
+    <p>A **force** is defined as a push or a pull that can cause an object to accelerate, meaning it can change its velocity (speed or direction). Forces are **vector quantities**, possessing both magnitude (strength) and direction.</p>
+    <p>Forces can be broadly categorized into two types based on how they interact with objects:</p>
+    <ul>
+        <li><strong>Contact Forces:</strong> These forces arise from direct physical contact between two objects.
+            <ul>
+                <li><strong>Normal Force (\(N\)):</strong> The force exerted by a surface perpendicular to the surface, preventing an object from passing through it. For an object on a horizontal surface, it balances the gravitational force.</li>
+                <li><strong>Friction Force (\(F_f\)):</strong> A force that opposes motion or attempted motion between surfaces in contact. It acts parallel to the surface.</li>
+                <li><strong>Tension Force (\(T\)):</strong> The force transmitted through a string, rope, cable, or similar object when it is pulled tight by forces acting from opposite ends. It acts along the length of the string.</li>
+                <li><strong>Applied Push/Pull Force (\(F_{app}\)):</strong> A direct force exerted by an agent (like a person pushing or pulling) on an object.</li>
+            </ul>
+        </li>
+        <li><strong>Field Forces (Non-Contact Forces):</strong> These forces act over a distance without direct physical contact between the objects.
+            <ul>
+                <li><strong>Gravitational Force (\(F_g\) or \(W\)):</strong> The attractive force between any two objects with mass. On Earth, it's the weight of an object, directed downwards towards the center of the Earth. The formula for weight is: \(W = mg\), where \(m\) is mass and \(g\) is the acceleration due to gravity (approximately \(9.8 \ m/s^2\)).</li>
+                <li><strong>Electromagnetic Force:</strong> Forces between charged particles (e.g., electrostatic forces, magnetic forces).</li>
+            </ul>
+        </li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>4.3 Free-Body Diagrams</h2>
+    <p>To systematically analyze forces acting on an object, **free-body diagrams** are an indispensable tool. A free-body diagram is a visual representation that shows all external forces acting *on* a single isolated object.</p>
+    <p>Steps for drawing a free-body diagram:</p>
+    <ul>
+        <li><strong>Isolate the object of interest:</strong> Treat the object as a single point or a simplified shape.</li>
+        <li><strong>Draw all forces acting *on* the object:</strong> Represent each force as an arrow. The tail of the arrow should originate from the object's center of mass (or a single point representing the object). The length of the arrow can qualitatively represent the magnitude of the force, and its direction indicates the force's direction.</li>
+        <li><strong>Label each force:</strong> Use appropriate symbols (e.g., \(F_g\), \(N\), \(F_f\), \(T\), \(F_{app}\)).</li>
+        <li><strong>Do not include forces exerted *by* the object:</strong> Only show forces *acting on* the object.</li>
+        <li><strong>Choose a coordinate system:</strong> Define positive x and y directions, usually aligning one axis with the direction of acceleration or motion.</li>
+    </ul>
+    <p><strong>Example:</strong> A block resting on a horizontal surface.</p>
+    <ul>
+        <li>Forces: Gravitational force (\(F_g\)) acting downwards, Normal force (\(N\)) acting upwards.</li>
+    </ul>
+    <p><strong>Example:</strong> A block being pulled across a rough horizontal surface.</p>
+    <ul>
+        <li>Forces: Gravitational force (\(F_g\)) downwards, Normal force (\(N\)) upwards, Applied force (\(F_{app}\)) in the direction of pull, Kinetic friction force (\(F_k\)) opposing the motion.</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>4.4 Applying Newton's Second Law with Free-Body Diagrams</h2>
+    <p>Newton's Second Law is the cornerstone of dynamics, mathematically stating the relationship between the net force acting on an object, its mass, and its acceleration:</p>
+    <p>\[ \Sigma \vec{F} = m\vec{a} \]</p>
+    <p>Where:</p>
+    <ul>
+        <li>\(\Sigma \vec{F}\) represents the **net force** (or resultant force), which is the vector sum of all individual forces acting on the object.</li>
+        <li>\(m\) is the **mass** of the object, a scalar measure of its inertia (resistance to acceleration).</li>
+        <li>\(\vec{a}\) is the **acceleration** of the object, a vector quantity that is in the same direction as the net force.</li>
+    </ul>
+    <p>In component form, for 2D motion, this law is applied separately for each axis:</p>
+    <ul>
+        <li>Sum of forces in the x-direction: \(\Sigma F_x = ma_x\)</li>
+        <li>Sum of forces in the y-direction: \(\Sigma F_y = ma_y\)</li>
+    </ul>
+    <p>When solving problems:</p>
+    <ul>
+        <li>Draw accurate free-body diagrams for all relevant objects.</li>
+        <li>Resolve any forces that are not aligned with the chosen coordinate axes into their x and y components using trigonometry (e.g., if a force \(F\) acts at an angle \(\theta\) with the x-axis, its components are \(F_x = F \cos\theta\) and \(F_y = F \sin\theta\)).</li>
+        <li>Write down the \(\Sigma F_x = ma_x\) and \(\Sigma F_y = ma_y\) equations for each object.</li>
+        <li>Solve the resulting system of linear equations to find unknown quantities (e.g., acceleration, tension, normal force, friction).</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>4.5 Examples and Applications in Engineering</h2>
+    <p>The principles of dynamics are applied to a wide range of problems relevant to engineering. Examples often discussed include:</p>
+    <ul>
+        <li><strong>Objects on Inclined Planes:</strong> Analyzing forces like gravity, normal force, and friction on objects moving or resting on a sloped surface. This often involves resolving the gravitational force into components parallel and perpendicular to the incline.</li>
+        <li><strong>Systems of Connected Objects:</strong> Problems involving two or more objects connected by ropes or strings, possibly over pulleys. Here, tension forces are crucial, and Newton's Second Law is applied to each object individually, leading to a system of equations.
+            <p><strong>Example: Atwood Machine:</strong> Two masses \(m_1\) and \(m_2\) connected by a string over a frictionless pulley. The acceleration of the system and the tension in the string can be found by applying \(\Sigma F = ma\) to each mass.</p>
+            <ul>
+                <li>For \(m_1\): \(T - F_{g1} = m_1 a\) (assuming \(m_1\) moves up)</li>
+                <li>For \(m_2\): \(F_{g2} - T = m_2 a\) (assuming \(m_2\) moves down)</li>
+            </ul>
+        </li>
+        <li><strong>Forces in Accelerating Systems:</strong> Analyzing apparent forces or actual forces in scenarios like an elevator accelerating upwards or downwards, or an object in an accelerating vehicle. The normal force, for instance, changes in an accelerating elevator.
+            <p><strong>Example: Elevator:</strong> For a person of mass \(m\) in an elevator with normal force \(N\) and gravitational force \(mg\):</p>
+            <ul>
+                <li>Elevator accelerating upwards (\(a\)): \(N - mg = ma \implies N = m(g+a)\)</li>
+                <li>Elevator accelerating downwards (\(a\)): \(mg - N = ma \implies N = m(g-a)\)</li>
+                <li>Elevator at rest or constant velocity: \(N = mg\)</li>
+            </ul>
+        </li>
+    </ul>
+    <p>These applications demonstrate how to rigorously apply Newton's laws and free-body diagrams to solve complex mechanical problems, which is fundamental for design and analysis in various engineering disciplines.</p>
+
+</body>
+</html>

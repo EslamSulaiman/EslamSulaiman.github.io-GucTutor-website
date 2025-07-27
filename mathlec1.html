@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATH103 for Engineering: Lecture #1 Summary</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']] // Defines how inline math is delimited
+            },
+            svg: {
+                fontCache: 'global' // Optimizes font loading
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+</head>
+<body class="lecture-page">
+    <h1>MATH103 for Engineering: Lecture #1 Summary</h1>
+
+    <p class="intro-text">
+        This lecture introduces the MATH103 for Engineering course, covering its structure, assessment, team, and the foundational mathematical concepts of numbers, inequalities, and functions.
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>I. Course Overview & Logistics</h2>
+
+    <h3>A. Instructors and Contact Information:</h3>
+    <ul>
+        <li><strong>Lecturers:</strong> Dr. Hany El-Sharkawy (C3.106) and Dr. Khaled Salem (C3.108).</li>
+        <li><strong>Emails:</strong> hany.elsharkawy@guc.edu.eg, khaled.salem@guc.edu.eg.</li>
+        <li>Course material can be downloaded from the GUC CMS: <a href="https://cms.guc.edu.eg">https://cms.guc.edu.eg</a>.</li>
+        <li><strong>Textbooks:</strong> "Calculus" by Smith and Minton (4th edition) and "Calculus" by J. Stewart (7th edition).</li>
+    </ul>
+
+    <h3>B. MATH103 Support Team:</h3>
+    <p>A support team is available at C3.127, C3.125, C3.118, C1.210. Key team members include:</p>
+    <ul>
+        <li>Dr. Mohamed Shawky</li>
+        <li>Mr. Hesham Sherif</li>
+        <li>Eng. Mariam Morgan</li>
+        <li>Eng. Walaa Ahmed</li>
+        <li>Eng. Abeer Samir</li>
+        <li>Eng. Noha Ehab</li>
+        <li>Ms. Naglaa Abozeid</li>
+        <li>Eng. Mohamed Hussein</li>
+        <li>Ms. Nihal Ali</li>
+        <li>Eng. Dina Salah</li>
+    </ul>
+
+    <h3>C. Course Assessment:</h3>
+    <p>Assessment is based on assignments, quizzes, midterm, and final exams.</p>
+    <ul>
+        <li><strong>Assignments:</strong> 10% (submitted to TA).</li>
+        <li><strong>Quizzes:</strong> 20% (best 2 out of 3 quizzes are selected).</li>
+        <li><strong>Midterm Exam:</strong> 20%.</li>
+        <li><strong>Final Exam:</strong> 50%.</li>
+        <li><strong>Important Notice:</strong> 75% attendance of lectures and tutorials is mandatory.</li>
+    </ul>
+
+    <h3>D. Types of Sheets:</h3>
+    <ul>
+        <li>Worksheets (in Tutorials by CA).</li>
+        <li>Homework sheets (at home).</li>
+        <li>Assignment sheets (at home + submit).</li>
+    </ul>
+
+    <h3>E. Course Target:</h3>
+    <p>The course aims to teach students how to "Think" by offering the idea behind each concept, its definition, and its relevance.</p>
+
+    <h3>F. Engineers Need Mathematics:</h3>
+    <p>Mathematics is crucial for engineers, following a cycle of:</p>
+    <ol>
+        <li><strong>Modeling:</strong> Transforming real-world problems (e.g., designing a car) into mathematical models (equations).</li>
+        <li><strong>Analysis:</strong> Solving and analyzing the mathematical model.</li>
+        <li><strong>Interpretation:</strong> Translating mathematical conclusions back into real-world insights.</li>
+        <li><strong>Verification:</strong> Testing and confirming predictions/explanations.</li>
+    </ol>
+
+    <hr class="section-divider">
+
+    <h2>II. Course Main Topics/Objectives</h2>
+    <p>The course covers four main chapters:</p>
+    <ul>
+        <li><strong>Chapter 1 (5 Lectures):</strong> Basics of numbers, inequalities, and real-valued functions.</li>
+        <li><strong>Chapter 2 (3 Lectures):</strong> Fundamental concepts of limits and continuity.</li>
+        <li><strong>Chapter 3 (8 Lectures):</strong> Definition and engineering applications of differentiation.</li>
+        <li><strong>Chapter 4 (4 Lectures):</strong> Introduction to integration (indefinite & definite) and its applications.</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>III. Chapter 1: Basics of Numbers & Inequalities</h2>
+
+    <h3>A. Fundamental Concepts of Numbers:</h3>
+    <p>Topics include distinguishing between discrete and continuous data values, and between rational and irrational numbers.</p>
+    <h4>1.1 The Real Numbers; The Number Line:</h4>
+    <ul>
+        <li><strong>Natural numbers:</strong> $\text{N} = \{1, 2, 3, 4, \dots\}$</li>
+        <li><strong>Whole numbers:</strong> $\text{N}^* = \{0, 1, 2, 3, 4, \dots\}$</li>
+        <li><strong>Integers:</strong> $\text{Z} = \{\dots, -3, -2, -1, 0, 1, 2, 3, 4, \dots\}$</li>
+        <li><strong>Rational numbers:</strong> $\text{Q} = \{x = \frac{n}{m}; n, m \in \text{Z}; m \neq 0\}$</li>
+        <li><strong>Irrational numbers:</strong> $\text{Q}' = \{e, \pi, \sqrt{2}, \dots\}$</li>
+        <li><strong>Real numbers:</strong> $\text{R} = \text{Q} \cup \text{Q}' = ]-\infty, \infty[$</li>
+        <li>Every real number corresponds to a unique point on the number line.</li>
+        <li>Ordering of real numbers: $a < b$ if $b - a$ is positive, or if $a$ precedes $b$ on the number line.</li>
+    </ul>
+
+    <h4>Some Remarks on Numbers:</h4>
+    <ul>
+        <li>Decimal representation distinguishes rational (terminating/repeating decimals) from irrational (non-terminating/non-repeating decimals) numbers.</li>
+        <li>Example: $0.999999\dots = 1$.</li>
+        <li>Proof that $\sqrt{2}$ is irrational (by contradiction, covered in tutorials).</li>
+        <li>Locating $\sqrt{5}$ on the real line using a right-angle triangle.</li>
+        <li>Sums/differences of integers, rationals, and reals are integers, rationals, and reals, respectively.</li>
+        <li>Sum of two irrationals is not always irrational.</li>
+    </ul>
+
+    <h4>1.2 Integer Exponents of Real Numbers & Laws of Exponents</h4>
+    <h4>1.3 Radicals and Rational Exponents & Laws of Radicals</h4>
+
+    <h3>B. Techniques of Solving Equations and Inequalities:</h3>
+    <p>This section covers various types of equations and inequalities.</p>
+    <ul>
+        <li><strong>1.4 Introduction:</strong> Definition of equation (statement of equality between algebraic expressions) and its solution (values that make it true). Distinction between Identity (true for all values) and Conditional equation (true for some values).</li>
+        <li><strong>1.5 Solving Linear Equations:</strong> Standard form $Ax+B=0$ with a single solution $x = -\frac{B}{A}$.</li>
+        <li><strong>1.6 Solving Quadratic Equations:</strong> Standard form $ax^2+bx+c=0$ (where $a \neq 0$) with two solutions. Methods include factorization and the quadratic formula ($x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$).</li>
+        <li><strong>1.7 Solving Other Types of Equations.</strong></li>
+        <li><strong>1.8 Solutions of Inequalities:</strong> Definition of inequality (expressions related by $<, >, \leq, \geq$) and its solution (interval of values that satisfy it). Types of intervals: bounded (finite) and unbounded (infinite).</li>
+        <li>**1.9 Equations and Inequalities Involving Absolute Value:** Covers equations of the form $\vert u \vert = c$ and inequalities like $\vert u \vert < c$, and $\vert u \vert > c$, etc.</li>
+    </ul>
+
+</body>
+</html>

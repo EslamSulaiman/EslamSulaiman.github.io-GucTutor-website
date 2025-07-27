@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics 101 Lecture 11: Rotational Motion of Rigid Bodies - Part I</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                packages: {'[+]': ['ams']}
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="lecture-page">
+    <h1>Physics 101 Lecture 11 (Chapter 10): Rotational Motion of Rigid Bodies - Part I</h1>
+    <h2>Rotational Kinetics - Moment of Inertia</h2>
+
+    <p class="intro-text">
+        This lecture, presented by Dr. Ahmed Maarouf, introduces the fundamental concepts of rotational motion for rigid bodies, focusing on rotational kinematics, moment of inertia, torque, and rotational kinetic energy. [cite_start]It draws parallels between linear and rotational quantities and provides essential formulas and examples for analyzing rotating systems. [cite: 174, 175, 177, 179]
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>11.1 Rigid Body Definition</h2>
+    <p>
+        [cite_start]A **rigid object (body)** is a non-deformable object whose dimensions do not change during its motion, and the relative locations of all its constituent particles remain constant. [cite: 261, 262, 263] [cite_start]This model simplifies the analysis of extended solid objects, especially when deformation is negligible. [cite: 259, 260, 264]
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>11.2 Rotational Kinematics: Angular Quantities</h2>
+
+    <h3>Angular Position ($\theta$)</h3>
+    <p>
+        [cite_start]The angular position of a rigid object is defined as the angle between a reference line attached to the object and a reference line fixed in space (often the x-axis). [cite: 181, 268, 269, 270, 274, 282, 310, 311] [cite_start]It plays the same role in rotational motion as translational position ($x$) in linear motion. [cite: 312] [cite_start]Polar coordinates $(r, \theta)$ are convenient for representing the position of a point on a rotating disc, where $r$ is the distance from the origin $O$ to the point $P$, and $\theta$ is measured counterclockwise from the reference line. [cite: 271, 273, 275, 276, 277, 278]
+    </p>
+    <p>
+        As a particle at $P$ moves through an angle $\theta$, it sweeps an arc length $s$ on a circular path of radius $r$. [cite_start]These quantities are related by: [cite: 294, 295, 296, 298]
+        \[ s = r\theta \quad \text{or} \quad \theta = \frac{s}{r} \]
+        [cite_start]Here, $s$ and $r$ are in meters, and $\theta$ is measured in **radians**. [cite: 296, 298, 303] [cite_start]One radian is the angle subtended by an arc whose length equals the radius of the arc. [cite: 304]
+        \[ 1 \, \text{rad} = \frac{360^\circ}{2\pi} \approx 57.3^\circ \]
+        [cite_start]\[ \theta(\text{rad}) = \frac{\pi}{180^\circ} \theta(\text{deg}) \] [cite: 306, 307]
+
+    <h3>Angular Displacement ($\Delta\theta$)</h3>
+    <p>
+        [cite_start]The angular displacement is the angle an object rotates through during a time interval. [cite: 182, 313] [cite_start]It is the angle swept out by the reference line of length $r$: [cite: 314]
+        [cite_start]\[ \Delta\theta \equiv \theta_f - \theta_i \] [cite: 182, 315]
+        [cite_start]Every particle in a rigid object rotates through the same angular displacement. [cite: 189, 315, 142]
+
+    <h3>Angular Velocity ($\omega$)</h3>
+    <p>
+        [cite_start]The **average angular velocity** ($\omega_{avg}$) is the ratio of angular displacement to the time interval: [cite: 316]
+        [cite_start]\[ \omega_{avg} = \frac{\Delta\theta}{\Delta t} = \frac{\theta_f - \theta_i}{t_f - t_i} \] [cite: 316]
+        [cite_start]The **instantaneous angular speed** ($\omega$) is the limit of the average angular speed as $\Delta t$ approaches zero: [cite: 183, 184, 318, 319]
+        [cite_start]\[ \omega \equiv \frac{d\theta}{dt} \] [cite: 184]
+        [cite_start]Units of angular velocity are radians/second (rad/s or rad·s⁻¹). [cite: 184, 317] [cite_start]Angular velocity $\omega$ is positive for counterclockwise rotation ($\theta$ increasing) and negative for clockwise rotation ($\theta$ decreasing). [cite: 320, 145]
+
+    <h3>Angular Acceleration ($\alpha$)</h3>
+    <p>
+        [cite_start]The **average angular acceleration** ($\alpha_{avg}$) is the ratio of the change in angular velocity to the time taken: [cite: 322]
+        [cite_start]\[ \alpha_{avg} = \frac{\Delta\omega}{\Delta t} = \frac{\omega_f - \omega_i}{t_f - t_i} \] [cite: 322]
+        [cite_start]The **instantaneous angular acceleration** ($\alpha$) is the limit of the average angular acceleration as $\Delta t$ approaches zero (the time derivative of $\omega$): [cite: 186, 187, 323]
+        [cite_start]\[ \alpha \equiv \frac{d\omega}{dt} \] [cite: 187]
+        [cite_start]Units of angular acceleration are radians/second squared (rad/s²). [cite: 187, 323] [cite_start]Angular acceleration $\alpha$ is positive if an object rotating counterclockwise is speeding up, and negative if it is slowing down while rotating counterclockwise. [cite: 324] [cite_start]For a rigid object rotating about a fixed axis, every part of the object has the same angular speed and angular acceleration. [cite: 189, 142]
+
+    <h3>Rotational Kinematic Equations (Constant Angular Acceleration)</h3>
+    <p>
+        [cite_start]When a rigid object rotates about a fixed axis under constant angular acceleration, kinematic equations analogous to those for translational motion can be applied. [cite: 113, 114, 239, 145, 146] [cite_start]The substitutions are $x \to \theta$, $v \to \omega$, and $a \to \alpha$. [cite: 146]
+    </p>
+    <ul>
+        [cite_start]<li>Angular velocity as a function of time: [cite: 114, 240]
+            \[ \omega_f = \omega_i + \alpha t \]
+        </li>
+        [cite_start]<li>Angular position as a function of time: [cite: 114, 241]
+            \[ \theta_f = \theta_i + \omega_i t + \frac{1}{2}\alpha t^2 \]
+        </li>
+        [cite_start]<li>Angular velocity squared as a function of angular displacement: [cite: 114, 241]
+            \[ \omega_f^2 = \omega_i^2 + 2\alpha(\theta_f - \theta_i) \]
+        </li>
+        [cite_start]<li>Angular position as a function of initial and final angular velocities and time: [cite: 114, 241]
+            \[ \theta_f = \theta_i + \frac{1}{2}(\omega_i + \omega_f)t \]
+        </li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>11.3 Relation Between Linear and Angular Quantities</h2>
+    <p>
+        [cite_start]While every point on a rotating rigid body has the same angular motion ($\theta, \omega, \alpha$), different points may have different linear motions ($s, v, a$) because the linear quantities depend on the distance $r$ from the axis of rotation. [cite: 147, 148, 149, 150, 151]
+    </p>
+    <ul>
+        [cite_start]<li><strong>Arc Length (translational position):</strong> [cite: 112, 220, 149]
+            \[ s = r\theta \]
+        </li>
+        [cite_start]<li><strong>Tangential Speed (translational speed):</strong> The linear velocity is always tangent to the circular path. [cite: 112, 222, 149]
+            \[ v = r\omega \]
+            [cite_start]The tangential speed increases with distance $r$ from the center of rotation. [cite: 151]
+        </li>
+        [cite_start]<li><strong>Tangential Acceleration:</strong> [cite: 112, 225, 152]
+            \[ a_t = r\alpha \]
+        </li>
+        [cite_start]<li><strong>Centripetal (Radial) Acceleration:</strong> Any object moving in a circle has a centripetal acceleration directed towards the center. [cite: 153]
+            [cite_start]\[ a_r = \frac{v^2}{r} = r\omega^2 \] [cite: 154]
+        </li>
+        [cite_start]<li><strong>Total Linear Acceleration:</strong> The tangential component is due to changing speed, and the centripetal component is due to changing direction. [cite: 155]
+            [cite_start]\[ a = \sqrt{a_t^2 + a_r^2} = \sqrt{(r\alpha)^2 + (r\omega^2)^2} = r\sqrt{\alpha^2 + \omega^4} \] [cite: 156]
+        </li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>11.4 Moment of Inertia ($I$)</h2>
+    <p>
+        [cite_start]When an object rotates about an axis with angular speed $\omega$, it possesses rotational kinetic energy. [cite: 156] Each particle in the object has kinetic energy $K_i = \frac{1}{2}m_i v_i^2$. [cite_start]Since $v_i = r_i\omega$, the total rotational kinetic energy is found by summing over all particles. [cite: 157]
+    </p>
+    <h3>Definition of Moment of Inertia</h3>
+    <p>
+        [cite_start]The **moment of inertia ($I$)** is a measure of an object's resistance to changes in its rotational motion. [cite: 163] [cite_start]It depends on the mass of the object and how that mass is distributed around the axis of rotation. [cite: 162, 164]
+    </p>
+    <p>
+        [cite_start]For a system of particles, the moment of inertia is defined as: [cite: 108, 197, 164]
+        \[ I \equiv \sum_i m_i r_i^2 \]
+        [cite_start]Where $m_i$ is the mass of the $i^{th}$ particle and $r_i$ is its perpendicular distance from the rotation axis. [cite: 198]
+    </p>
+    <p>
+        [cite_start]For a continuous rigid object, the moment of inertia is found by integrating over all mass elements: [cite: 111, 211, 212, 161, 164, 165]
+        \[ I = \int r^2 dm \]
+        [cite_start]Where $r$ is the distance from the mass element $dm$ to the axis of rotation. [cite: 213]
+    </p>
+    <ul>
+        [cite_start]<li>Dimensions: $ML^2$ [cite: 160]</li>
+        [cite_start]<li>SI Units: kg·m² [cite: 160]</li>
+    </ul>
+    <p>
+        [cite_start]Different mass distributions can be described using densities: [cite: 166, 167]
+    </p>
+    <ul>
+        <li>**Volume mass density ($\rho$):** mass per unit volume ($dm = \rho \, dV$)</li>
+        <li>**Surface mass density ($\sigma$):** mass per unit area ($dm = \sigma \, dA$)</li>
+        <li>**Linear mass density ($\lambda$):** mass per unit length ($dm = \lambda \, dL$)</li>
+    </ul>
+
+    <h3>Parallel Axis Theorem</h3>
+    <p>
+        [cite_start]The parallel-axis theorem simplifies the calculation of the moment of inertia for an arbitrary axis that is parallel to an axis passing through the center of mass. [cite: 168, 169]
+        [cite_start]\[ I = I_{CM} + MD^2 \] [cite: 169]
+        Where:
+    </p>
+    <ul>
+        [cite_start]<li>$I$ is the moment of inertia about the arbitrary axis. [cite: 169]</li>
+        [cite_start]<li>$I_{CM}$ is the moment of inertia about the axis passing through the center of mass. [cite: 170]</li>
+        [cite_start]<li>$M$ is the total mass of the body. [cite: 172]</li>
+        [cite_start]<li>$D$ is the perpendicular distance between the center of mass axis and the arbitrary parallel axis. [cite: 171]</li>
+    </ul>
+    <h4>Example: Moment of Inertia of a Rod Rotating Around One End</h4>
+    <p>
+        [cite_start]If the moment of inertia of a uniform rod of mass $M$ and length $L$ about an axis through its midpoint (CM) is $I_{CM} = \frac{1}{12}ML^2$, [cite: 172] [cite_start]then the moment of inertia about an axis passing through one of its ends (where $D = L/2$) is: [cite: 172]
+        [cite_start]\[ I = I_{CM} + MD^2 = \frac{1}{12}ML^2 + M\left(\frac{L}{2}\right)^2 = \frac{1}{12}ML^2 + \frac{1}{4}ML^2 = \frac{1}{3}ML^2 \] [cite: 172]
+
+    <hr class="section-divider">
+
+    <h2>11.5 Rotational Kinetic Energy ($K_R$)</h2>
+    <p>
+        [cite_start]If a rigid object rotates about a fixed axis with angular speed $\omega$, its rotational kinetic energy is: [cite: 110, 206]
+        [cite_start]\[ K_R = \frac{1}{2}I\omega^2 \] [cite: 207]
+        [cite_start]Where $I$ is the moment of inertia about the axis of rotation. [cite: 209, 158]
+    </p>
+    <p>
+        [cite_start]For a rigid object rolling on a rough surface without slipping, its total kinetic energy ($K$) is the sum of its rotational kinetic energy about its center of mass ($I_{CM}$) and the translational kinetic energy of its center of mass ($M v_{CM}^2$): [cite: 113, 231, 232]
+        [cite_start]\[ K = \frac{1}{2}I_{CM}\omega^2 + \frac{1}{2}Mv_{CM}^2 \] [cite: 232]
+
+    <hr class="section-divider">
+
+    <h2>11.6 Torque ($\tau$)</h2>
+    <p>
+        **Torque** is the rotational equivalent of force; it is what causes an object to rotate or change its rotational motion.
+    </p>
+    <h3>Definition of Torque</h3>
+    <p>
+        [cite_start]The magnitude of the torque associated with a force $\vec{F}$ acting on an object at a distance $r$ from the rotation axis is: [cite: 109, 199, 200]
+        [cite_start]\[ \tau = rF \sin\phi = Fd \] [cite: 200]
+        Where:
+    </p>
+    <ul>
+        [cite_start]<li>$r$ is the distance from the rotation axis to the point where the force is applied. [cite: 199]</li>
+        [cite_start]<li>$\phi$ is the angle between the position vector $\vec{r}$ (from the axis to the point of application) and the force vector $\vec{F}$. [cite: 202]</li>
+        [cite_start]<li>$d = r \sin\phi$ is the **moment arm** (or lever arm) of the force, which is the perpendicular distance from the rotation axis to the line of action of the force. [cite: 202]</li>
+    </ul>
+
+    <h3>Newton's Second Law for Rotation (Rigid Object Under a Net Torque)</h3>
+    <p>
+        If a rigid object free to rotate about a fixed axis has a net external torque acting on it, the object undergoes an angular acceleration $\alpha$. [cite_start]This relationship is the rotational analog to Newton's Second Law ($\sum \vec{F} = m\vec{a}$). [cite: 115, 252, 253, 255]
+        [cite_start]\[ \sum\tau_{ext} = I\alpha \] [cite: 253]
+
+    <hr class="section-divider">
+
+    <h2>11.7 Work and Power in Rotational Motion</h2>
+    <h3>Work Done by a Torque</h3>
+    <p>
+        [cite_start]If work is done on a rigid object and the only result of the work is rotation about a fixed axis, the net work done by external forces in rotating the object equals the change in its rotational kinetic energy: [cite: 112, 113, 229, 230]
+        [cite_start]\[ \sum W = \frac{1}{2}I\omega_f^2 - \frac{1}{2}I\omega_i^2 \] [cite: 230]
+
+    <h3>Power Delivered by a Torque</h3>
+    <p>
+        [cite_start]The rate at which work is done by an external force in rotating a rigid object about a fixed axis, or the power delivered, is: [cite: 112, 226, 227, 228]
+        [cite_start]\[ P = \tau\omega \] [cite: 228]
+
+</body>
+</html>

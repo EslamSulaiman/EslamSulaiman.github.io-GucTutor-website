@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATH103 for Engineering: Lecture #3 Summary</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']], // Defines how inline math is delimited
+                packages: {'[+]': ['ams']} // Explicitly load ams package for commands like \mathbb
+            },
+            svg: {
+                fontCache: 'global' // Optimizes font loading
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+</head>
+<body class="lecture-page">
+    <h1>MATH103 for Engineering: Lecture #3 Summary</h1>
+
+    <p class="intro-text">
+        [cite_start]This lecture continues Chapter 1 of MATH103 for Engineering, focusing on the various types of functions and techniques for sketching their graphs, including shifts, reflections, and scaling. [cite: 1]
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>Chapter 1: Basics: Types of functions</h2>
+
+    <h3>Shift Formulas: Shifting Functions</h3>
+
+    <h4>Vertical Shifts</h4>
+    <ul>
+        [cite_start]<li>For $y=f(x)+k$: Shifts the graph of $f$ up $k$ units if $k>0$. [cite: 1]</li>
+        [cite_start]<li>Shifts it down $|k|$ units if $k<0$. [cite: 1]</li>
+    </ul>
+    <p><strong>Example: Vertical Shift</strong><br>
+    Consider the basic function $y=x^2$. <br>
+    - $y=x^2+1$ shifts the graph of $y=x^2$ up by 1 unit. <br>
+    - [cite_start]$y=x^2-2$ shifts the graph of $y=x^2$ down by 2 units. [cite: 1]</p>
+
+    <h4>Horizontal Shifts</h4>
+    <ul>
+        [cite_start]<li>For $y=f(x+h)$: Shifts the graph of $f$ left $h$ units if $h>0$. [cite: 1]</li>
+        [cite_start]<li>Shifts it right $|h|$ units if $h<0$. [cite: 1]</li>
+    </ul>
+    <p><strong>Example: Horizontal Shift</strong><br>
+    Consider the basic function $y=x^2$. <br>
+    - $y=(x+3)^2$ shifts the graph of $y=x^2$ to the left by 3 units. <br>
+    - [cite_start]$y=(x-2)^2$ shifts the graph of $y=x^2$ to the right by 2 units. [cite: 2]</p>
+
+    <hr class="section-divider">
+
+    <h2>Curve Sketching: Very Important Steps</h2>
+    [cite_start]<p>To sketch the graph of a transformed function, follow these steps: [cite: 3]</p>
+    <ol>
+        [cite_start]<li>Sketch the graph of the basic function. [cite: 3]</li>
+        [cite_start]<li>Reflect it around the y-axis, if needed. [cite: 4]</li>
+        [cite_start]<li>Make horizontal shifts "right or left", if needed. [cite: 4]</li>
+        [cite_start]<li>Reflect it around the x-axis, if needed. [cite: 5]</li>
+        [cite_start]<li>Make vertical shifts "up or down", if needed. [cite: 5]</li>
+    </ol>
+    [cite_start]<p>Note: It is generally better to proceed by first reflecting, then shifting. [cite: 6]</p>
+
+    <h3>Examples:</h3>
+    <h4>Sketch a) $f(x)=-\sqrt{2x+4}-3$</h4>
+    [cite_start]<p>This can be rewritten as $f(x)=-\sqrt{2(x+2)}-3$. [cite: 6]</p>
+    <ul>
+        [cite_start]<li><strong>Basic function:</strong> $y=\sqrt{x}$. [cite: 6]</li>
+        [cite_start]<li><strong>Step 1: Reflection across the X-axis:</strong> Apply the negative sign outside the square root, $y=-\sqrt{x}$. [cite: 6]</li>
+        <li><strong>Step 2: Horizontal Shift (due to $x+2$):</strong> Shift left by 2 units. This results from $x+2$, so for the general form $f(x+h)$, here $h=2 > 0$ means a left shift. [cite_start]This implies a transformation from $\sqrt{2x}$ to $\sqrt{2(x+2)}$. [cite: 6]</li>
+        [cite_start]<li><strong>Step 3: Vertical Shift (due to $-3$):</strong> Shift down by 3 units. [cite: 6]</li>
+    </ul>
+    <h4>Sketch b) $f(x)=-3x^{2}+6x-1$</h4>
+    [cite_start]<p>First, complete the square to get $f(x)=-3(x-1)^{2}+2$. [cite: 6]</p>
+    <ul>
+        [cite_start]<li><strong>Basic function:</strong> $y=x^2$. [cite: 7]</li>
+        <li><strong>Step 1: Reflection across the x-axis and Vertical Stretch:</strong> Apply the $-3$ factor, $y=-3x^2$. [cite_start]The negative sign reflects across the x-axis, and the '3' causes a vertical stretch. [cite: 6]</li>
+        [cite_start]<li><strong>Step 2: Horizontal Shift (due to $x-1$):</strong> Shift right by 1 unit. [cite: 7]</li>
+        [cite_start]<li><strong>Step 3: Vertical Shift (due to $+2$):</strong> Shift up by 2 units. [cite: 7]</li>
+    </ul>
+    <hr class="section-divider">
+
+    <h2>Scaling and Reflecting Functions</h2>
+
+    [cite_start]<h3>Vertical and Horizontal Scaling and Reflecting Formulas: [cite: 7]</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Transformation</th>
+                <th>Effect</th>
+                <th>Condition</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>$y=cf(x)$</td>
+                <td>Stretches the graph of $f$ vertically by a factor of $c$.</td>
+                [cite_start]<td>For $c>1$ [cite: 7]</td>
+            </tr>
+            <tr>
+                <td>$y=\frac{1}{c}f(x)$</td>
+                <td>Compresses the graph of $f$ vertically by a factor of $c$.</td>
+                [cite_start]<td>For $c>1$ [cite: 7]</td>
+            </tr>
+            <tr>
+                <td>$y=f(cx)$</td>
+                <td>Compresses the graph of $f$ horizontally by a factor of $c$.</td>
+                [cite_start]<td>For $c>1$ [cite: 7]</td>
+            </tr>
+            <tr>
+                <td>$y=f(x/c)$</td>
+                <td>Stretches the graph of $f$ horizontally by a factor of $c$.</td>
+                [cite_start]<td>For $c>1$ [cite: 7]</td>
+            </tr>
+            <tr>
+                <td>$y=-f(x)$</td>
+                <td>Reflects the graph of $f$ across the x-axis.</td>
+                [cite_start]<td>For $c=-1$ [cite: 8]</td>
+            </tr>
+            <tr>
+                <td>$y=f(-x)$</td>
+                <td>Reflects the graph of $f$ across the y-axis.</td>
+                [cite_start]<td>For $c=-1$ [cite: 9]</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><strong>Example: Vertical Scaling</strong><br>
+    For $y=\sqrt{x}$: <br>
+    - $y=3\sqrt{x}$ shows vertical stretching. <br>
+    - [cite_start]$y=\frac{1}{3}\sqrt{x}$ shows vertical compression. [cite: 9]</p>
+
+    <p><strong>Example: Horizontal Scaling</strong><br>
+    For $y=\sqrt{x}$: <br>
+    - $y=\sqrt{3x}$ shows horizontal compression. <br>
+    - [cite_start]$y=\sqrt{x/3}$ shows horizontal stretching. [cite: 9]</p>
+
+    <hr class="section-divider">
+
+    [cite_start]<h2>We continue what we started on Lecture 2: "Some types of functions" [cite: 9]</h2>
+
+    [cite_start]<h3>Types of Functions: [cite: 10]</h3>
+    <ol>
+        [cite_start]<li>Polynomials. [cite: 10]</li>
+        [cite_start]<li>Square root function "radicals". [cite: 10]</li>
+        [cite_start]<li>Rational function. [cite: 10]</li>
+        [cite_start]<li>Absolute value function "Modulus". [cite: 10]</li>
+        [cite_start]<li>Exponential function. [cite: 10]</li>
+        [cite_start]<li>Logarithmic function. [cite: 10]</li>
+        [cite_start]<li>Trigonometric functions. [cite: 11]</li>
+        [cite_start]<li>Hyperbolic functions. [cite: 11]</li>
+    </ol>
+
+    <h3>3. Rational function</h3>
+    [cite_start]<p><strong>Definition:</strong> The quotient of two polynomials is called a rational function $f(x) = \frac{P(x)}{Q(x)}$, where $P(x)$ and $Q(x)$ are polynomials. [cite: 11]</p>
+    <p>The domain of the rational function is $\mathbb{R} - \{x | [cite_start]Q(x)=0\}$ (all real numbers except where the denominator is zero). [cite: 12]</p>
+    [cite_start]<p><strong>Example:</strong> The domain of the rational function $f(x)=\frac{3x^2-1}{x-4}$ is $\mathbb{R}-\{4\}$, which can also be written as $\{x : x \in \mathbb{R}, x \ne 4\}$. [cite: 12]</p>
+
+    <p><strong>Some special rational functions:</strong><br>
+    - The graph for $y=\frac{1}{x^n}$ will have a shape similar to $y=\frac{1}{x}$ when $n$ is odd (branches in opposite quadrants).<br>
+    - [cite_start]The graph for $y=\frac{1}{x^n}$ will have a shape similar to $y=\frac{1}{x^2}$ when $n$ is even (branches in adjacent quadrants, typically both going to positive or negative infinity). [cite: 13]</p>
+
+    <h3>Example: Sketch the graph of $y = -\frac{1}{(x-1)^2} + 3$</h3>
+    [cite_start]<p>Apply the 3 steps of curve sketching: [cite: 13]</p>
+    <ol>
+        <li>Start with the basic graph of $y=\frac{1}{x^2}$.</li>
+        [cite_start]<li>Reflect on the x-axis (due to the negative sign in front): $y=-\frac{1}{x^2}$. [cite: 13]</li>
+        [cite_start]<li>Shift right by 1 unit (due to $x-1$): $y=-\frac{1}{(x-1)^2}$. [cite: 13]</li>
+        [cite_start]<li>Shift up by 3 units (due to $+3$): $y=-\frac{1}{(x-1)^2}+3$. [cite: 13]</li>
+    </ol>
+
+    <h3>4. Absolute Value Function $f(x) = |x|$</h3>
+    [cite_start]<p>The absolute value function $f(x)=|x|$ has a domain of $(-\infty, \infty)$ and a range of $[0, \infty)$. [cite: 14]</p>
+    <h4>Sketch the function $y = |x-2|-1$</h4>
+    [cite_start]<p>This involves both horizontal and vertical shifts. [cite: 14]</p>
+    <ul>
+        [cite_start]<li>Shift the basic graph of $y=|x|$ 2 units to the right (due to $x-2$). [cite: 15]</li>
+        [cite_start]<li>Shift it 1 unit down (due to $-1$). [cite: 15]</li>
+    </ul>
+    <h3>5. Exponential function</h3>
+    [cite_start]<p><strong>Definition:</strong> For any positive real number $a$ and any real number $x$, we define the exponential function as $f(x) = a^x$. [cite: 15]</p>
+    [cite_start]<p><strong>Special cases:</strong> [cite: 16, 17]</p>
+    <ul>
+        [cite_start]<li>If $a=1$, then $f(x)=1^x=1$. [cite: 16]</li>
+        [cite_start]<li>If $a=0$, then $f(x)=0^x=0$, provided $x>0$. [cite: 17]</li>
+    </ul>
+    [cite_start]<h3>Examples: Use the ideas of reflection and shifting to sketch the graph of: [cite: 18]</h3>
+    <ol>
+        <li>$f(x) = 4^{x+2}$<br>
+            [cite_start]The graph of $y=4^x$ shifted to the left by 2 units. [cite: 18]</li>
+        <li>$f(x) = 4^x + 2$<br>
+            [cite_start]The graph of $y=4^x$ shifted up by 2 units. [cite: 18]</li>
+        <li>$f(x) = 3 - 4^{-x} = -4^{-x} + 3$<br>
+            [cite_start]The graph of $y=4^x$ will be: [cite: 18]
+            <ul>
+                [cite_start]<li>Reflected on the y-axis (due to $-x$). [cite: 18]</li>
+                [cite_start]<li>Reflected on the x-axis (due to the negative sign in front of $4^{-x}$). [cite: 19]</li>
+                [cite_start]<li>Shifted up by 3 units (due to $+3$). [cite: 19]</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h3>Special case: The natural exponential function $f(x) = e^x$</h3>
+    [cite_start]<p>A very special irrational number denoted by $e \approx 2.71828...$ is very useful in engineering applications. [cite: 19]</p>
+    <p>The function $f(x)=e^x$ is called the natural exponential function. [cite_start]Its graph is shown in the figure (similar to $y=a^x$ for $a>1$). [cite: 20]</p>
+    [cite_start]<h3>Properties of the natural exponential function: [cite: 21]</h3>
+    <ul>
+        <li>$e^2 \cdot e^3 = e^5$</li>
+        <li>$e^{-3} = 1/e^3$</li>
+        <li>$e^5 / e^3 = e^2$</li>
+        <li>$(e^2)^3 = e^6$</li>
+    </ul>
+
+    <h3>6. Logarithmic function</h3>
+    [cite_start]<p>We define $y = \log_a(x)$ if and only if $x = a^y$. [cite: 22]</p>
+    [cite_start]<p>We can think of "$\log_a(x)$" as the power of "$a$" that gives $x$. [cite: 22]</p>
+    [cite_start]<p><strong>Examples:</strong> [cite: 21]</p>
+    <ul>
+        <li>$\log_2(32) = 5$, because $2^5 = 32$. [cite_start]This means the power of 2 that gives 32 is 5. [cite: 21]</li>
+        <li>$\log_2(2) = 1$, because $2^1 = 2$. [cite_start]The power of 2 that gives 2 is 1. [cite: 21]</li>
+        <li>$\log_2(1) = 0$, because $2^0 = 1$. [cite_start]The power of 2 that gives 1 is 0. [cite: 21]</li>
+    </ul>
+
+    <h3>Graph of the logarithmic function:</h3>
+    [cite_start]<p>The graph of $y=\log_a(x)$ is the reflection of $y=a^x$ on the line $y=x$. [cite: 23]</p>
+    <p>NEXT Lecture</p>
+    <p>Thank you</p>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATH103 for Engineering: Lecture #15 Summary</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']], // Defines how inline math is delimited
+                packages: {'[+]': ['ams']} // Explicitly load ams package for commands like \mathbb
+            },
+            svg: {
+                fontCache: 'global' // Optimizes font loading
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+</head>
+<body class="lecture-page">
+    <h1>MATH103 for Engineering: Lecture #15 Summary</h1>
+
+    <p class="intro-text">
+        This lecture continues Chapter 3 of MATH103 for Engineering, focusing on the applications of limits: differentiation of functions, specifically extrema points and optimization.
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>Chapter 3: Applications of Limits: Differentiation of Functions</h2>
+
+    <h3>Applications of Differentiation</h3>
+    <p>This lecture covers the following applications of differentiation:</p>
+    <ol type="a">
+        <li>Logarithmic differentiation.</li>
+        <li>Challenging problem.</li>
+        <li>Implicit differentiation.</li>
+        <li>Linearization of a function.</li>
+        <li>The Differential of a function.</li>
+        <li>L'Hopital rule.</li>
+        <li>Extrema & Inflection points, Optimization & Curve sketching.</li>
+    </ol>
+
+    <hr class="section-divider">
+
+    <h2>Extrema Points</h2>
+    <h3>The maximum and minimum values of a function</h3>
+    <ul>
+        <li>Absolute Extrema</li>
+        <li>Local Extrema</li>
+    </ul>
+    <p><strong>Introduction:</strong> One of the most important applications of calculus of differentiation is to find the best way to perform a certain task. This problem is eventually known as the optimization problem. Solving an optimization problem usually reduces to finding the maximum or the minimum value of a function and determine where this value occurs. Our task, in this Lecture, concentrates on developing some mathematical tools for solving this problem.</p>
+
+    <hr class="section-divider">
+
+    <h2>DEFINITIONS</h2>
+    <h3>Absolute Maximum, Absolute Minimum</h3>
+    <p>Let $f$ be a function with domain $D$. Then $f$ has an absolute maximum value on $D$ at a point $c$ if $f(x)\le f(c)$ for all $x$ in $D$ and an absolute minimum value on $D$ at $c$ if $f(x)\ge f(c)$ for all $x$ in $D$.</p>
+    <p>The existence of absolute maximum or minimum depends on the function and on its domain.</p>
+    <p>For example, for $y=x^2$:
+        <ul>
+            <li>On $D=(-\infty, \infty)$, there is only an absolute minimum.</li>
+            <li>On $D=[0, 2]$, there are absolute maximum and minimum.</li>
+            <li>On $D=(0, 2]$, there is only an absolute maximum.</li>
+            <li>On $D=(0, 2)$, there is no maximum or minimum.</li>
+        </ul>
+    </p>
+
+    <hr class="section-divider">
+
+    <h3>Local Maximum, Local Minimum</h3>
+    <ul>
+        <li>A function $f$ has a local maximum value at an interior point $c$ of its domain if $f(x)\le f(c)$ for all $x$ in some open interval containing $c$.</li>
+        <li>A function $f$ has a local minimum value at an interior point $c$ of its domain if $f(x)\ge f(c)$ for all $x$ in some open interval containing $c$.</li>
+    </ul>
+    <p><strong>Distinction between local and absolute extrema:</strong></p>
+    <ul>
+        <li>Local maximum: No greater value of $f$ nearby.</li>
+        <li>Absolute maximum: No greater value of $f$ anywhere. Also a local maximum.</li>
+        <li>Local minimum: No smaller value of $f$ nearby.</li>
+        <li>Absolute minimum: No smaller value of $f$ anywhere. Also a local minimum.</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>The Extreme Value Theorem</h2>
+    <p>If $f$ is continuous on a closed interval $[a, b]$, then $f$ attains both an absolute maximum value $M$ and an absolute minimum value $m$ in $[a, b]$. That is, there are numbers $x_{1}$ and $x_{2}$ in $[a, b]$ with $f(x_{1})=m$, $f(x_{2})=M$ and $m\le f(x)\le M$ for every other $x$ in $[a, b]$.</p>
+    <p>Absolute maximum or minimum may occur at an interior point or at an end point.</p>
+    <p>Even a single point of discontinuity can keep a function from having either a maximum or minimum value on a closed interval. For example, the function $y=\begin{cases}x,&0\le x<1\\ 0,&x=1\end{cases}$ is continuous at every point of $[0, 1]$ except $x=1$, yet its graph over $[0, 1]$ does not have a highest point.</p>
+    <p>If the domain of the continuous function is not a closed interval, then the function may neither have maximum nor minimum. For example, for $y=x^2$ on $D=(0,2)$, there is no maximum or minimum.</p>
+
+    <hr class="section-divider">
+
+    <h2>Critical Points of a function</h2>
+    <h3>The First Derivative Theorem for Local Extreme Values</h3>
+    <p>If $f$ has a local maximum or minimum value at an interior point $c$ of its domain, and if $f'$ is defined at $c$, then $f^{\prime}(c)=0$. This means there is a horizontal tangent at $c$.</p>
+    <p><strong>DEFINITION:</strong> An interior point of the domain of a function $f$ where $f'$ is zero or undefined is a critical point of $f$.</p>
+    <p>Is it true that every critical point is a point of local max. or min.? (This is a question posed in the lecture, implying the answer is no).</p>
+
+    <p>Thank you</p>
+
+</body>
+</html>

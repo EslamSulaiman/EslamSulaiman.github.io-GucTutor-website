@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATH103 for Engineering: Lecture #7 Summary</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']], // Defines how inline math is delimited
+                packages: {'[+]': ['ams']} // Explicitly load ams package for commands like \mathbb
+            },
+            svg: {
+                fontCache: 'global' // Optimizes font loading
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+</head>
+<body class="lecture-page">
+    <h1>MATH103 for Engineering: Lecture #7 Summary</h1>
+
+    <p class="intro-text">
+        This lecture continues Chapter 2 of MATH103 for Engineering, focusing on advanced techniques for limits, including the Sandwich Theorem, and introduces one-sided limits.
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>Chapter 2: Limits of Functions (Continued)</h2>
+
+    <h3>Techniques of Limits (Continued)</h3>
+    <ol>
+        <li><strong>Direct Substitution</strong></li>
+        <li><strong>If the limit results in an indeterminate form ($\frac{0}{0}$), "Undetermined"</strong>:
+            <ol type="i">
+                <li>We must cancel the zero factor (i.e., identify common factors) by:
+                    <ol type="a">
+                        <li>Factorizing both numerator and denominator.</li>
+                        <li>Multiplying by the conjugate.</li>
+                    </ol>
+                </li>
+                <li>Important rule: $\lim_{\theta\rightarrow0}\frac{sin~\theta}{\theta}=1$. This rule is also valid with "tan".
+                    <ul>
+                        <li>This is an important result.</li>
+                        <li><strong>Proof Example ($\lim_{x\rightarrow0}\frac{sin~2x}{sin~3x}$):</strong>
+                            $\lim_{x\rightarrow0}\frac{sin~2x}{sin~3x} = \lim_{x\rightarrow0}(\frac{sin~2x}{sin~3x}.\frac{x}{x}) = \lim_{x\rightarrow0}(\frac{sin~2x}{x}.\frac{x}{sin~3x})$
+                            $= \lim_{x\rightarrow0}\frac{sin~2x}{x}\cdot \lim_{x\rightarrow0}\frac{x}{sin~3x}$
+                            $= \frac{2}{3}\lim_{2x\rightarrow0}\frac{sin~2x}{2x}\cdot \lim_{3x\rightarrow0}\frac{3x}{sin~3x} = \frac{2}{3}$
+                        </li>
+                        <li><strong>Proof Example ($\lim_{x\rightarrow0}\frac{tan~2x}{sin~3x}$):</strong>
+                            $\lim_{x\rightarrow0}\frac{tan~2x}{sin~3x} = \frac{2}{3}\lim_{x\rightarrow0}(\frac{tan~2x}{2x}\cdot\frac{3x}{sin~3x})$
+                            $= \frac{2}{3}\lim_{2x\rightarrow0}\frac{tan~2x}{2x}\cdot \lim_{3x\rightarrow0}\frac{3x}{sin~3x} = \frac{2}{3}\lim_{2x\rightarrow0}\frac{tan~2x}{2x}$
+                            $= \frac{2}{3}\lim_{2x\rightarrow0}\frac{sin~2x}{2x}\cdot \lim_{x\rightarrow0}\frac{1}{cos~2x} = \frac{2}{3}$
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+        </li>
+        <li><strong>Squeezing "Sandwich" Theorem</strong>
+            <ul>
+                <li>We use it with Bounded functions ONLY.</li>
+                <li><strong>Theorem 4:</strong> Suppose that $g(x)\le f(x)\le h(x)$ for all $x$ in some open interval containing $c$, except possibly at $x=c$ itself.
+                <li>Suppose also that $\lim_{x\rightarrow c}g(x)=\lim_{x\rightarrow c}h(x)=L$.
+                <li>Then $\lim_{x\rightarrow c}f(x)=L$.</li>
+                <li><strong>Example 1:</strong> If $1-\frac{x^{2}}{2}\le u(x)\le1+\frac{x^{2}}{2}$, find $\lim_{x\rightarrow0}u(x)$.
+                    <ul>
+                        <li>Since, $\lim_{x\rightarrow0}(1-\frac{x^{2}}{2})=1=\lim_{x\rightarrow0}(1+\frac{x^{2}}{2})$, then (by the sandwich theorem) $\lim_{x\rightarrow0}u(x)=1$.</li>
+                    </ul>
+                </li>
+                <li><strong>Example 2:</strong> Prove that: $\lim_{x\rightarrow0}x^{2}sin(\frac{1}{x})=0$.
+                    <ul>
+                        <li>Notice that, $-1\le sin(1/x)\le1$, so $-x^{2}\le x^{2}sin(1/x)\le x^{2}$.</li>
+                        <li>As $\lim_{x\rightarrow0}x^{2}=0$ and $\lim_{x\rightarrow0}(-x^{2})=0$, therefore, by the sandwich theorem: $\lim_{x\rightarrow0}x^{2}sin(\frac{1}{x})=0$.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><strong>Limits at infinity</strong>
+            <ul>
+                <li>When $x$ increases without bound ($x \rightarrow \infty$), the values of the function are very close to zero.
+                <li>Similarly, when $x$ decreases without bound ($x \rightarrow -\infty$), the values of the function are very close to zero.
+                <li><strong>Technique for rational functions:</strong> To find the limit of a rational function as $x \rightarrow \pm\infty$, divide both the numerator and denominator by the highest order term in the denominator, then evaluate the limit.</li>
+                <li><strong>Example:</strong> For $\lim_{x\rightarrow\infty}(2+\frac{sin~x}{x})=2$.
+                    <ul>
+                        <li>Since $-1 \le \sin x \le 1$, we have $-\frac{1}{x} \le \frac{\sin x}{x} \le \frac{1}{x}$ for $x > 0$.</li>
+                        <li>As $\lim_{x\rightarrow\infty} -\frac{1}{x} = 0$ and $\lim_{x\rightarrow\infty} \frac{1}{x} = 0$, by the Sandwich Theorem, $\lim_{x\rightarrow\infty} \frac{sin~x}{x} = 0$.</li>
+                        <li>Therefore, $\lim_{x\rightarrow\infty}(2+\frac{sin~x}{x})=2+0=2$.</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><strong>L'Hopital's Rule</strong> (this technique will be covered after differentiation)</li>
+    </ol>
+
+    <hr class="section-divider">
+
+    <h3>One-Sided Limit (Motivation)</h3>
+    <p>Consider the Heaviside (unit step) function defined as: $y(x)=\begin{cases}0,&x<0\\ 1,&x\ge0\end{cases}$</p>
+    <ul>
+        <li>As $x\rightarrow0$ from the left ($x<0$), we can see that $y(x)\rightarrow0$. This is written as: $\lim_{x\rightarrow0^{-}}y(x)=0$.</li>
+        <li>As $x\rightarrow0$ from the right ($x>0$), we can see that $y(x)\rightarrow1$. This is written as: $\lim_{x\rightarrow0^{+}}y(x)=1$.</li>
+        <li>Therefore, there is no unique number that $y(x)$ approaches as $x\rightarrow0$. Thus, $\lim_{x\rightarrow0}y(x)=$ Does Not Exist "DNE".</li>
+    </ul>
+
+    <h3>Formal Definition of One-Sided Limit</h3>
+    <ul>
+        <li>We say that the limit of $f(x)$ equals $L$ as "$x \rightarrow a^{-}$" ($x$ approaches $a$ from left), if the values of $f(x)$ are arbitrarily close to a unique number $L$, when the values of $x$ are sufficiently close to $a$ ($x < a$), but not necessarily equal to $a$.</li>
+        <li>We say that the limit of $f(x)$ equals $M$ as "$x \rightarrow a^{+}$" ($x$ approaches $a$ from right), if the values of $f(x)$ are arbitrarily close to a unique number $M$, when the values of $x$ are sufficiently close to $a$ ($x > a$), but not necessarily equal to $a$.</li>
+    </ul>
+
+    <h3>When is it necessary to study left-hand and right-sided limits?</h3>
+    <ol>
+        <li>If $f(x)$ is defined differently "with different expressions" around the limit study point.</li>
+        <li>Whenever we have a modulus, and its symmetric point is the same as the limit study point.</li>
+    </ol>
+    <p><strong>Conclusion:</strong> If the function is defined on a closed interval $[a, b]$, then at point "$a$" we can only calculate the right-sided limit, and at point "$b$" we can only calculate the left-sided limit.</p>
+
+</body>
+</html>

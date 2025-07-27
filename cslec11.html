@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSEN102 Introduction to Computer Science: Lecture 11 Summary</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                packages: {'[+]': ['ams']}
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+</head>
+<body class="lecture-page">
+    <h1>CSEN102 Introduction to Computer Science: Lecture 11: Boolean Logic (Part 1)</h1>
+
+    <p class="intro-text">
+        This lecture for CSEN102: Introduction to Computer Science, given by Milad Ghantous, PhD, introduces the foundational concepts of Boolean logic, which is crucial for understanding how computers perform operations.
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>11.1 Introduction to Boolean Logic</h2>
+    <p>Boolean logic, named after George Boole, is a branch of algebra that deals with values of true and false (often represented as 1 and 0). It is the mathematical foundation of digital circuits and computer programming logic. In Boolean logic, statements are either true or false, and operations are performed on these values to produce a true or false result.</p>
+
+    <h3>Key Concepts:</h3>
+    <ul>
+        <li><strong>Binary Values:</strong> True (1) and False (0).</li>
+        <li><strong>Logical Operators:</strong> Operations that combine or modify Boolean values.</li>
+        <li><strong>Truth Tables:</strong> Tables that show all possible input combinations for a logical operation and their corresponding outputs.</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>11.2 Basic Boolean Operators</h2>
+    <p>There are three fundamental Boolean operators:</p>
+
+    <h3>1. AND Operator:</h3>
+    <ul>
+        <li><strong>Symbol:</strong> `AND`, `&`, `&&` (in programming)</li>
+        <li><strong>Function:</strong> The result is True (1) only if ALL of its inputs are True (1). If any input is False (0), the result is False (0).</li>
+        <li><strong>Truth Table:</strong>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Input A</th>
+                        <th>Input B</th>
+                        <th>Output (A AND B)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>0</td><td>0</td><td>0</td></tr>
+                    <tr><td>0</td><td>1</td><td>0</td></tr>
+                    <tr><td>1</td><td>0</td><td>0</td></tr>
+                    <tr><td>1</td><td>1</td><td>1</td></tr>
+                </tbody>
+            </table>
+        </li>
+    </ul>
+
+    <h3>2. OR Operator:</h3>
+    <ul>
+        <li><strong>Symbol:</strong> `OR`, `|`, `||` (in programming)</li>
+        <li><strong>Function:</strong> The result is True (1) if AT LEAST ONE of its inputs is True (1). The result is False (0) only if ALL inputs are False (0).</li>
+        <li><strong>Truth Table:</strong>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Input A</th>
+                        <th>Input B</th>
+                        <th>Output (A OR B)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>0</td><td>0</td><td>0</td></tr>
+                    <tr><td>0</td><td>1</td><td>1</td></tr>
+                    <tr><td>1</td><td>0</td><td>1</td></tr>
+                    <tr><td>1</td><td>1</td><td>1</td></tr>
+                </tbody>
+            </table>
+        </li>
+    </ul>
+
+    <h3>3. NOT Operator:</h3>
+    <ul>
+        <li><strong>Symbol:</strong> `NOT`, `!`, `~` (in programming)</li>
+        <li><strong>Function:</strong> The result is the inverse of the input. If the input is True (1), the output is False (0), and vice versa. It is a unary operator (takes only one input).</li>
+        <li><strong>Truth Table:</strong>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Input A</th>
+                        <th>Output (NOT A)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>0</td><td>1</td></tr>
+                    <tr><td>1</td><td>0</td></tr>
+                </tbody>
+            </table>
+        </li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>11.3 Boolean Expressions</h2>
+    <p>Boolean expressions are combinations of Boolean variables and operators that evaluate to either true or false. These expressions are used extensively in conditional statements (e.g., `if` statements) and loops in programming.</p>
+
+    <h3>Examples:</h3>
+    <ul>
+        <li>`A AND B`</li>
+        <li>`NOT (A OR B)`</li>
+        <li>`(X AND Y) OR Z`</li>
+    </ul>
+
+    <p>Boolean logic is the bedrock of digital computing, enabling computers to make decisions and perform complex operations by manipulating simple true/false values.</p>
+
+    <p>Thank you</p>
+
+</body>
+</html>

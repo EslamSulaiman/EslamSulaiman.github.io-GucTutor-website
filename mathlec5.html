@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATH103 for Engineering: Lecture #5 Summary</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']], // Defines how inline math is delimited
+                packages: {'[+]': ['ams']} // Explicitly load ams package for commands like \mathbb
+            },
+            svg: {
+                fontCache: 'global' // Optimizes font loading
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+</head>
+<body class="lecture-page">
+    <h1>MATH103 for Engineering: Lecture #5 Summary</h1>
+
+    <p class="intro-text">
+        This lecture continues Chapter 1 of MATH103 for Engineering, focusing on inverse trigonometric functions and introducing hyperbolic functions.
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>Chapter 1: Basics: Types of Functions (Continued)</h2>
+
+    <h3>7. Trigonometric Functions & Their Inverse Functions (Continued)</h3>
+
+    <h4>(1) The Inverse Sine Function: $sin^{-1}(x)$ or $arcsin(x)$</h4>
+    <ul>
+        <li>**Definition**: $sin^{-1}(x)$ is the angle whose sine is $x$. It is an angle in the 1st or 4th quadrant. The function $sin(x)$ is restricted to the domain $[-\frac{\pi}{2}, \frac{\pi}{2}]$ to make it one-to-one and allow for an inverse.</li>
+        <li>**Domain**: $[-1, 1]$</li>
+        <li>**Range**: $[-\frac{\pi}{2}, \frac{\pi}{2}]$</li>
+        <li>**Properties**:
+            <ul>
+                <li>$sin^{-1}(sin~x) = x$, for $x \in [-\frac{\pi}{2}, \frac{\pi}{2}]$</li>
+                <li>$sin(sin^{-1}x) = x$, for $x \in [-1, 1]$</li>
+            </ul>
+        </li>
+        <li>**General Property**: $sin^{-1}(-x) = -sin^{-1}(x)$</li>
+        <li>**Examples**:
+            <ul>
+                <li>$sin^{-1}(\frac{\sqrt{3}}{2}) = \frac{\pi}{3}$</li>
+                <li>$sin^{-1}(-\frac{1}{\sqrt{2}}) = sin^{-1}(-\frac{\sqrt{2}}{2}) = -\frac{\pi}{4}$</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h4>(2) The Inverse Cosine Function: $cos^{-1}(x)$ or $arccos(x)$</h4>
+    <ul>
+        <li>**Definition**: $cos^{-1}(x)$ is the angle whose cosine is $x$. It is an angle in the 1st or 2nd quadrant. The domain of $cos(x)$ is restricted to $[0, \pi]$ to define its inverse.</li>
+        <li>**Domain**: $[-1, 1]$</li>
+        <li>**Range**: $[0, \pi]$</li>
+        <li>**Properties**:
+            <ul>
+                <li>$cos^{-1}(cos~x) = x$, for $x \in [0, \pi]$</li>
+                <li>$cos(cos^{-1}x) = x$, for $x \in [-1, 1]$</li>
+            </ul>
+        </li>
+        <li>**General Property**: $cos^{-1}(-x) = \pi - cos^{-1}(x)$</li>
+        <li>**Examples**:
+            <ul>
+                <li>$cos^{-1}(\frac{1}{\sqrt{2}}) = cos^{-1}(\frac{\sqrt{2}}{2}) = \frac{\pi}{4}$</li>
+                <li>$cos^{-1}(-\frac{1}{2}) = \frac{2}{3}\pi$</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h4>(3) The Inverse Tangent and Cotangent Functions: $tan^{-1}(x)$, $arctan(x)$, $cot^{-1}(x)$, $arccot(x)$</h4>
+    <ul>
+        <li>**Inverse Tangent**:
+            <ul>
+                <li>**Definition**: $y=tan^{-1}x$ is the number in $(-\frac{\pi}{2}, \frac{\pi}{2})$ for which $tan~y=x$. The domain of $tan(x)$ is restricted to $(-\frac{\pi}{2}, \frac{\pi}{2})$ to define its inverse.</li>
+                <li>**Domain**: $(-\infty, \infty)$</li>
+                <li>**Range**: $(-\frac{\pi}{2}, \frac{\pi}{2})$</li>
+                <li>**Properties**:
+                    <ul>
+                        <li>$tan(tan^{-1}x)=x$, for $x \in (-\infty,\infty)$</li>
+                        <li>$tan^{-1}(tan~x)=x$, for $x \in (-\frac{\pi}{2},\frac{\pi}{2})$</li>
+                    </ul>
+                </li>
+                <li>**General Property**: $tan^{-1}(-x)=-tan^{-1}(x)$</li>
+                <li>**Examples**:
+                    <ul>
+                        <li>$tan^{-1}(\frac{1}{\sqrt{3}}) = tan^{-1}(\frac{\sqrt{3}}{3}) = \frac{\pi}{6}$</li>
+                        <li>$tan^{-1}(-\sqrt{3}) = -\frac{\pi}{3}$</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>**Inverse Cotangent**:
+            <ul>
+                <li>**Definition**: $y=cot^{-1}x$ is the number in $(0, \pi)$ for which $cot~y=x$. The domain of $cot(x)$ is restricted to $(0, \pi)$ to define its inverse.</li>
+                <li>**Domain**: $(-\infty, \infty)$</li>
+                <li>**Range**: $(0, \pi)$</li>
+                <li>**Properties**:
+                    <ul>
+                        <li>$cot(cot^{-1}x)=x$, for $x \in (-\infty,\infty)$</li>
+                        <li>$cot^{-1}(cot~x)=x$, for $x \in (0,\pi)$</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>Graphs of All Inverse Trigonometric Functions</h3>
+    <p>It is important to study the graphs of all inverse trigonometric functions to understand their domains and ranges.</p>
+    <ul>
+        <li>**$y=sin^{-1}x$**: Domain: $[-1,1]$, Range: $[-\frac{\pi}{2},\frac{\pi}{2}]$</li>
+        <li>**$y=cos^{-1}x$**: Domain: $[-1,1]$, Range: $[0,\pi]$</li>
+        <li>**$y=tan^{-1}x$**: Domain: $(-\infty,\infty)$, Range: $(-\frac{\pi}{2},\frac{\pi}{2})$</li>
+        <li>**$y=sec^{-1}x$**: Domain: $x\le-1$ or $x\ge1$, Range: $[0,\pi], y\ne\frac{\pi}{2}$</li>
+        <li>**$y=csc^{-1}x$**: Domain: $x\le-1$ or $x\ge1$, Range: $[-\frac{\pi}{2},\frac{\pi}{2}],y\ne0$</li>
+        <li>**$y=cot^{-1}x$**: Domain: $(-\infty,\infty)$, Range: $(0,\pi)$</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>Key Identities and Properties of Inverse Trigonometric Functions</h2>
+    <ul>
+        <li>$sin^{-1}(x) + sin^{-1}(-x) = 0$</li>
+        <li>$cos^{-1}(x) + cos^{-1}(-x) = \pi$</li>
+        <li>$sin^{-1}(x) + cos^{-1}(x) = \frac{\pi}{2}$ (meaning they are complementary angles)</li>
+        <li>$tan^{-1}(x) + tan^{-1}(-x) = 0$</li>
+        <li>This implies that $cos^{-1}(x) = \frac{\pi}{2} - sin^{-1}(x)$.</li>
+    </ul>
+
+    <h3>Example: Finding values of basic trigonometric functions from an inverse sine function</h3>
+    <p>Let $\alpha = sin^{-1}(\frac{2}{3})$. Find the values of all basic trigonometric functions of $\alpha$.</p>
+    <p>From a right triangle where $\sin\alpha = \frac{2}{3}$ (opposite side = 2, hypotenuse = 3), the adjacent side can be found using the Pythagorean theorem: $\sqrt{3^2 - 2^2} = \sqrt{9 - 4} = \sqrt{5}$.</p>
+    <ul>
+        <li>$sin~\alpha = \frac{2}{3}$</li>
+        <li>$cos~\alpha = \frac{\sqrt{5}}{3}$</li>
+        <li>$csc~\alpha = \frac{3}{2}$</li>
+        <li>$sec~\alpha = \frac{3}{\sqrt{5}} = \frac{3\sqrt{5}}{5}$</li>
+        <li>$tan~\alpha = \frac{2}{\sqrt{5}} = \frac{2\sqrt{5}}{5}$</li>
+        <li>$cot~\alpha = \frac{\sqrt{5}}{2}$</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>8. Hyperbolic Functions (Next Lecture)</h2>
+    <p>The lecture introduces hyperbolic functions as the topic for the next session. These functions are based on the exponential function, similar to how trigonometric functions relate to circles.</p>
+    <p>The two basic hyperbolic functions are:</p>
+    <ul>
+        <li>**Hyperbolic Sine**: $Sinh(x) = \frac{e^x - e^{-x}}{2}$</li>
+        <li>**Hyperbolic Cosine**: $Cosh(x) = \frac{e^x + e^{-x}}{2}$</li>
+    </ul>
+    <p>Initial values provided:</p>
+    <ul>
+        <li>$Sinh(0) = 0$</li>
+        <li>$Cosh(0) = 1$</li>
+    </ul>
+    <p>Students are encouraged to find the domains and ranges of these functions from their graphs, and to prove basic identities using their definitions.</p>
+
+    <p>Thank you</p>
+
+</body>
+</html>

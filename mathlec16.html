@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATH103 for Engineering: Lecture #16 Summary</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']], // Defines how inline math is delimited
+                packages: {'[+]': ['ams']} // Explicitly load ams package for commands like \mathbb
+            },
+            svg: {
+                fontCache: 'global' // Optimizes font loading
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+</head>
+<body class="lecture-page">
+    <h1>MATH103 for Engineering: Lecture #16 Summary</h1>
+
+    <p class="intro-text">
+        This lecture continues Chapter 3 of MATH103 for Engineering, focusing on the applications of limits: differentiation of functions, specifically optimization problems.
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>Chapter 3: Applications of Limits: Differentiation of Functions</h2>
+
+    <h3>Applications of Differentiation</h3>
+    <p>This lecture covers the following applications of differentiation:</p>
+    <ol type="a">
+        <li>Logarithmic differentiation</li>
+        <li>Challenging problem.</li>
+        <li>Implicit differentiation.</li>
+        <li>Linearization of a function.</li>
+        <li>The Differential of a function.</li>
+        <li>L'Hopital rule.</li>
+        <li>Extrema & Inflection points, Optimization & Curve sketching.</li>
+    </ol>
+
+    <hr class="section-divider">
+
+    <h2>Optimization Problem</h2>
+    <p>"Read the real wording problem and create the function yourself"</p>
+
+    <h4>Example 1: Find two nonnegative numbers whose sum is 20 and whose product is as large as possible.</h4>
+    <p><strong>Solution:</strong> Let us denote the first number by $x$, then the second number is $20 - x$.
+    The product $P$ of the two numbers is given by:
+    $P(x)=x.(20-x)=20x-x^{2}$ with domain $0\le x\le20$.
+    For the critical points, we set the derivative to zero:
+    $\frac{dP}{dx}=20-2x = 0 \Rightarrow x=10$.
+    Since the domain is a closed interval $[0, 20]$, we also check the endpoints.
+    At $x=10$, $P(10)=10(20-10)=100$.
+    At $x=0$, $P(0)=0$.
+    At $x=20$, $P(20)=0$.
+    Therefore, the point of absolute maximum is $x=10$ at which $P(10)=100$.
+    Conclusion: The two numbers are equal and each of them is 10 and the maximum product is 100.</p>
+
+    <p><strong>Alternative Solution (using second derivative test):</strong>
+    The product $P$ of the two numbers is given by:
+    $P(x)=x.(20-x)=20x-x^{2}$.
+    For the critical points, $\frac{dP}{dx}=0\Rightarrow20-2x=0\Rightarrow x=10$.
+    Now, calculate the second derivative: $P^{\prime\prime}(x)=-2$.
+    At $x=10$, $P^{\prime\prime}(10)=-2 < 0$, which indicates a local maximum.
+    Since $x=10$ is the ONLY local maximum point in the domain, it is also the absolute maximum.
+    Conclusion: The two numbers are equal and each of them is 10 and the maximum product is $P(10)=100$.</p>
+
+    <hr class="section-divider">
+
+    <h4>Example 2: A rectangle is to be inscribed in a semicircle of radius 2in. What is the largest area the rectangle can have, and what are its dimensions?</h4>
+    <p><strong>Solution:</strong>
+    Let $2x$ be the length of the rectangle. In order to get the maximum area, the two upper corners of the rectangle must lie on the given semicircle. The equation of the semicircle (upper half of a circle) with radius 2 centered at the origin is $x^2+y^2=2^2$, so $y=\sqrt{4-x^2}$.
+    The area of the rectangle will be: $A(x)=$ width $\cdot$ height $= 2x \cdot y = 2x\sqrt{4-x^2}$.
+    The domain for $x$ is $0 \le x \le 2$.
+    For the critical points, find the derivative of $A(x)$:
+    $A^{\prime}(x)=2x\cdot\frac{-2x}{2\sqrt{4-x^{2}}} + 2\sqrt{4-x^{2}}$
+    $A^{\prime}(x)=\frac{-2x^{2}}{\sqrt{4-x^{2}}} + \frac{2(4-x^{2})}{\sqrt{4-x^{2}}}$
+    $A^{\prime}(x)=\frac{-2x^{2}+8-2x^{2}}{\sqrt{4-x^{2}}}=\frac{8-4x^{2}}{\sqrt{4-x^{2}}}$
+    Set $A^{\prime}(x)=0$ to find critical points:
+    $8-4x^{2}=0 \Rightarrow 4x^{2}=8 \Rightarrow x^{2}=2 \Rightarrow x=\pm\sqrt{2}$.
+    Also consider where $A'(x)$ is undefined, which is when the denominator is zero: $4-x^2=0 \Rightarrow x=\pm 2$.
+    Considering the domain $0 \le x \le 2$, the relevant critical points are $x=\sqrt{2}$ (from $A'(x)=0$) and the endpoints $x=0, x=2$.
+    Evaluate $A(x)$ at these points:
+    At $x=\sqrt{2}$, $A(\sqrt{2})=2\sqrt{2}\sqrt{4-(\sqrt{2})^{2}}=2\sqrt{2}\sqrt{4-2}=2\sqrt{2}\sqrt{2}=2(2)=4$.
+    At $x=0$, $A(0)=2(0)\sqrt{4-0^{2}}=0$.
+    At $x=2$, $A(2)=2(2)\sqrt{4-2^{2}}=4\sqrt{0}=0$.
+    Therefore, the absolute maximum area is 4 square units, and it occurs at $x=\sqrt{2}$.
+    Conclusion: The maximum area is 4 square units. The dimensions of the rectangle are:
+    height $y=\sqrt{4-x^{2}}=\sqrt{4-(\sqrt{2})^{2}}=\sqrt{2}$ units.
+    width $2x=2\sqrt{2}$ units.</p>
+
+    <hr class="section-divider">
+
+    <h4>Example 3: An open top box is to be made by cutting small congruent squares from the corners of a 12-by-12 in² sheet of tin and bending up the sides. How large should the squares cut from the corners to make the box hold the most?</h4>
+    <p>This problem is presented as a challenge/example. The solution involves defining the volume of the box in terms of the side length of the cut squares, finding the derivative, setting it to zero to find critical points, and then determining which critical point yields the maximum volume.</p>
+
+    <p>Thank you</p>
+
+</body>
+</html>

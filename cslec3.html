@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSEN102 Introduction to Computer Science: Lecture 3 Summary</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                packages: {'[+]': ['ams']}
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+</head>
+<body class="lecture-page">
+    <h1>CSEN102 Introduction to Computer Science: Lecture 3</h1>
+
+    <p class="intro-text">
+        This lecture for CSEN102: Introduction to Computer Science, given by Milad Ghantous, PhD, focuses on fundamental programming concepts.
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>3.1 Basic Programming Concepts</h2>
+    <p>Programming involves writing instructions that a computer can understand and execute to perform a specific task. To do this, we use programming languages, which have their own syntax and rules.</p>
+
+    <h3>1. Variables:</h3>
+    <p>Variables are named storage locations in a computer's memory used to hold data. The value stored in a variable can change during program execution.</p>
+    <ul>
+        <li><strong>Declaration:</strong> Giving a name and a data type to a variable.</li>
+        <li><strong>Initialization:</strong> Assigning an initial value to a variable.</li>
+        <li><strong>Assignment:</strong> Changing the value of a variable after it has been initialized.</li>
+    </ul>
+    <h4>Example (Conceptual):</h4>
+    <pre><code>int age;         // Declaration: 'age' is an integer variable
+age = 30;        // Assignment: 'age' is now 30
+float price = 99.99; // Declaration and Initialization: 'price' is a float, set to 99.99
+</code></pre>
+
+    <h3>2. Data Types:</h3>
+    <p>Data types classify the kind of values that a variable can hold and the operations that can be performed on them. Common data types include:</p>
+    <ul>
+        <li><strong>Integers (e.g., `int`):</strong> Whole numbers (e.g., 5, -100).</li>
+        <li><strong>Floating-point Numbers (e.g., `float`, `double`):</strong> Numbers with decimal points (e.g., 3.14, -0.5).</li>
+        <li><strong>Characters (e.g., `char`):</strong> Single letters, symbols, or numbers (e.g., 'A', '$', '7').</li>
+        <li><strong>Strings (e.g., `string`):</strong> Sequences of characters (e.g., "Hello World", "CSEN102").</li>
+        <li><strong>Booleans (e.g., `bool`):</strong> Represents true or false values.</li>
+    </ul>
+
+    <h3>3. Operators:</h3>
+    <p>Operators are symbols that perform operations on values and variables.</p>
+    <ul>
+        <li><strong>Arithmetic Operators:</strong> For mathematical calculations (+, -, *, /, %).</li>
+        <li><strong>Assignment Operators:</strong> For assigning values (=, +=, -=, etc.).</li>
+        <li><strong>Comparison/Relational Operators:</strong> For comparing values (==, !=, <, >, <=, >=). These typically result in a Boolean (true/false) value.</li>
+        <li><strong>Logical Operators:</strong> For combining Boolean expressions (AND, OR, NOT).</li>
+    </ul>
+
+    <h3>4. Input and Output (I/O):</h3>
+    <p>How programs interact with the user or external systems.</p>
+    <ul>
+        <li><strong>Input:</strong> Getting data from the user or a file (e.g., `cin` in C++, `input()` in Python).</li>
+        <li><strong>Output:</strong> Displaying information to the user or writing to a file (e.g., `cout` in C++, `print()` in Python).</li>
+    </ul>
+    <h4>Example (Conceptual):</h4>
+    <pre><code>// Input
+int num;
+cout << "Enter a number: "; // Prompt
+cin >> num; // Read input
+
+// Output
+cout << "You entered: " << num << endl;
+</code></pre>
+
+    <hr class="section-divider">
+
+    <h2>3.2 Program Structure (Conceptual)</h2>
+    <p>While specific syntax varies, most programs follow a general structure:</p>
+    <ul>
+        <li><strong>Header/Includes:</strong> Importing necessary libraries or modules.</li>
+        <li><strong>Main Function/Block:</strong> The starting point of program execution.</li>
+        <li><strong>Declarations:</strong> Defining variables and functions.</li>
+        <li><strong>Statements:</strong> The instructions that perform the actual work.</li>
+        <li><strong>Comments:</strong> Explanatory notes within the code, ignored by the compiler/interpreter. Essential for code readability and maintenance.</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>3.3 Error Types in Programming</h2>
+    <p>Understanding different types of errors is crucial for debugging and writing robust programs.</p>
+    <ul>
+        <li><strong>Syntax Errors:</strong> Violations of the programming language's rules (grammar). The program will not compile or run until these are fixed. Examples: missing semicolons, misspelled keywords.</li>
+        <li><strong>Runtime Errors:</strong> Errors that occur while the program is executing. The program might compile but crash during execution. Examples: division by zero, accessing an invalid memory location.</li>
+        <li><strong>Logical Errors:</strong> The program runs and compiles without crashing, but it produces incorrect output because of a flaw in the algorithm's logic. These are often the hardest to find. Example: incorrect formula in a calculation.</li>
+    </ul>
+
+    <p>Thank you</p>
+
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSEN102 Introduction to Computer Science: Lecture 12 Summary</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                packages: {'[+]': ['ams']}
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+</head>
+<body class="lecture-page">
+    <h1>CSEN102 Introduction to Computer Science: Lecture 12: Boolean Logic (Part 2)</h1>
+
+    <p class="intro-text">
+        [cite_start]This lecture for CSEN102: Introduction to Computer Science, given by Milad Ghantous, PhD, continues the discussion on Boolean logic, focusing on its implementation in hardware and the concept of logic gates. [cite: 1]
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>12.1 Encoding Boolean Logic in Hardware</h2>
+    [cite_start]<p>Boolean logic, with its true/false values, is fundamentally important in computer science because it directly translates into the design and operation of digital electronic circuits. [cite: 1] [cite_start]These circuits are the physical foundation of all computing devices. [cite: 1] [cite_start]At the most basic level, electrical signals in a circuit represent Boolean values: a high voltage typically represents 'True' (or 1), and a low voltage represents 'False' (or 0). [cite: 1]</p>
+
+    <h3>Circuits and Gates:</h3>
+    [cite_start]<p>A circuit is essentially a network of interconnected logic gates that implements one or more Boolean operations. [cite: 1] [cite_start]Logic gates are the fundamental building blocks of digital circuits. [cite: 1] [cite_start]Each gate performs a specific Boolean function (like AND, OR, NOT) on one or more binary inputs to produce a single binary output. [cite: 1]</p>
+
+    <hr class="section-divider">
+
+    <h2>12.2 Basic Logic Gates</h2>
+    <p>The primary logic gates are:</p>
+
+    <h3>1. AND Gate:</h3>
+    <ul>
+        <li><strong>Function:</strong> The output is True (1) only if ALL inputs are True (1). [cite_start]Otherwise, the output is False (0). [cite: 1]</li>
+        [cite_start]<li><strong>Symbol:</strong> (Typically represented by a 'D' shape with inputs on the flat side and output on the curved side). [cite: 1]</li>
+        <li><strong>Truth Table:</strong>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Input A</th>
+                        <th>Input B</th>
+                        <th>Output (A AND B)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>0</td><td>0</td><td>0</td></tr>
+                    <tr><td>0</td><td>1</td><td>0</td></tr>
+                    <tr><td>1</td><td>0</td><td>0</td></tr>
+                    <tr><td>1</td><td>1</td><td>1</td></tr>
+                </tbody>
+            </table>
+        </li>
+    </ul>
+
+    <h3>2. OR Gate:</h3>
+    <ul>
+        <li><strong>Function:</strong> The output is True (1) if AT LEAST ONE input is True (1). [cite_start]The output is False (0) only if ALL inputs are False (0). [cite: 1]</li>
+        [cite_start]<li><strong>Symbol:</strong> (Typically represented by a curved shield-like shape). [cite: 1]</li>
+        <li><strong>Truth Table:</strong>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Input A</th>
+                        <th>Input B</th>
+                        <th>Output (A OR B)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>0</td><td>0</td><td>0</td></tr>
+                    <tr><td>0</td><td>1</td><td>1</td></tr>
+                    <tr><td>1</td><td>0</td><td>1</td></tr>
+                    <tr><td>1</td><td>1</td><td>1</td></tr>
+                </tbody>
+            </table>
+        </li>
+    </ul>
+
+    <h3>3. NOT Gate (Inverter):</h3>
+    <ul>
+        <li><strong>Function:</strong> The output is the inverse of the input. [cite_start]If the input is True (1), the output is False (0), and vice versa. [cite: 1] [cite_start]It has only one input. [cite: 1]</li>
+        [cite_start]<li><strong>Symbol:</strong> (Typically represented by a triangle with a small circle (inversion bubble) at the output). [cite: 1]</li>
+        <li><strong>Truth Table:</strong>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Input A</th>
+                        <th>Output (NOT A)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>0</td><td>1</td></tr>
+                    <tr><td>1</td><td>0</td></tr>
+                </tbody>
+            </table>
+        </li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>12.3 Derived Logic Gates (Examples)</h2>
+    <p>More complex gates can be created by combining the basic AND, OR, and NOT gates.</p>
+
+    <h3>1. NAND Gate (NOT AND):</h3>
+    <ul>
+        <li><strong>Function:</strong> The output is False (0) only if ALL inputs are True (1). [cite_start]It's the inverse of an AND gate. [cite: 1]</li>
+        [cite_start]<li><strong>Symbol:</strong> An AND gate with an inversion bubble at the output. [cite: 1]</li>
+    </ul>
+
+    <h3>2. NOR Gate (NOT OR):</h3>
+    <ul>
+        <li><strong>Function:</strong> The output is True (1) only if ALL inputs are False (0). [cite_start]It's the inverse of an OR gate. [cite: 1]</li>
+        [cite_start]<li><strong>Symbol:</strong> An OR gate with an inversion bubble at the output. [cite: 1]</li>
+    </ul>
+
+    [cite_start]<p>These gates form the foundation for building all digital systems, from simple calculators to complex supercomputers, by encoding logical operations into electrical signals. [cite: 1]</p>
+
+    <p>Thank you</p>
+
+</body>
+</html>

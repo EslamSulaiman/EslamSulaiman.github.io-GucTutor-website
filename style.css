@@ -1,0 +1,240 @@
+/* style.css */
+
+/* --- Global Body Styles (Applied to both pages for consistency) --- */
+body {
+    display: flex; /* Keep for centering on intro/courses pages */
+    flex-direction: column;
+    justify-content: flex-start; /* Aligns content to the top for the intro page and others */
+    align-items: center; /* Centers content horizontally */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: transparent;
+    position: relative; /* Keep this to make footer's absolute positioning relative to body */
+    z-index: 1;
+    overflow-y: auto; /* Allows vertical scrolling */
+    overflow-x: hidden; /* Hides horizontal scrollbar */
+    min-height: 100vh; /* IMPORTANT: Ensures body takes at least full viewport height */
+    /* Removed 'height: auto;' as min-height is more appropriate here */
+}
+
+/* --- Background Image Styling for index.html --- */
+/* Ensure the background image covers the whole viewport */
+.background-image {
+    position: fixed; /* Use fixed to ensure it covers the whole viewport even on scroll */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Take 100% of viewport width */
+    height: 100vh; /* Take 100% of viewport height */
+    object-fit: cover; /* This makes sure the image covers the area without distortion */
+    z-index: -1; /* Puts the background image behind the content */
+}
+
+/* --- H1 Styling for index.html (Welcome to GucTutor!) --- */
+h1 {
+    text-align: center;
+    color: darkgray;
+    margin-top: 10vh; /* Original margin-top for intro page H1 */
+    margin-bottom: 20px;
+    z-index: 2; /* Ensure H1 is above background */
+}
+
+/* --- Paragraph Styling for index.html (highlight-f class is on the <p> tag) --- */
+.highlight-f {
+    color: red; /* Original color for the entire paragraph */
+    font-weight: bold; /* Optional: make it bold too */
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: center;
+    z-index: 2; /* Ensure text is above background */
+}
+
+/* --- Button Styling for index.html (Enter button) --- */
+.button {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    z-index: 2;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* --- Social Icons and "Made with love" for index.html --- */
+.footer-corner {
+    position: absolute;
+    bottom: 0; /* Set to 0 to place it at the very bottom */
+    left: 50%; /* Start at the horizontal center */
+    transform: translateX(-50%); /* Shift left by half its width to truly center */
+    text-align: center; /* Center text and inline elements within the footer */
+    color: white;
+    z-index: 10; /* Ensure footer is on top */
+    font-size: 0.9em;
+    width: 100%; /* Allows text-align: center to work across the page */
+    padding-bottom: 20px; /* Add padding to lift content slightly from the very edge */
+}
+
+.footer-corner p {
+    margin: 0 0 5px 0;
+    color: white; /* Ensure text is visible over background */
+}
+
+.social-icons {
+    display: flex; /* Use flexbox for the icons to easily center them */
+    justify-content: center; /* Center the icons horizontally */
+    align-items: center;
+    margin-top: 10px; /* Add some space between text and icons */
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px; /* Adjust margin between icons */
+    transition: transform 0.2s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* --- Background Image Styling for coursespage.html (and mathlectures.html) --- */
+.background-image-courses {
+    position: fixed; /* Use fixed to ensure it covers the whole viewport even on scroll */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Take 100% of viewport width */
+    height: 100vh; /* Take 100% of viewport height */
+    object-fit: cover; /* This makes sure the image covers the area without distortion */
+    z-index: -1;
+}
+
+/* --- Course Page H1 Title (Courses) --- */
+.course-title {
+    color: darkgray;
+    text-align: center;
+    margin-top: 5vh; /* Original margin-top for courses page H1 */
+    margin-bottom: 30px;
+    z-index: 2;
+}
+
+/* --- Styles for the Course List (the whole box on coursespage.html and mathlectures.html) --- */
+.course-list {
+    list-style: none;
+    padding: 30px;
+    margin: 0 auto 20px auto; /* Centers the list horizontally within its parent */
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    max-width: 700px;
+    width: 90%;
+    text-align: center;
+    z-index: 2;
+}
+
+/* --- Styles for each course list item (li) --- */
+.course-list li {
+    margin-bottom: 15px;
+}
+
+/* --- Styles for individual clickable course links --- */
+.course-link {
+    display: block;
+    background-color: #007bff;
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.course-link:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+/* --- Styles for the Back Button on coursespage.html and mathlectures.html --- */
+.back-button {
+    margin-top: 70px; /* Adjust as needed */
+    display: inline-block;
+    background-color: #6c757d;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    z-index: 2;
+}
+
+.back-button:hover {
+    background-color: #5a6268;
+}
+
+/* --- Specific styles for lecture pages (like math103_lecture1_summary.html) --- */
+body.lecture-page {
+    display: block; /* Overrides flexbox for lecture pages to allow normal document flow */
+    max-width: 960px; /* Limit content width for readability */
+    margin: 20px auto; /* Centers the content block horizontally, 20px top/bottom margin */
+    padding: 20px; /* Add some padding to all sides of the content, adjusted from 0 20px */
+    background-color: #f4f4f4; /* Light background for lecture content */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for the content area */
+    overflow-y: auto; /* Ensure lecture pages can scroll naturally */
+    overflow-x: hidden;
+    min-height: auto; /* No min-height for lecture pages, let content define height */
+    position: relative; /* Ensure z-index works relative to body */
+    z-index: 1; /* Ensure lecture content is above background if applicable */
+}
+
+/* Specific H1 for lecture pages */
+body.lecture-page h1 {
+    font-size: 2.2em;
+    text-align: center;
+    color: #0056b3; /* A nice blue for lecture headings */;
+    margin-top: 0; /* Reset margin-top for H1 within lecture-page body */
+    margin-bottom: 20px; /* Add some space below H1 */
+}
+
+.lecture-index-content-wrapper {
+    width: 90%; /* Max width relative to parent */
+    max-width: 700px; /* Max absolute width */
+    margin: 0 auto; /* Center the wrapper itself horizontally */
+    text-align: center; /* Center text content inside */
+    padding-bottom: 50px; /* Add some space at the bottom */
+    z-index: 2; /* Ensure it's above the background image */
+    flex-shrink: 0; /* Prevent it from shrinking in a flex container */
+    padding-top: 5vh; /* Example: same as h1 margin-top on courses page */
+}
+
+.lecture-index-content-wrapper .course-title {
+    margin-top: 0; /* Reset margin-top as wrapper adds padding-top */
+    margin-bottom: 30px;
+}
+.lecture-index-content-wrapper .back-button {
+    margin-top: 30px; /* Adjust top margin for the back button */
+    margin-bottom: 30px; /* Add some space below the back button */
+}
+
+/* Also, ensure the .lecture-courses-index body allows for this wrapper to be used */
+body.lecture-courses-index {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center;   /* Center content horizontally */
+    justify-content: flex-start; /* Start content from the top */
+
+    max-width: none; /* Let the body span full width to allow background image to fill */
+    margin: 0; /* Reset margins */
+    padding: 0; /* Reset padding */
+    background-color: transparent; /* Keep background transparent to see image */
+    box-shadow: none; /* No box shadow for this one, as background is an image */
+    overflow-y: auto; /* Ensure this page can scroll */
+    overflow-x: hidden;
+    min-height: 100vh; /* This one can keep min-height: 100vh as it's for shorter index/course pages */
+}

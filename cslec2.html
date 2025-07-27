@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSEN102 Introduction to Computer Science: Lecture 2 Summary</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                packages: {'[+]': ['ams']}
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+</head>
+<body class="lecture-page">
+    <h1>CSEN102 Introduction to Computer Science: Lecture 2</h1>
+
+    <p class="intro-text">
+        This lecture for CSEN102: Introduction to Computer Science, given by Milad Ghantous, PhD, focuses on algorithms, their properties, and representation.
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>2.1 What is an Algorithm?</h2>
+    <p>An algorithm is a step-by-step procedure for solving a problem or accomplishing a task. It's a set of well-defined instructions that, when executed, will produce a desired output and terminate in a finite amount of time.</p>
+
+    <h3>Key Properties of an Algorithm:</h3>
+    <ul>
+        <li><strong>Unambiguous:</strong> Each step must be clear and have only one interpretation.</li>
+        <li><strong>Input:</strong> An algorithm must have zero or more well-defined inputs.</li>
+        <li><strong>Output:</strong> An algorithm must have one or more well-defined outputs.</li>
+        <li><strong>Finiteness:</strong> An algorithm must terminate after a finite number of steps.</li>
+        <li><strong>Effectiveness:</strong> Each step must be sufficiently basic that it can be done exactly and in a finite amount of time by a person using pencil and paper.</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>2.2 Why are Algorithms Important?</h2>
+    <p>Algorithms are at the heart of computer science and programming. They provide a blueprint for how to solve computational problems. Without well-designed algorithms, even the fastest computers would be inefficient. They enable:</p>
+    <ul>
+        <li>Structured problem-solving.</li>
+        <li>Efficiency in computation.</li>
+        <li>Automation of tasks.</li>
+        <li>Clear communication of solutions.</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>2.3 Representing Algorithms</h2>
+    <p>Algorithms can be represented in various ways, each with its own advantages for clarity and precision:</p>
+
+    <h3>1. Pseudocode:</h3>
+    <p>A high-level description of an algorithm that uses a combination of natural language statements and programming-like constructs. It is not tied to a specific programming language, making it easy to understand for humans but not directly executable by computers.</p>
+    <h4>Example: Algorithm to find the sum of two numbers</h4>
+    <pre><code>Algorithm SumTwoNumbers
+    Input: Number1, Number2
+    Output: Sum
+
+    Step 1: Get Number1
+    Step 2: Get Number2
+    Step 3: Calculate Sum = Number1 + Number2
+    Step 4: Display Sum
+End Algorithm
+</code></pre>
+
+    <h3>2. Flowchart:</h3>
+    <p>A graphical representation of an algorithm using standard symbols to depict the flow of logic, operations, and decisions. Flowcharts are good for visualizing the control flow but can become complex for large algorithms.</p>
+    <ul>
+        <li><strong>Start/End (Terminal) Symbol:</strong> Oval, represents the beginning or end of the flowchart.</li>
+        <li><strong>Process Symbol:</strong> Rectangle, represents a processing step (e.g., calculation, assignment).</li>
+        <li><strong>Input/Output Symbol:</strong> Parallelogram, represents data input or output.</li>
+        <li><strong>Decision Symbol:</strong> Diamond, represents a point where a decision is made (usually a yes/no question), with multiple paths emerging.</li>
+        <li><strong>Arrow (Flowline):</strong> Indicates the direction of flow.</li>
+    </ul>
+    <h4>Example (Conceptual Flowchart for SumTwoNumbers):</h4>
+    <p>A flowchart would visually connect these symbols: Start -> Input Number1 -> Input Number2 -> Process: Sum = Number1 + Number2 -> Output Sum -> End.</p>
+
+    <h3>3. Structured English (or Natural Language):</h3>
+    <p>Using clear, concise English statements to describe the steps of an algorithm. This is often the initial approach but can lack the precision needed for complex algorithms.</p>
+
+    <h3>4. Programming Language Code:</h3>
+    <p>The most precise representation, where the algorithm is written in a specific programming language (e.g., C++, Python, Java) that can be executed directly by a computer.</p>
+
+    <hr class="section-divider">
+
+    <h2>2.4 Sequential Algorithms</h2>
+    <p>A sequential algorithm is one where instructions are executed in a strict, linear order, one after another, from top to bottom. There are no branches, loops, or conditional jumps in a purely sequential algorithm. Most simple programs start with a sequential flow.</p>
+    <h4>Example:</h4>
+    <p>The "SumTwoNumbers" algorithm above is a sequential algorithm.</p>
+
+    <p>Thank you</p>
+
+</body>
+</html>

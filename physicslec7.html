@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics 101 Lecture 7: Energy & Work I</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                packages: {'[+]': ['ams']}
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="lecture-page">
+    <h1>Physics 101 Lecture 7: Energy & Work I</h1>
+
+    <p class="intro-text">
+        This lecture introduces the fundamental concepts of energy and work, crucial in science and engineering. We will explore how energy is transferred and transformed, and how these principles can simplify complex problems that are challenging to solve with Newton's laws alone. A key shift in this approach is moving from a particle model to a "system model." [cite_start]This lecture is presented by Dr. Ahmed Maarouf. [cite: 1]
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>7.1 The Concept of Energy</h2>
+    <p>Energy is one of the most vital concepts in physics and engineering. Every physical process in the universe involves energy and its transfers or transformations. [cite_start]Utilizing principles of energy and work can significantly simplify problems that might be complex when exclusively approached with Newton's laws. [cite: 1, 2]</p>
+
+    <hr class="section-divider">
+
+    <h2>7.2 Defining a "System"</h2>
+    [cite_start]<p>In the context of energy and work, a <strong>system</strong> is defined as a specific, small portion of the Universe that we choose to focus on, intentionally ignoring the intricate details of everything else. [cite: 6, 7]</p>
+    [cite_start]<p>A valid system can be highly flexible in its definition: [cite: 8] </p>
+    <ul>
+        [cite_start]<li>It may consist of a single object or particle. [cite: 8]</li>
+        [cite_start]<li>It may be a collection of multiple objects or particles. [cite: 8]</li>
+        [cite_start]<li>It can represent a specific region of space. [cite: 8]</li>
+        [cite_start]<li>Its size and shape can even vary over time. [cite: 8]</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>7.3 Work as Energy Transfer</h2>
+    [cite_start]<p><strong>Work ($W$)</strong> is fundamentally defined as an amount of energy transfer. [cite: 11] [cite_start]When an agent exerts a constant force on a system, the work done ($W$) is the product of the magnitude of the force ($F$), the magnitude of the displacement ($\Delta r$) of the point where the force is applied, and the cosine of the angle ($\theta$) between the force vector and the displacement vector. [cite: 11]</p>
+    <h3>Formula for Work Done by a Constant Force:</h3>
+    \[ W = F \Delta r \cos\theta \]
+    [cite_start]<p>Where: [cite: 12]</p>
+    <ul>
+        <li>$W$ is the work done.</li>
+        <li>$F$ is the magnitude of the constant force.</li>
+        <li>$\Delta r$ is the magnitude of the displacement.</li>
+        <li>$\theta$ is the angle between the force vector ($\vec{F}$) and the displacement vector ($\Delta\vec{r}$).</li>
+    </ul>
+    [cite_start]<p><strong>Key Properties of Work:</strong> [cite: 12, 13, 14]</p>
+    <ul>
+        [cite_start]<li>Work is a **scalar quantity**, meaning it only has magnitude, not direction. [cite: 12]</li>
+        [cite_start]<li>A force does no work on an object if it does not cause any displacement of the object. [cite: 13]</li>
+        [cite_start]<li>The work done by a force on a moving object is zero when the force applied is perpendicular to the displacement ($\theta = 90^\circ$, since $\cos 90^\circ = 0$). [cite: 14, 16, 17]</li>
+    </ul>
+    <p>The standard unit of work is the **joule (J)**. [cite_start]One joule is defined as one newton-meter: [cite: 12]</p>
+    \[ 1 \text{ joule (J)} = 1 \text{ newton (N)} \cdot 1 \text{ meter (m)} \]
+    \[ \text{J} = \text{N} \cdot \text{m} = \text{kg} \cdot \text{m}^2/\text{s}^2 \]
+
+    <hr class="section-divider">
+
+    <h2>7.4 Positive, Negative, and Zero Work</h2>
+    [cite_start]<p>The sign of the work done depends on the relative direction of the force and the displacement: [cite: 18]</p>
+    <ul>
+        <li><strong>Positive Work:</strong> Work is positive when the component of the force in the direction of the displacement (the projection of $\vec{F}$ onto $\Delta\vec{r}$) is in the same direction as the displacement. [cite_start]This signifies that energy is being transferred *to* the system. [cite: 20, 21]</li>
+        <li><strong>Negative Work:</strong> Work is negative when the component of the force in the direction of the displacement is in the opposite direction to the displacement, or simply when the force is in the opposite direction to the motion. [cite_start]This indicates that energy is being transferred *out of* the system. [cite: 21, 22]</li>
+        <li><strong>Zero Work:</strong> Work is zero when the force is perpendicular to the displacement. [cite_start]Examples include the normal force and gravitational force doing no work on an object undergoing horizontal displacement. [cite: 14, 16, 17]</li>
+    </ul>
+
+    [cite_start]<h3>Example: Work Done by the Sun on the Earth [cite: 24]</h3>
+    <p>The gravitational force from the Sun keeps the Earth in its orbit. Assuming a perfectly circular orbit, the gravitational force is always directed towards the center of the circle (the Sun). The Earth's displacement at any instant is tangential to the orbit, and thus perpendicular to the gravitational force. [cite_start]Therefore, the work done by the gravitational force during the Earth's orbital motion is **zero**. [cite: 25]</p>
+
+    [cite_start]<h3>Example: Ranking Work Done in Different Situations [cite: 26]</h3>
+    <p>Consider four situations where a force of the same magnitude is applied to an object, and the displacement is to the right and of the same magnitude in all cases.</p>
+    [cite_start]<p>Ranking the situations from most positive work to most negative work: [cite: 28]</p>
+    <ol>
+        [cite_start]<li><strong>Situation (c):</strong> The work done is positive and has the largest possible value because the angle between the force and the displacement is zero ($\cos 0^\circ = 1$). [cite: 28]</li>
+        [cite_start]<li><strong>Situation (a):</strong> The work done is zero because the force is perpendicular to the displacement ($\cos 90^\circ = 0$). [cite: 28]</li>
+        [cite_start]<li><strong>Situation (d):</strong> Negative work is done because there is a component of the force opposite to the direction of displacement. [cite: 28]</li>
+        [cite_start]<li><strong>Situation (b):</strong> This situation represents the most negative work because the angle between the force and the displacement is 180 degrees ($\cos 180^\circ = -1$), meaning the force is directly opposite to the motion. [cite: 28]</li>
+    </ol>
+
+    <hr class="section-divider">
+
+    <h2>7.5 The Scalar Product (Dot Product) of Vectors</h2>
+    <p>Work is a scalar product of force and displacement vectors. [cite_start]The <strong>scalar product</strong> (also known as the **dot product**) of two vectors, $\vec{A}$ and $\vec{B}$, is defined as: [cite: 29]</p>
+    \[ \vec{A} \cdot \vec{B} = AB \cos\theta \]
+    [cite_start]<p>Where: [cite: 29]</p>
+    <ul>
+        <li>$A$ and $B$ are the magnitudes of vectors $\vec{A}$ and $\vec{B}$, respectively.</li>
+        <li>$\theta$ is the angle between vectors $\vec{A}$ and $\vec{B}$.</li>
+    </ul>
+    [cite_start]<p><strong>Properties of the Scalar Product:</strong> [cite: 30]</p>
+    <ul>
+        <li><strong>Commutative:</strong> The order of multiplication does not matter.
+            \[ \vec{A} \cdot \vec{B} = \vec{B} \cdot \vec{A} \]
+        </li>
+        <li><strong>Distributive Law:</strong> It obeys the distributive law over addition.
+            \[ \vec{A} \cdot (\vec{B} + \vec{C}) = \vec{A} \cdot \vec{B} + \vec{A} \cdot \vec{C} \]
+        </li>
+    </ul>
+    [cite_start]<p><strong>Scalar Product in Terms of Unit Vectors:</strong> [cite: 30]</p>
+    <p>Given two vectors in component form:</p>
+    \[ \vec{A} = A_x\hat{i} + A_y\hat{j} + A_z\hat{k} \]
+    \[ \vec{B} = B_x\hat{i} + B_y\hat{j} + B_z\hat{k} \]
+    <p>The dot product can be calculated as:</p>
+    \[ \vec{A} \cdot \vec{B} = A_x B_x + A_y B_y + A_z B_z \]
+    [cite_start]<p>This is due to the properties of dot products of orthogonal unit vectors: [cite: 30]</p>
+    <ul>
+        <li>$\hat{i} \cdot \hat{i} = \hat{j} \cdot \hat{j} = \hat{k} \cdot \hat{k} = 1$</li>
+        <li>$\hat{i} \cdot \hat{j} = \hat{i} \cdot \hat{k} = \hat{j} \cdot \hat{k} = 0$</li>
+    </ul>
+    [cite_start]<p>A special case is the dot product of a vector with itself: [cite: 30]</p>
+    \[ \vec{A} \cdot \vec{A} = A_x^2 + A_y^2 + A_z^2 = A^2 \]
+
+    <h3>Work as a Scalar Product:</h3>
+    [cite_start]<p>Based on the definition of the scalar product, the work done by a constant force can be written as the dot product of the force vector and the displacement vector: [cite: 30]</p>
+    \[ W = \vec{F} \cdot \Delta\vec{r} = F \Delta r \cos\theta \]
+
+    [cite_start]<h3>Example 1: Work Done by a Pulling Force [cite: 31]</h3>
+    <p>A man pulls a vacuum cleaner with a force $F = 50.0 \, \text{N}$ at an angle of $30.0^\circ$ with the horizontal. The vacuum cleaner is displaced $3.00 \, \text{m}$ to the right.</p>
+    [cite_start]<p>To calculate the work done by the force on the vacuum cleaner: [cite: 31]</p>
+    \[ W = F \Delta r \cos\theta \]
+    \[ W = (50.0 \, \text{N})(3.00 \, \text{m})\cos(30.0^\circ) \]
+    \[ W = 150 \times \frac{\sqrt{3}}{2} \]
+    \[ W \approx 129.9 \, \text{J} \approx 130 \, \text{J} \]
+    [cite_start]<p>The normal force ($\vec{n}$) and the gravitational force ($m\vec{g}$) do no work in this horizontal displacement because they are perpendicular to the displacement ($\theta = 90^\circ$, so $\cos 90^\circ = 0$). [cite: 32]</p>
+
+    [cite_start]<h3>Example 2: Work Done with Forces and Displacements in Component Form [cite: 32]</h3>
+    <p>A particle undergoes a displacement given by $\Delta\vec{r} = (2.0\hat{i} + 3.0\hat{j}) \, \text{m}$ as a constant force $\vec{F} = (5.0\hat{i} + 2.0\hat{j}) \, \text{N}$ acts on it. Calculate the work done by the force on the particle.</p>
+    [cite_start]<p>Using the dot product in component form: [cite: 32]</p>
+    \[ W = \vec{F} \cdot \Delta\vec{r} = (F_x)(\Delta r_x) + (F_y)(\Delta r_y) \]
+    \[ W = (5.0 \, \text{N})(2.0 \, \text{m}) + (2.0 \, \text{N})(3.0 \, \text{m}) \]
+    \[ W = 10 \, \text{J} + 6 \, \text{J} \]
+    \[ W = 16 \, \text{J} \]
+
+    <hr class="section-divider">
+
+    <h2>7.6 Work Done by a Varying Force</h2>
+    <p>The formula $W = F \Delta r \cos\theta$ is only applicable when the force ($F$) is constant. [cite_start]If the force varies with displacement, this equation cannot be directly used. [cite: 34, 35]</p>
+    <p>To calculate work done by a varying force, we consider infinitesimally small displacements ($\Delta x$) during which the force ($F_x$) can be approximated as constant. The work done over each small interval is approximately $F_x \Delta x$. [cite_start]The total work is the sum of these small work contributions: [cite: 36, 37]</p>
+    \[ W \approx \sum F_x \Delta x \]
+    <p>As the size of these small displacements approaches zero ($\Delta x \to 0$), the sum becomes an integral. [cite_start]The work done by a varying force $F_x$ as a particle moves from an initial position $x_i$ to a final position $x_f$ is exactly equal to the area under the force-displacement ($F_x$ vs. $x$) curve: [cite: 38]</p>
+    \[ W = \int_{x_i}^{x_f} F_x \, dx \]
+    [cite_start]<p>This integral represents the total work done and is equivalent to the area under the force curve between $x_i$ and $x_f$. [cite: 38]</p>
+
+    <hr class="section-divider">
+
+    <h2>7.7 Work Done by Multiple Forces</h2>
+    <p>If multiple forces act on a system (modeled as a particle), the total work done on the system is the work done by the **net force**. [cite_start]Since work is a scalar quantity, the total work is simply the algebraic sum of the work done by each individual force. [cite: 39]</p>
+    [cite_start]<p>In the general case where the net force's magnitude and direction may vary, the total work done ($W_{ext}$) for a particle is given by: [cite: 39]</p>
+    \[ W_{ext} = \int_{x_i}^{x_f} (\Sigma F_x) \, dx \]
+    <p>Or, in a more general vector form:</p>
+    \[ W_{ext} = \int (\Sigma \vec{F}) \cdot d\vec{r} \]
+    [cite_start]<p>For a deformable system (where internal forces might also do work), the total work is the sum of the integrals of each force dotted with its respective displacement: [cite: 39]</p>
+    \[ W_{tot} = \sum_{\text{forces}} \left(\int \vec{F} \cdot d\vec{r}\right) \]
+
+    <hr class="section-divider">
+
+    <h2>7.8 Work Done by a Spring (Hooke's Law)</h2>
+    <p>Springs exert a varying force that depends on their displacement from equilibrium. [cite_start]<strong>Hooke's Law</strong> describes this force: [cite: 41]</p>
+    <p>The force exerted by a spring ($F_s$) is always directed opposite to the displacement ($x$) from its equilibrium position ($x=0$) and is directly proportional to the extension or compression of the spring, provided the elastic limit is not exceeded. [cite_start]This is often called the **restoring force**. [cite: 41, 42]</p>
+    <h3>Formula for Spring Force:</h3>
+    \[ F_s = -kx \]
+    [cite_start]<p>Where: [cite: 42, 43]</p>
+    <ul>
+        <li>$F_s$ is the spring force.</li>
+        [cite_start]<li>$k$ is the **spring constant** (or force constant), a positive value that measures the stiffness of the spring (a larger $k$ means a stiffer spring). [cite: 43]</li>
+        <li>$x$ is the position of the block with respect to the equilibrium position ($x=0$). [cite_start]This $x$ represents the displacement (length minus equilibrium length). [cite: 42, 45]</li>
+    </ul>
+    [cite_start]<p><strong>Direction of Spring Force:</strong> [cite: 44]</p>
+    <ul>
+        <li>When $x$ is positive (spring is stretched), $F_s$ is negative (force is in the negative x-direction, pulling back).</li>
+        <li>When $x = 0$ (at equilibrium), $F_s = 0$.</li>
+        <li>When $x$ is negative (spring is compressed), $F_s$ is positive (force is in the positive x-direction, pushing out).</li>
+    </ul>
+
+    <h3>Work Done by the Spring Force:</h3>
+    [cite_start]<p>Since the spring force is a varying force, we use the integral to calculate the work done by the spring as the block moves from an initial position $x_i$ to a final position $x_f$: [cite: 47]</p>
+    \[ W_{spring} = \int_{x_i}^{x_f} (-kx) \, dx \]
+    \[ W_{spring} = -\frac{1}{2}kx_f^2 + \frac{1}{2}kx_i^2 \]
+    [cite_start]<p>If the block starts at $x_i$ and returns to the same position $x_f = x_i$, then the total work done by the spring is $W=0$. [cite: 48, 49]</p>
+
+    [cite_start]<h3>Example: Work Done by Spring from Max Compression to Equilibrium [cite: 45]</h3>
+    <p>Calculate the work done by the spring force on a block released from maximum compression at $x_i = -x_{max}$ to the equilibrium position $x_f = 0$.</p>
+    [cite_start]<p>Applying the work formula: [cite: 46]</p>
+    \[ W_{spring} = \frac{1}{2}k(-x_{max})^2 - \frac{1}{2}k(0)^2 \]
+    \[ W_{spring} = \frac{1}{2}kx_{max}^2 \]
+    [cite_start]<p>The work done is positive because the spring force (pushing right) is in the same direction as the displacement (moving right from negative x to 0). [cite: 46]</p>
+
+    <h3>Work Done by an Applied Force on a Spring:</h3>
+    <p>Suppose an external applied force, $F_{app}$, stretches or compresses a spring. [cite_start]If the spring is in equilibrium (or moving very slowly), the applied force is equal in magnitude and opposite in direction to the spring force ($F_{app} = -F_s = -(-kx) = kx$). [cite: 50]</p>
+    [cite_start]<p>The work done by the applied force on the spring as it moves from $x_i$ to $x_f$ is: [cite: 51]</p>
+    \[ W_{app} = \int_{x_i}^{x_f} (kx) \, dx \]
+    \[ W_{app} = \frac{1}{2}kx_f^2 - \frac{1}{2}kx_i^2 \]
+    [cite_start]<p>This work done by the applied force is stored within the spring as **elastic potential energy**. [cite: 51]</p>
+
+    [cite_start]<h3>Example: Spring Constant and Work Done by Spring [cite: 52]</h3>
+    [cite_start]<p>A spring is stretched $2.0 \, \text{cm}$ ($0.02 \, \text{m}$) by a suspended object of mass $0.55 \, \text{kg}$. [cite: 52]</p>
+    [cite_start]<p><strong>(A) What is the force constant of the spring?</strong> [cite: 52]</p>
+    [cite_start]<p>Using a free-body diagram for the object when suspended at rest, the upward spring force ($F_s$) balances the downward gravitational force ($mg$): [cite: 57]</p>
+    \[ F_s = mg \]
+    [cite_start]<p>From Hooke's Law, $F_s = kd$, where $d$ is the stretch distance. [cite: 57]</p>
+    \[ kd = mg \]
+    \[ k = \frac{mg}{d} = \frac{(0.55 \, \text{kg})(9.8 \, \text{m/s}^2)}{0.02 \, \text{m}} \]
+    \[ k = \frac{5.39 \, \text{N}}{0.02 \, \text{m}} \]
+    \[ k = 269.5 \, \text{N/m} \]
+
+    [cite_start]<p><strong>(B) How much work is done by the spring on the object as it stretches through this distance?</strong> [cite: 53]</p>
+    <p>The spring stretches from its equilibrium position ($x_i = 0$) to a stretched position ($x_f = 0.02 \, \text{m}$). [cite_start]The work done *by the spring* is $W_{spring} = -\frac{1}{2}kx_f^2 + \frac{1}{2}kx_i^2$. [cite: 58]</p>
+    <p>In this case, the displacement is downward while the spring force is upward. So the work done by the spring will be negative. The spring is doing work against the direction of displacement.</p>
+    \[ W_{spring} = -\frac{1}{2}k(x_f^2 - x_i^2) \]
+    \[ W_{spring} = -\frac{1}{2}(269.5 \, \text{N/m})((0.02 \, \text{m})^2 - (0 \, \text{m})^2) \]
+    \[ W_{spring} = -\frac{1}{2}(269.5 \, \text{N/m})(0.0004 \, \text{m}^2) \]
+    \[ W_{spring} = -0.0539 \, \text{J} \]
+
+</body>
+</html>

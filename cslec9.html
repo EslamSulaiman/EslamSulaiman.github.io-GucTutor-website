@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSEN102 Introduction to Computer Science: Lecture 9 Summary</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                packages: {'[+]': ['ams']}
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+</head>
+<body class="lecture-page">
+    <h1>CSEN102 Introduction to Computer Science: Lecture 9: Functions</h1>
+
+    <p class="intro-text">
+        This lecture for CSEN102: Introduction to Computer Science, given by Milad Ghantous, PhD, introduces the concept of functions in programming, their purpose, and how to define and use them.
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>9.1 What are Functions?</h2>
+    <p>A function (also known as a subroutine, procedure, or method in different programming contexts) is a block of organized, reusable code that is used to perform a single, related action. Functions provide a way to break down complex problems into smaller, manageable sub-problems, making programs easier to design, write, debug, and maintain.</p>
+
+    <h3>Why Use Functions?</h3>
+    <ul>
+        <li><strong>Modularity:</strong> Breaking down a program into smaller, self-contained units.</li>
+        <li><strong>Reusability:</strong> Once defined, a function can be called multiple times from different parts of the program without rewriting the code.</li>
+        <li><strong>Readability:</strong> Programs become easier to understand when complex logic is encapsulated within descriptive function names.</li>
+        <li><strong>Maintainability:</strong> Changes or bug fixes can be isolated to specific functions, reducing the risk of introducing errors elsewhere in the code.</li>
+        <li><strong>Reduced Code Duplication:</strong> Avoids writing the same block of code repeatedly.</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>9.2 Defining and Calling Functions</h2>
+    <p>Every function typically has a definition and can be called (executed) from other parts of the program.</p>
+
+    <h3>Function Definition:</h3>
+    <p>This involves specifying the function's name, its parameters (inputs), and the block of code it executes. The syntax for defining functions varies by programming language.</p>
+    <h4>Conceptual Structure:</h4>
+    <pre><code>return_type function_name(parameter1_type parameter1, parameter2_type parameter2, ...) {
+    // Body of the function
+    // Instructions to be executed when the function is called
+    return value; // Optional: returns a value to the caller
+}
+</code></pre>
+
+    <h3>Function Call:</h3>
+    <p>To execute the code within a function, you "call" or "invoke" it by its name, followed by parentheses containing any necessary arguments (actual values passed to the parameters).</p>
+    <h4>Conceptual Example:</h4>
+    <pre><code>// Assuming a function defined like: int add(int a, int b) { return a + b; }
+int result = add(5, 3); // Calling the 'add' function with arguments 5 and 3
+// 'result' will now hold the value 8
+</code></pre>
+
+    <hr class="section-divider">
+
+    <h2>9.3 Function Parameters and Arguments</h2>
+    <ul>
+        <li><strong>Parameters:</strong> These are variables listed inside the parentheses in the function definition. They act as placeholders for the values that will be passed into the function when it is called.</li>
+        <li><strong>Arguments:</strong> These are the actual values passed to the function when it is called. The arguments correspond to the parameters in the function definition.</li>
+    </ul>
+
+    <h3>Example:</h3>
+    <pre><code>// Function definition with parameters 'num1' and 'num2'
+void greet(string name) {
+    cout << "Hello, " << name << "!" << endl;
+}
+
+// Function call with argument "Alice"
+greet("Alice"); // "Alice" is the argument passed to the 'name' parameter
+</code></pre>
+
+    <hr class="section-divider">
+
+    <h2>9.4 Return Values</h2>
+    <p>Functions can optionally return a value to the part of the code that called them. The `return` statement is used to send a value back. If a function doesn't return a value, its return type is often specified as `void` (in languages like C++ or Java).</p>
+
+    <h3>Example:</h3>
+    <pre><code>int multiply(int x, int y) {
+    int product = x * y;
+    return product; // Returns the calculated product
+}
+
+int myProduct = multiply(4, 5); // myProduct will be 20
+</code></pre>
+
+    <hr

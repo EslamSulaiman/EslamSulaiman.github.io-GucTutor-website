@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics 101 Lecture 8: Conservation of Energy</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                packages: {'[+]': ['ams']}
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="lecture-page">
+    <h1>Physics 101 Lecture 8: Conservation of Energy</h1>
+
+    <p class="intro-text">
+        This lecture focuses on the fundamental principle of the Conservation of Energy, a cornerstone of physics. We will review different forms of energy, classify systems based on energy transfer, and apply the conservation of energy to various physical scenarios, including those involving friction. This lecture is presented by Dr. Nermeen Serag.
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>8.1 Energy Review</h2>
+    <p>Before diving into conservation, let's review key forms of energy:</p>
+    <ul>
+        <li><strong>Kinetic Energy ($K$):</strong> Energy associated with the movement of members within a system.</li>
+        <li><strong>Potential Energy ($U$):</strong> Energy determined by the configuration of the system. We have previously studied:
+            <ul>
+                <li>Gravitational Potential Energy</li>
+                <li>Elastic Potential Energy</li>
+            </ul>
+        </li>
+        <li><strong>Internal Energy ($E_{int}$):</strong> Energy related to the temperature of the system.</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>8.2 Types of Systems</h2>
+    <p>Understanding how energy interacts with a system's boundaries is crucial for applying conservation principles:</p>
+    <ul>
+        <li><strong>Non-isolated Systems:</strong>
+            <ul>
+                <li>Energy can cross the system boundary in a variety of ways (e.g., work, heat, mechanical waves, matter transfer, electrical transmission, electromagnetic radiation).</li>
+                <li>The total energy of the system changes.</li>
+            </ul>
+        </li>
+        <li><strong>Isolated Systems:</strong>
+            <ul>
+                <li>Energy does not cross the boundary of the system.</li>
+                <li>The total energy of the system is constant.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>8.3 General Law of Conservation of Energy (Non-Isolated Systems)</h2>
+    <p>The principle of conservation of energy states that energy cannot be created nor destroyed. If the total amount of energy in a system changes, it must be because energy has crossed the boundary of the system through some method of energy transfer.</p>
+    <h3>General Conservation of Energy Equation for Non-Isolated Systems:</h3>
+    \[ \Delta K + \Delta U + \Delta E_{int} = W + Q + T_{MW} + T_{MT} + T_{ET} + T_{ER} \]
+    <p>Where:</p>
+    <ul>
+        <li>$\Delta K$ is the change in kinetic energy.</li>
+        <li>$\Delta U$ is the change in potential energy.</li>
+        <li>$\Delta E_{int}$ is the change in internal energy.</li>
+        <li>$W$ is work.</li>
+        <li>$Q$ is heat.</li>
+        <li>$T_{MW}$ is energy transfer by mechanical waves.</li>
+        <li>$T_{MT}$ is energy transfer by matter transfer.</li>
+        <li>$T_{ET}$ is energy transfer by electrical transmission.</li>
+        <li>$T_{ER}$ is energy transfer by electromagnetic radiation.</li>
+    </ul>
+    <h3>Examples of Energy Transfer Ways:</h3>
+    <ul>
+        <li>Energy transferred to a block by work (e.g., pushing a book).</li>
+        <li>Energy leaving a radio speaker by mechanical waves (sound).</li>
+        <li>Energy transferring to a spoon handle by heat.</li>
+        <li>Energy entering an automobile gas tank by matter transfer (fuel).</li>
+        <li>Energy entering a hair dryer by electrical transmission.</li>
+        <li>Energy leaving a light-bulb by electromagnetic radiation (light).</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>8.4 Conservation of Mechanical Energy (Isolated Systems)</h2>
+    <p>For an isolated system where no non-conservative forces (like friction) are acting, the total mechanical energy is conserved.</p>
+    <h3>Mechanical Energy:</h3>
+    \[ E_{mech} = K + U \]
+    <h3>Conservation of Mechanical Energy for Isolated Systems (no non-conservative forces):</h3>
+    \[ \Delta E_{mech} = 0 \]
+    <p>This implies that the initial mechanical energy equals the final mechanical energy:</p>
+    \[ K_f + U_f = K_i + U_i \]
+    <p>If non-conservative forces *are* acting within an isolated system, some mechanical energy is transformed into internal energy (e.g., due to friction).</p>
+    <h3>Most General Statement of Isolated System Model:</h3>
+    <p>The total energy of an isolated system is constant, where $E_{system}$ includes all kinetic, potential, and internal energies.</p>
+    \[ \Delta E_{system} = 0 \]
+    <p>This means energy transforms among the three possible types (kinetic, potential, internal) but the total amount remains constant.</p>
+
+    <hr class="section-divider">
+
+    <h2>8.5 Applying Conservation of Energy</h2>
+    <h3>Example 1: Ball in Free Fall</h3>
+    <p>A ball of mass $m$ is dropped from a height $h$. Determine the speed of the ball at a height $y$ above the ground.</p>
+    <ul>
+        <li><strong>Conceptualize:</strong> Use energy considerations instead of kinematic equations.</li>
+        <li><strong>Categorize:</strong> The system is the ball and the Earth. This is an isolated system because the only significant force acting is gravity, which is a conservative force. Thus, we use the isolated system model where mechanical energy is conserved.</li>
+        <li><strong>Analyze:</strong>
+            <ul>
+                <li>Initial state (i): At height $h$.
+                    <ul>
+                        <li>Initial height: $y_i = h$</li>
+                        <li>Initial gravitational potential energy: $U_{gi} = mgh$</li>
+                        <li>Initial kinetic energy: $K_i = 0$ (since it's dropped)</li>
+                    </ul>
+                </li>
+                <li>Final state (f): At height $y$.
+                    <ul>
+                        <li>Final height: $y_f = y$</li>
+                        <li>Final gravitational potential energy: $U_{gf} = mgy$</li>
+                        <li>Final kinetic energy: $K_f = \frac{1}{2}mv_f^2$</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>Apply conservation of mechanical energy:</p>
+            \[ K_f + U_{gf} = K_i + U_{gi} \]
+            \[ \frac{1}{2}mv_f^2 + mgy = 0 + mgh \]
+            <p>Solve for $v_f$:</p>
+            \[ \frac{1}{2}mv_f^2 = mgh - mgy \]
+            \[ v_f^2 = 2g(h-y) \]
+            \[ v_f = \sqrt{2g(h-y)} \]
+        </li>
+    </ul>
+
+    <h3>Example 2: Ranking Speeds of Thrown Balls</h3>
+    <p>Three identical balls are thrown from the top of a building with the same initial speed. Ball 1 is thrown horizontally, Ball 2 at an angle above the horizontal, and Ball 3 at an angle below the horizontal. Neglecting air resistance, rank the speeds of the balls at the instant each hits the ground.</p>
+    <ul>
+        <li><strong>Analysis:</strong> For a system consisting of a ball and the Earth, if air resistance is negligible, only the conservative gravitational force does work. Therefore, the mechanical energy ($K+U$) of the ball-Earth system is conserved. All three balls start with the same initial kinetic energy ($K_i = \frac{1}{2}mv_{initial}^2$) and undergo the same change in gravitational potential energy ($\Delta U_g = mg\Delta h$, where $\Delta h$ is the height of the building).
+        Since $K_i + U_i = K_f + U_f$, and $U_i$ and $U_f$ are the same for all balls (assuming $U=0$ at ground level), then $K_f$ must be the same for all balls.</li>
+        <li><strong>Conclusion:</strong> All three balls will have the **same speed** when they hit the ground ($v_1 = v_2 = v_3$). The time intervals to reach the ground will be different due to different initial vertical velocities, but the final speeds will be equal.</li>
+    </ul>
+
+    <h3>Example 3: Rock Drop Kinetic Energy</h3>
+    <p>A rock of mass $m$ is dropped from height $h$. A second rock, with mass $2m$, is dropped from the same height. When the second rock strikes the ground, what is its kinetic energy?</p>
+    <ul>
+        <li><strong>Analysis:</strong> For both rocks, the system (rock + Earth) is isolated, and only gravity (a conservative force) does work. Thus, mechanical energy is conserved.
+            Initial potential energy $U_{gi} = mgh$ and $K_i = 0$.
+            Final potential energy $U_{gf} = 0$ (at ground level).
+            So, $K_f + U_{gf} = K_i + U_{gi} \implies K_f = U_{gi} = mgh$.
+            For the first rock (mass $m$), $K_{f1} = mgh$.
+            For the second rock (mass $2m$), $K_{f2} = (2m)gh = 2(mgh)$.
+        </li>
+        <li><strong>Conclusion:</strong> The kinetic energy of the second rock ($2m$) when it strikes the ground is **twice that of the first rock**.</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>8.6 Work and Energy With Friction</h2>
+    <p>When kinetic friction is acting within a system, it transforms kinetic energy into internal energy (e.g., heat), meaning mechanical energy is not conserved.</p>
+    <h3>Work-Kinetic Energy Theorem with Friction:</h3>
+    \[ \Delta K = W_{other \ forces} - f_k d \]
+    <p>Where:</p>
+    <ul>
+        <li>$\Delta K$ is the change in kinetic energy of the system.</li>
+        <li>$W_{other \ forces}$ represents the work done by any other external forces on the system.</li>
+        <li>$f_k$ is the magnitude of the kinetic friction force.</li>
+        <li>$d$ is the distance over which friction acts.</li>
+    </ul>
+    <p>This is a modified form of the work-kinetic energy theorem, used when friction acts on an object. If friction is zero ($f_k = 0$), this equation reduces to the conservation of mechanical energy (assuming $W_{other \ forces}$ is work done by conservative forces or zero).</p>
+    <h3>Conservation of Energy for Isolated Systems with Friction:</h3>
+    <p>If friction acts within an isolated system, the change in mechanical energy is equal to the negative of the work done by friction (which is the energy transformed into internal energy):</p>
+    \[ \Delta E_{mech} = \Delta K + \Delta U = -f_k d \]
+    <p>Here, $\Delta U$ represents the change in all forms of potential energy within the system.</p>
+    <p>If non-conservative forces act within a non-isolated system, and the external influence is primarily through work (and friction acts internally):</p>
+    \[ \Delta E_{mech} = W_{other \ forces} - f_k d \]
+
+    <h3>Example: Crate Sliding Down a Rough Ramp</h3>
+    <p>A crate slides down a rough ramp. The initial velocity $\vec{v}_i = 0$. The ramp has a length $d = 1.00 \, \text{m}$ and makes an angle of $30.0^\circ$ with the horizontal. The vertical height of the ramp is $0.500 \, \text{m}$. Find the speed of the crate at the bottom of the ramp ($\vec{v}_f$).</p>
+    <ul>
+        <li><strong>Conceptualize:</strong> Use energy considerations because friction is present, making Newton's laws potentially more complicated.</li>
+        <li><strong>Categorize:</strong> Define the system as the crate, the surface (ramp), and the Earth. This is an isolated system with a non-conservative force (friction) acting within it.</li>
+        <li><strong>Analyze:</strong>
+            <p>Let the bottom of the ramp be $y=0$.</p>
+            <ul>
+                <li><strong>Initial State (Top of ramp):</strong>
+                    <ul>
+                        <li>$K_i = 0$ (starts from rest)</li>
+                        <li>$U_{gi} = mgy_i = mg(0.500 \, \text{m})$</li>
+                        <li>So, $E_i = K_i + U_{gi} = mg(0.500 \, \text{m})$</li>
+                    </ul>
+                </li>
+                <li><strong>Final State (Bottom of ramp):</strong>
+                    <ul>
+                        <li>$K_f = \frac{1}{2}mv_f^2$</li>
+                        <li>$U_{gf} = mgy_f = mg(0)$</li>
+                        <li>So, $E_f = K_f + U_{gf} = \frac{1}{2}mv_f^2$</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>Apply the conservation of energy equation for an isolated system with friction:</p>
+            \[ \Delta E_{mech} = E_f - E_i = -f_k d \]
+            \[ \frac{1}{2}mv_f^2 - mg(0.500 \, \text{m}) = -f_k (1.00 \, \text{m}) \]
+            <p>To solve for $v_f$, one would need the coefficient of kinetic friction ($\mu_k$) to calculate $f_k = \mu_k N$. The normal force $N$ on an incline is $N = mg \cos\theta$. So, $f_k = \mu_k mg \cos(30.0^\circ)$.</p>
+            <p>Substituting $f_k$ and solving for $v_f$ would yield the final speed.</p>
+        </li>
+        <li><strong>Finalize:</strong> The calculated speed could be compared to a scenario where the ramp was frictionless (where $f_k=0$ and $\Delta E_{mech}=0$). The fact that $\Delta E_{mech} < 0$ implies that the internal energy of the system (due to friction) increased.</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>8.7 Power</h2>
+    <p><strong>Power ($P$)</strong> is defined as the time rate of energy transfer.</p>
+    <h3>Formulas for Power:</h3>
+    <ul>
+        <li><strong>Instantaneous Power:</strong> The instantaneous power is the limiting value of the average power as the time interval $\Delta t$ approaches zero.
+            \[ P = \frac{dW}{dt} \]
+        </li>
+        <li><strong>Power in terms of Force and Velocity:</strong> When work is the method of energy transfer, instantaneous power can also be expressed as the dot product of the force vector and the instantaneous velocity vector:
+            \[ P = \vec{F} \cdot \vec{v} \]
+            If the force is constant and in the direction of motion, $P = Fv$.
+        </li>
+    </ul>
+    <h3>Units of Power:</h3>
+    <p>The standard SI unit of power is the **watt (W)**.</p>
+    \[ 1 \text{ watt (W)} = 1 \text{ joule (J)} / \text{second (s)} = 1 \text{ kg} \cdot \text{m}^2 / \text{s}^3 \]
+    <p>Another common unit of power, especially in mechanical contexts, is the horsepower (hp):</p>
+    \[ 1 \text{ hp} = 746 \text{ W} \]
+
+</body>
+</html>

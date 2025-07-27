@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics 101 Lecture 6: Dynamics – Newton's Second and Third Laws</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                packages: {'[+]': ['ams']}
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="lecture-page">
+    <h1>Physics 101 Lecture 6: Dynamics – Newton's Second and Third Laws</h1>
+
+    <p class="intro-text">
+        This lecture delves into the core principles of dynamics by exploring Newton's Second and Third Laws of Motion. We will learn how forces cause acceleration and how forces always occur in action-reaction pairs. This lecture will also cover how to apply these laws using free-body diagrams.
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>6.1 Newton's Second Law of Motion</h2>
+    <p>Newton's Second Law quantifies the relationship between force, mass, and acceleration. It states that whenever a net force acts on a body, it produces an acceleration in the direction of that force. This acceleration is directly proportional to the magnitude of the net force and inversely proportional to the mass of the body.</p>
+    <h3>Mathematical Formulation:</h3>
+    <p>The most famous form of Newton's Second Law is:</p>
+    \[ \vec{F}_{net} = m\vec{a} \]
+    <p>Where:</p>
+    <ul>
+        <li>$\vec{F}_{net}$ is the net (or resultant) force acting on the object (a vector quantity).</li>
+        <li>$m$ is the mass of the object (a scalar quantity).</li>
+        <li>$\vec{a}$ is the acceleration produced (a vector quantity, in the same direction as $\vec{F}_{net}$).</li>
+    </ul>
+    <p>This can also be written to solve for acceleration:</p>
+    \[ \vec{a} = \frac{\vec{F}_{net}}{m} \]
+    <p><strong>Important Note:</strong> When applying Newton's Second Law, always consider only the forces acting *on* the object of interest, not the forces that object exerts on other objects.</p>
+    <h3>Example:</h3>
+    <p>If two applied forces, say $\vec{F_1}$ and $\vec{F_2}$, act on an object, their vector sum gives the net force $\vec{F}_{net}$. If $\vec{F}_{net} = 0$, then the acceleration $\vec{a} = 0$. If $\vec{F}_{net} \neq 0$, then $\vec{a} \neq 0$. For instance, if $\vec{F_1}$ and $\vec{F_2}$ are equal in magnitude and opposite in direction, $\vec{F}_{net} = 0$. Otherwise, $\vec{F}_{net}$ will produce an acceleration proportional to its magnitude and inversely proportional to the object's mass.</p>
+
+    <hr class="section-divider">
+
+    <h2>6.2 Newton's Third Law of Motion (Action-Reaction Pairs)</h2>
+    <p>Newton's Third Law of Dynamics asserts that forces always occur in pairs; single, isolated forces do not exist. For every action force, there is an equal in magnitude and opposite in direction reaction force. These forces act on *different* objects.</p>
+    <h3>Mathematical Formulation:</h3>
+    <p>If object 1 exerts a force $\vec{F}_{12}$ on object 2, then object 2 simultaneously exerts a force $\vec{F}_{21}$ on object 1 such that:</p>
+    \[ \vec{F}_{12} = - \vec{F}_{21} \]
+    <p>This equation indicates that the two forces have equal magnitudes but opposite directions.</p>
+    <h3>Example: Block on a Horizontal Plane</h3>
+    <p>Consider a block resting on a horizontal surface:</p>
+    <ul>
+        <li><strong>Action Force:</strong> The block exerts a downward gravitational force (its weight, $W = mg$) on the horizontal plane.</li>
+        <li><strong>Reaction Force:</strong> The horizontal plane exerts an upward normal force ($N$) on the block.</li>
+    </ul>
+    <p>According to Newton's Third Law, these two forces are equal in magnitude and opposite in direction ($N = mg$). For the block, the net vertical force is $N - mg = 0$, resulting in zero vertical acceleration, which is consistent with the block resting on the surface.</p>
+    <p>It is crucial to understand that the action and reaction forces act on *different* bodies. The motion of a specific body is determined solely by the forces acting *on* that body.</p>
+
+    <hr class="section-divider">
+
+    <h2>6.3 Solving Problems with Newton's Laws: Free-Body Diagrams</h2>
+    <p>To effectively apply Newton's Laws and solve problems in dynamics, <strong>free-body diagrams (FBDs)</strong> are indispensable. An FBD is a simplified visual representation that isolates an object and shows all external forces acting upon it.</p>
+    <h3>Steps for Solving Problems Using FBDs and Newton's Laws:</h3>
+    <ol>
+        <li><strong>Sketch the Situation:</strong> Draw a clear diagram of the physical scenario described in the problem.</li>
+        <li><strong>Draw Free-Body Diagram(s):</strong> For each object whose motion is being analyzed, draw a separate free-body diagram.
+            <ul>
+                <li>Represent the object as a point or a simple shape.</li>
+                <li>Draw arrows originating from the object to represent each force acting *on* it. Label each force (e.g., $F_g$, $N$, $F_f$, $T$).</li>
+                <li>Try to draw the arrows to qualitatively represent the relative magnitudes and correct directions of the forces.</li>
+                <li><strong>Do NOT include forces exerted *by* the object on other objects.</strong></li>
+            </ul>
+        </li>
+        <li><strong>Choose a Coordinate System:</strong> Select an appropriate Cartesian coordinate system (x and y axes). Often, it's beneficial to align one axis with the direction of acceleration or motion.</li>
+        <li><strong>Resolve Vectors into Components:</strong> If any forces are not aligned with your chosen axes, resolve them into their x and y components using trigonometry.
+            <ul>
+                <li><em>Example:</em> A force $F$ at an angle $\theta$ to the x-axis has components $F_x = F \cos\theta$ and $F_y = F \sin\theta$.</li>
+            </ul>
+        </li>
+        <li><strong>Apply Newton's Second Law:</strong> Write down Newton's Second Law ($\Sigma \vec{F} = m\vec{a}$) in component form for each axis:
+            \[ \Sigma F_x = ma_x \]
+            \[ \Sigma F_y = ma_y \]
+            (If applicable, also $\Sigma F_z = ma_z$)
+        </li>
+        <li><strong>Solve the Equations:</strong> Solve the resulting system of algebraic equations for the unknown quantities (e.g., acceleration, tension, normal force, friction force).</li>
+    </ol>
+
+    <hr class="section-divider">
+
+    <h2>6.4 Common Forces: Tension and Friction</h2>
+    <ul>
+        <li><strong>Tension Force ($T$):</strong> This is the force exerted by a taut string, rope, cable, or similar object when it pulls on another object. The tension force acts along the length of the string and away from the object it is pulling. In an ideal massless string, the tension is uniform throughout its length.</li>
+        <li><strong>Static Friction Force ($F_s$):</strong> This is the force that opposes the *tendency* of motion between two surfaces that are in contact but not yet sliding relative to each other. Static friction prevents objects from moving until a sufficiently large applied force overcomes it. Its maximum value is given by $F_{s,max} = \mu_s N$, where $\mu_s$ is the coefficient of static friction and $N$ is the normal force.</li>
+        <li><strong>Kinetic Friction Force ($F_k$):</strong> This is the force that opposes the *actual* motion between two surfaces that are sliding relative to each other. Kinetic friction is typically constant for a given pair of surfaces and is generally less than the maximum static friction. Its magnitude is given by $F_k = \mu_k N$, where $\mu_k$ is the coefficient of kinetic friction and $N$ is the normal force.</li>
+    </ul>
+
+</body>
+</html>

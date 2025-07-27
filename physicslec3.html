@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics 101 Lecture 3: Motion in Two Dimensions</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                packages: {'[+]': ['ams']}
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="lecture-page">
+    <h1>Physics 101 Lecture 3: Motion in Two Dimensions</h1>
+
+    <p class="intro-text">
+        This lecture extends the concepts of kinematics to describe motion in two dimensions, which is essential for understanding projectile motion and other complex movements.
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>3.1 Kinematics in Two Dimensions</h2>
+    <p>Motion in two dimensions means an object moves in a plane (e.g., the x-y plane). This type of motion can be analyzed by considering the horizontal (x) and vertical (y) components of motion independently, as they are perpendicular and do not affect each other.</p>
+    <ul>
+        <li>Vectors are crucial for describing two-dimensional motion, as quantities like position, velocity, and acceleration have both magnitude and direction in a plane.</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>3.2 Position, Displacement, Velocity, and Acceleration in 2D</h2>
+
+    <h3>3.2.1 Position Vector (\(\vec{r}\))</h3>
+    <ul>
+        <li>Describes the location of an object in a 2D plane relative to the origin.</li>
+        <li>\(\vec{r} = x\hat{i} + y\hat{j}\), where \(x\) and \(y\) are the coordinates and \(\hat{i}\) and \(\hat{j}\) are unit vectors along the x and y axes, respectively.</li>
+    </ul>
+
+    <h3>3.2.2 Displacement Vector (\(\Delta \vec{r}\))</h3>
+    <ul>
+        <li>The change in the position vector: \(\Delta \vec{r} = \vec{r}_f - \vec{r}_i = (x_f - x_i)\hat{i} + (y_f - y_i)\hat{j} = \Delta x\hat{i} + \Delta y\hat{j}\).</li>
+    </ul>
+
+    <h3>3.2.3 Average Velocity (\(\vec{v}_{avg}\))</h3>
+    <ul>
+        <li>\(\vec{v}_{avg} = \frac{\Delta \vec{r}}{\Delta t} = \frac{\Delta x}{\Delta t}\hat{i} + \frac{\Delta y}{\Delta t}\hat{j} = v_{avg,x}\hat{i} + v_{avg,y}\hat{j}\).</li>
+    </ul>
+
+    <h3>3.2.4 Instantaneous Velocity (\(\vec{v}\))</h3>
+    <ul>
+        <li>The derivative of the position vector with respect to time: \(\vec{v} = \frac{d\vec{r}}{dt} = \frac{dx}{dt}\hat{i} + \frac{dy}{dt}\hat{j} = v_x\hat{i} + v_y\hat{j}\).</li>
+        <li>The magnitude of velocity is speed: \(|\vec{v}| = \sqrt{v_x^2 + v_y^2}\).</li>
+    </ul>
+
+    <h3>3.2.5 Average Acceleration (\(\vec{a}_{avg}\))</h3>
+    <ul>
+        <li>\(\vec{a}_{avg} = \frac{\Delta \vec{v}}{\Delta t} = \frac{\Delta v_x}{\Delta t}\hat{i} + \frac{\Delta v_y}{\Delta t}\hat{j} = a_{avg,x}\hat{i} + a_{avg,y}\hat{j}\).</li>
+    </ul>
+
+    <h3>3.2.6 Instantaneous Acceleration (\(\vec{a}\))</h3>
+    <ul>
+        <li>The derivative of the velocity vector with respect to time: \(\vec{a} = \frac{d\vec{v}}{dt} = \frac{dv_x}{dt}\hat{i} + \frac{dv_y}{dt}\hat{j} = a_x\hat{i} + a_y\hat{j}\).</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>3.3 Projectile Motion</h2>
+    <p>Projectile motion is a common example of two-dimensional motion where an object is launched into the air and moves under the influence of gravity alone (neglecting air resistance).</p>
+    <ul>
+        <li><strong>Key Assumptions:</strong>
+            <ul>
+                <li>Acceleration in the horizontal (x) direction is zero (\(a_x = 0\)). This means \(v_x\) is constant.</li>
+                <li>Acceleration in the vertical (y) direction is due to gravity (\(a_y = -g\), where \(g \approx 9.8 \ m/s^2\) downwards).</li>
+            </ul>
+        </li>
+        <li>The horizontal and vertical components of motion are independent. Problems are solved by applying the one-dimensional kinematic equations to each component separately.</li>
+    </ul>
+
+    <h3>3.3.1 Equations for Projectile Motion:</h3>
+    <ul>
+        <li><strong>Horizontal Motion (constant velocity):</strong>
+            <ul>
+                <li>\(x = x_0 + v_{0x}t\)</li>
+                <li>\(v_x = v_{0x}\)</li>
+            </ul>
+        </li>
+        <li><strong>Vertical Motion (constant acceleration \(a_y = -g\)):</strong>
+            <ul>
+                <li>\(y = y_0 + v_{0y}t - \frac{1}{2}gt^2\)</li>
+                <li>\(v_y = v_{0y} - gt\)</li>
+                <li>\(v_y^2 = v_{0y}^2 - 2g(y - y_0)\)</li>
+            </ul>
+        </li>
+    </ul>
+    <p>where \(v_{0x} = v_0 \cos\theta\) and \(v_{0y} = v_0 \sin\theta\), with \(v_0\) being the initial speed and \(\theta\) the launch angle with the horizontal.</p>
+
+    <p>Understanding motion in two dimensions, particularly projectile motion, is crucial for analyzing trajectories, designing ballistic systems, and understanding the flight of objects in various engineering applications.</p>
+
+</body>
+</html>

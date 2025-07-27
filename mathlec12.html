@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATH103 for Engineering: Lecture #12 Summary</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']], // Defines how inline math is delimited
+                packages: {'[+]': ['ams']} // Explicitly load ams package for commands like \mathbb
+            },
+            svg: {
+                fontCache: 'global' // Optimizes font loading
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+</head>
+<body class="lecture-page">
+    <h1>MATH103 for Engineering: Lecture #12 Summary</h1>
+
+    <p class="intro-text">
+        This lecture continues Chapter 3 of MATH103 for Engineering, focusing on the applications of limits: differentiation of functions, specifically inverse trigonometric and inverse hyperbolic functions.
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>Chapter 3: Applications of Limits: Differentiation of Functions</h2>
+
+    <h3>Derivative of Functions: Methods Overview</h3>
+    <p>This section provides an overview of the derivative methods covered or to be covered:</p>
+    <ol>
+        <li>By Definition.</li>
+        <li>Power function rule.</li>
+        <li>Square root function rule.</li>
+        <li>Absolute value function rule.</li>
+        <li>Product of two functions rule.</li>
+        <li>Quotient of two functions rule.</li>
+        <li>Exponential function rule.</li>
+        <li>Logarithmic function rule.</li>
+        <li>Trigonometric functions rules and their inverses.</li>
+        <li>Hyperbolic functions rules and their inverses.</li>
+    </ol>
+
+    <hr class="section-divider">
+
+    <h2>9'. Derivative of the Inverse Trigonometric Functions</h2>
+    <p>The following rules must be kept in mind:</p>
+    <ul>
+        <li>$\frac{d}{dx}(\sin^{-1}x)=\frac{1}{\sqrt{1-x^{2}}}, \quad |x|<1$</li>
+        <li>$\frac{d}{dx}(\cos^{-1}x)=\frac{-1}{\sqrt{1-x^{2}}}, \quad |x|<1$</li>
+        <li>$\frac{d}{dx}(\tan^{-1}x)=\frac{1}{1+x^{2}}$</li>
+        <li>$\frac{d}{dx}(\cot^{-1}x)=\frac{-1}{1+x^{2}}$</li>
+        <li>$\frac{d}{dx}(\sec^{-1}x)=\frac{1}{x\sqrt{x^{2}-1}}, \quad |x|>1$</li>
+        <li>$\frac{d}{dx}(\csc^{-1}x)=\frac{-1}{x\sqrt{x^{2}-1}}, \quad |x|>1$</li>
+    </ul>
+    <p><strong>Remember that:</strong> $\sin^{2}x+\cos^{2}x=1$, $1+\tan^{2}x=\sec^{2}x$ & $1+\cot^{2}x=\csc^{2}x$.</p>
+    <p>The proofs of all the above rules are similar to the following examples:</p>
+
+    <hr class="section-divider">
+
+    <h2>Prove that $\frac{d}{dx}(\sin^{-1}x)=\frac{1}{\sqrt{1-x^{2}}}, x<1$</h2>
+    <p><strong>Proof:</strong>
+    Let $y=\sin^{-1}x \Rightarrow x=\sin y$.
+    Differentiate both sides with respect to $x$:
+    $$\frac{dx}{dx}=\frac{d}{dx}(\sin y)$$
+    $$1=(\cos y)\cdot\frac{dy}{dx}$$
+    Solve for $\frac{dy}{dx}$:
+    $$\frac{dy}{dx}=\frac{1}{\cos y}$$
+    Since $\sin^{2}y+\cos^{2}y=1$, we have $\cos y=\sqrt{1-\sin^{2}y}$. (We take the positive root because the range of $\sin^{-1}x$ is $[-\frac{\pi}{2}, \frac{\pi}{2}]$, where $\cos y \ge 0$).
+    $$\frac{dy}{dx}=\frac{1}{\sqrt{1-\sin^{2}y}}$$
+    Substitute $x=\sin y$:
+    $$\frac{d}{dx}(\sin^{-1}x)=\frac{1}{\sqrt{1-x^{2}}}$$</p>
+
+    <hr class="section-divider">
+
+    <h2>Prove that $\frac{d}{dx}(\sec^{-1}x)=\frac{1}{x\sqrt{x^{2}-1}}, |x|>1$</h2>
+    <p><strong>Proof:</strong>
+    Let $y=\sec^{-1}x \Rightarrow x=\sec y$.
+    Differentiate both sides with respect to $x$:
+    $$\frac{dx}{dx}=\frac{d}{dx}(\sec y)$$
+    $$1=(\sec y \tan y)y^{\prime}$$
+    Solve for $y^{\prime}=\frac{dy}{dx}$:
+    $$y^{\prime}=\frac{1}{\sec y \tan y}$$
+    Since $1+\tan^{2}y=\sec^{2}y$, we have $\tan y=\pm\sqrt{\sec^{2}y-1}$.
+    For $\sec^{-1}x$, the range is $[0, \pi/2) \cup (\pi/2, \pi]$.
+    If $x>1$, then $y \in [0, \pi/2)$, so $\tan y \ge 0$. Thus $\tan y = \sqrt{\sec^2 y - 1}$.
+    If $x<-1$, then $y \in (\pi/2, \pi]$, so $\tan y \le 0$. Thus $\tan y = -\sqrt{\sec^2 y - 1}$.
+    To account for both cases, we use $|x|\sqrt{x^2-1}$ in the denominator, which naturally comes from $\sec y \tan y$ when considering the sign.
+    $$y^{\prime}=\frac{1}{\sec y \sqrt{\sec^{2}y-1}}$$
+    Substitute $x=\sec y$:
+    $$\frac{d}{dx}(\sec^{-1}x)=\frac{1}{x\sqrt{x^{2}-1}}$$</p>
+
+    <hr class="section-divider">
+
+    <h2>The General Formulas (using $u$) "Chain Rule" of the Derivative of Inverse Trigonometric Functions</h2>
+    <p>Note: $\frac{du}{dx}=u^{\prime}$</p>
+    <ul>
+        <li>$\frac{d}{dx}(\sin^{-1}u)=\frac{u^{\prime}}{\sqrt{1-u^{2}}}, \quad |u|<1$</li>
+        <li>$\frac{d}{dx}(\cos^{-1}u)=-\frac{u^{\prime}}{\sqrt{1-u^{2}}}, \quad |u|<1$</li>
+        <li>$\frac{d}{dx}(\tan^{-1}u)=\frac{u^{\prime}}{1+u^{2}}$</li>
+        <li>$\frac{d}{dx}(\cot^{-1}u)=-\frac{u^{\prime}}{1+u^{2}}$</li>
+        <li>$\frac{d}{dx}(\sec^{-1}u)=\frac{u^{\prime}}{|u|\sqrt{u^{2}-1}}, \quad |u|>1$</li>
+        <li>$\frac{d}{dx}(\csc^{-1}u)=-\frac{u^{\prime}}{|u|\sqrt{u^{2}-1}}, \quad |u|>1$</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>10'. Derivative of Inverse Hyperbolic Functions</h2>
+    <ul>
+        <li>$\frac{d}{dx}(\sinh^{-1}x)=\frac{1}{\sqrt{1+x^{2}}}$</li>
+        <li>$\frac{d}{dx}(\cosh^{-1}x)=\frac{1}{\sqrt{x^{2}-1}}, \quad x>1$</li>
+        <li>$\frac{d}{dx}(\tanh^{-1}x)=\frac{1}{1-x^{2}}, \quad |x|<1$</li>
+        <li>$\frac{d}{dx}(\coth^{-1}x)=\frac{1}{1-x^{2}}, \quad |x|>1$</li>
+        <li>$\frac{d}{dx}(\text{sech}^{-1}x)=\frac{-1}{x\sqrt{1-x^{2}}}, \quad 0<x<1$</li>
+        <li>$\frac{d}{dx}(\text{csch}^{-1}x)=\frac{-1}{|x|\sqrt{x^{2}+1}}, \quad x\ne0$</li>
+    </ul>
+    <p><strong>Remember that:</strong> $\cosh^{2}x-\sinh^{2}x=1$, $1-\tanh^{2}x=\text{sech}^{2}x$ & $\coth^{2}x-1=\text{csch}^{2}x$.</p>
+
+    <hr class="section-divider">
+
+    <h2>Prove that $\frac{d}{dx}(\sinh^{-1}x)=\frac{1}{\sqrt{1+x^{2}}}$</h2>
+    <p><strong>Proof:</strong>
+    Let $y=\sinh^{-1}x \Rightarrow x=\sinh y$.
+    Differentiate both sides with respect to $x$:
+    $$\frac{dx}{dx}=\frac{d}{dx}(\sinh y)$$
+    $$1=(\cosh y)\cdot\frac{dy}{dx}$$
+    Solve for $\frac{dy}{dx}$:
+    $$\frac{dy}{dx}=\frac{1}{\cosh y}$$
+    Since $\cosh^{2}y-\sinh^{2}y=1$, we have $\cosh y=\sqrt{1+\sinh^{2}y}$. (We take the positive root because $\cosh y \ge 1$).
+    $$\frac{dy}{dx}=\frac{1}{\sqrt{1+\sinh^{2}y}}$$
+    Substitute $x=\sinh y$:
+    $$\frac{d}{dx}(\sinh^{-1}x)=\frac{1}{\sqrt{1+x^{2}}}$$</p>
+
+    <hr class="section-divider">
+
+    <h2>Prove that $\frac{d}{dx}(\text{csch}^{-1}x)=\frac{-1}{x\sqrt{x^{2}+1}}$</h2>
+    <p><strong>Proof:</strong>
+    Let $y=\text{csch}^{-1}x \Rightarrow x=\text{csch} y$.
+    Differentiate both sides with respect to $x$:
+    $$\frac{dx}{dx}=\frac{d}{dx}(\text{csch} y)$$
+    $$1=-\text{csch} y \cdot \coth y \cdot y^{\prime}$$
+    Solve for $y^{\prime}=\frac{dy}{dx}$:
+    $$\frac{dy}{dx}=\frac{-1}{\text{csch} y \cdot \coth y}$$
+    Since $\coth^{2}y-1=\text{csch}^{2}y$, we have $\coth y=\pm\sqrt{\text{csch}^{2}y+1}$.
+    The sign of $\coth y$ depends on the sign of $y$, and the domain of $\text{csch}^{-1}x$ is $x \ne 0$.
+    For the derivative, we use the absolute value for $x$ in the general rule, but the specific form given implies a particular branch or a common simplification.
+    $$=\frac{-1}{\text{csch} y \cdot \sqrt{\text{csch}^{2}y+1}}$$
+    Substitute $x=\text{csch} y$:
+    $$\frac{d}{dx}(\text{csch}^{-1}x)=\frac{-1}{x\sqrt{x^{2}+1}}$$</p>
+
+    <hr class="section-divider">
+
+    <h2>Summary for the Derivatives of Inverse Trigonometric & Inverse Hyperbolic Functions (in terms of $u(x)$ - Chain Rule)</h2>
+    <p>$u^{\prime}=\frac{du}{dx}$</p>
+    <ul>
+        <li>$\frac{d}{dx}(\sin^{-1}u)=\frac{u^{\prime}}{\sqrt{1-(u)^{2}}}$</li>
+        <li>$\frac{d}{dx}(\sinh^{-1}u)=\frac{u^{\prime}}{\sqrt{1+(u)^{2}}}$</li>
+        <li>$\frac{d}{dx}(\cos^{-1}u)=\frac{-u^{\prime}}{\sqrt{1-(u)^{2}}}$</li>
+        <li>$\frac{d}{dx}(\cosh^{-1}u)=\frac{u^{\prime}}{\sqrt{(u)^{2}-1}}$</li>
+        <li>$\frac{d}{dx}(\tan^{-1}u)=\frac{u^{\prime}}{1+(u)^{2}}$</li>
+        <li>$\frac{d}{dx}(\tanh^{-1}u)=\frac{u^{\prime}}{1-(u)^{2}}$</li>
+        <li>$\frac{d}{dx}(\cot^{-1}u)=\frac{-u^{\prime}}{1+(u)^{2}}$</li>
+        <li>$\frac{d}{dx}(\coth^{-1}u)=\frac{u^{\prime}}{1-(u)^{2}}$</li>
+        <li>$\frac{d}{dx}(\sec^{-1}u)=\frac{u^{\prime}}{|u|\sqrt{(u)^{2}-1}}$</li>
+        <li>$\frac{d}{dx}(\text{sech}^{-1}u)=\frac{-u^{\prime}}{u\sqrt{1-(u)^{2}}}$</li>
+        <li>$\frac{d}{dx}(\csc^{-1}u)=\frac{-u^{\prime}}{|u|\sqrt{(u)^{2}-1}}$</li>
+        <li>$\frac{d}{dx}(\text{csch}^{-1}u)=\frac{-u^{\prime}}{|u|\sqrt{(u)^{2}+1}}$</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>Examples</h2>
+    <p>This section would typically contain examples applying the rules for inverse trigonometric and inverse hyperbolic functions. The provided content indicates "Examples," "Solutions," and further "Examples Solution."</p>
+
+    <hr class="section-divider">
+
+    <h2>Higher Order Derivatives</h2>
+    <p>We define the second derivative as follows:</p>
+    $$\frac{d^2y}{dx^2} = \frac{d}{dx}\left(\frac{dy}{dx}\right)$$
+    <p>Higher order derivatives are defined in a similar way.</p>
+
+    <hr class="section-divider">
+
+    <h2>Important Exercise</h2>
+    <p>This section indicates an important exercise and its solution, likely related to higher-order derivatives.</p>
+
+    <hr class="section-divider">
+
+    <h2>Applications of Differentiation</h2>
+    <p>Future topics or continued applications of differentiation include:</p>
+    <ol>
+        <li>Logarithmic differentiation.</li>
+        <li>Challenging problems.</li>
+        <li>Implicit differentiation.</li>
+        <li>Linearization of a function.</li>
+        <li>The Differential of a function.</li>
+        <li>L'Hôpital's rule.</li>
+        <li>Extrema & Inflection points, Optimization & Curve sketching.</li>
+    </ol>
+    <p>Thank you</p>
+
+</body>
+</html>

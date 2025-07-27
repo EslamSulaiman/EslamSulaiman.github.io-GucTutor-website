@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATH103 for Engineering: Lecture #10 Summary</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']], // Defines how inline math is delimited
+                packages: {'[+]': ['ams']} // Explicitly load ams package for commands like \mathbb
+            },
+            svg: {
+                fontCache: 'global' // Optimizes font loading
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+</head>
+<body class="lecture-page">
+    <h1>MATH103 for Engineering: Lecture #10 Summary</h1>
+
+    <p class="intro-text">
+        This lecture continues Chapter 3 of MATH103 for Engineering, focusing on the applications of limits: differentiation of functions.
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>Chapter 3: Applications of Limits: Differentiation of Functions</h2>
+
+    <h3>Power Rule for Rational Powers</h3>
+    <p>If $p/q$ is a rational number, then $x^{p/q}$ is differentiable at every interior point of the domain of $x^{(p/q)-1}$, and:
+    $$\frac{d}{dx}x^{p/q}=\frac{p}{q}x^{(p/q)-1}$$</p>
+
+    <h4>Examples: Find $\frac{dy}{dx}$</h4>
+    <p>1. $y=x^{2/3}$
+        <br><strong>Solution:</strong> $\frac{dy}{dx}=\frac{2}{3}x^{-1/3}=\frac{2}{3}.\frac{1}{\sqrt[3]{x}}$</p>
+    <p>2. $y=\sqrt[3]{x}.e^{x}$
+        <br><strong>Solution:</strong> $\frac{dy}{dx}=\sqrt[3]{x}.(e^{x})+e^{x}.(\frac{1}{3}x^{-2/3})$</p>
+    <p><strong>Conclusion:</strong> For any rational number $n$, the derivative of $x^n$ is $n \cdot x^{n-1}$.</p>
+
+    <h3>Derivative Sum Rule</h3>
+    <p>If $u$ and $v$ are differentiable functions of $x$, then their sum $u+v$ is differentiable at every point where $u$ and $v$ are both differentiable. At such points:
+    $$\frac{d}{dx}(u+v)=\frac{du}{dx}+\frac{dv}{dx}$$
+    The proof follows from the definition.</p>
+
+    <h4>Example:</h4>
+    <p>Find the points at which the tangent lines to the curve $y=x^{4}-2x^{2}+2$ are horizontal.</p>
+    <p><strong>Solution:</strong>
+    For horizontal tangent lines, the slope $y'$ must be zero.
+    Given $y=x^{4}-2x^{2}+2$
+    $y^{\prime}=4x^{3}-4x=4x(x^{2}-1)$
+    Set $y^{\prime}=0$:
+    $4x(x^{2}-1)=0 \Rightarrow x=0, x=-1, x=1$.
+    Now, find the corresponding $y$ values:
+    For $x=0 \Rightarrow y=0^{4}-2(0)^{2}+2=2$. Point: $(0,2)$.
+    For $x=-1 \Rightarrow y=(-1)^{4}-2(-1)^{2}+2=1-2+2=1$. Point: $(-1,1)$.
+    For $x=1 \Rightarrow y=(1)^{4}-2(1)^{2}+2=1-2+2=1$. Point: $(1,1)$.
+    Therefore, the three points are $(0,2)$, $(-1,1)$, and $(1,1)$.</p>
+
+    <hr class="section-divider">
+
+    <h2>Overview of Derivative Rules</h2>
+    <p>This lecture covers various derivative rules, including:</p>
+    <ol>
+        <li>By Definition</li>
+        <li>Power function rule</li>
+        <li>Square root function rule</li>
+        <li>Absolute value function rule</li>
+        <li>Product of two functions rule</li>
+        <li>Quotient of two functions rule</li>
+        <li>Exponential function rule</li>
+        <li>Logarithmic function rule</li>
+        <li>Trigonometric functions rules and their inverses</li>
+        <li>Hyperbolic functions rules and their inverses</li>
+    </ol>
+
+    <h3>Derivative Product Rule (RULE 5)</h3>
+    <p>If $u$ and $v$ are differentiable at $x$, then so is their product $uv$, and:
+    $$\frac{d}{dx}(uv)=u\frac{dv}{dx}+v\frac{du}{dx}$$
+    The proof follows from the definition.</p>
+    <p><strong>Example:</strong>
+    $\frac{d}{dx}[\sqrt{x}(x^{2}+3x-1)] = \sqrt{x}(x^{2}+3x-1)^{\prime}+(x^{2}+3x-1)(\sqrt{x})^{\prime}$
+    $= \sqrt{x}(2x+3)+(x^{2}+3x-1)\frac{1}{2\sqrt{x}}$</p>
+
+    <h3>Derivative Quotient Rule (RULE 6)</h3>
+    <p>If $u$ and $v$ are differentiable at $x$ and if $v(x)\ne0$, then the quotient $u/v$ is differentiable at $x$, and:
+    $$\frac{d}{dx}\left(\frac{u}{v}\right)=\frac{v\frac{du}{dx}-u\frac{dv}{dx}}{v^{2}}$$
+    The proof follows from the definition.</p>
+    <p><strong>Example:</strong>
+    $\frac{d}{dx}\left[\frac{2x^{2}-1}{x^{2}+1}\right]=\frac{(x^{2}+1)(2x^{2}-1)^{\prime}-(2x^{2}-1)(x^{2}+1)^{\prime}}{(x^{2}+1)^{2}}$
+    $=\frac{(x^{2}+1)(4x)-(2x^{2}-1)(2x)}{(x^{2}+1)^{2}}=\frac{4x^3+4x-4x^3+2x}{(x^{2}+1)^{2}}=\frac{6x}{(x^{2}+1)^{2}}$</p>
+
+    <h3>Derivative of the Exponential Function</h3>
+    <p>$$\frac{d}{dx}(a^{x})=a^{x}.ln(a)$$
+    <strong>Proof:</strong>
+    We know that: $lim_{h\rightarrow0}\frac{a^{h}-1}{h}=ln(a)$
+    $\frac{d}{dx}(a^{x})=lim_{h\rightarrow0}\frac{a^{x+h}-a^{x}}{h}$
+    $=lim_{h\rightarrow0}\frac{a^{x}.a^{h}-a^{x}}{h}$
+    $=lim_{h\rightarrow0}\frac{a^{x}.[a^{h}-1]}{h}$
+    $=a^{x}.lim_{h\rightarrow0}\frac{a^{h}-1}{h}=a^{x}.ln(a)$</p>
+
+    <h3>Derivative of the Logarithmic Function</h3>
+    <p>$$\frac{d}{dx}(ln~x)=\frac{1}{x},x>0$$
+    <strong>Proof:</strong>
+    We know that: $lim_{y\rightarrow0}(1+y)^{\frac{1}{y}}=e$
+    $\frac{d}{dx}(ln~x)=lim_{h\rightarrow0}\frac{ln(x+h)-ln~x}{h}=lim_{h\rightarrow0}\frac{ln(\frac{x+h}{x})}{h}$
+    $=lim_{h\rightarrow0}\frac{ln(1+\frac{h}{x})}{h}$ (Let $\frac{h}{x}=y$, so $h=xy$. As $h\rightarrow0$, $y\rightarrow0$)
+    $=lim_{y\rightarrow0}\frac{ln(1+y)}{xy}=\frac{1}{x}lim_{y\rightarrow0}\frac{1}{y}.ln(1+y)=\frac{1}{x}lim_{y\rightarrow0}ln(1+y)^{\frac{1}{y}}$
+    By the continuity of the $ln(.)$ function:
+    $=\frac{1}{x}ln~lim_{y\rightarrow 0}(1+y)^{\frac{1}{y}}=\frac{1}{x}ln~e=\frac{1}{x}.$</p>
+    <p><strong>To prove:</strong> $\frac{d}{dx}(ln|x|)=\frac{1}{x}$</p>
+
+    <h3>Derivative of the General Logarithmic Function</h3>
+    <p>$$\frac{d}{dx}(log_{a}x)=\frac{1}{x}.\frac{1}{ln~a}$$
+    <strong>Proof:</strong>
+    Since $log_{a}x=\frac{ln~x}{ln~a}$, then:
+    $\frac{d}{dx}(log_{a}x)=\frac{d}{dx}\left(\frac{ln~x}{ln~a}\right)=\frac{1}{ln~a}\frac{d}{dx}(ln~x)=\frac{1}{ln~a}\cdot\frac{1}{x}$.</p>
+
+    <hr class="section-divider">
+
+    <h2>The Chain Rule</h2>
+    <p>If $f(u)$ is differentiable at the point $u=g(x)$ and $g(x)$ is differentiable at $x$, then the composite function $(f\circ g)(x)=f(g(x))$ is differentiable at $x$, and:
+    $$(f\circ g)^{\prime}(x)=f^{\prime}(g(x))\cdot g^{\prime}(x)$$
+    In Leibniz's notation, if $y=f(u)$ and $u=g(x)$, then:
+    $$\frac{dy}{dx}=\frac{dy}{du}\cdot\frac{du}{dx},$$
+    where $dy/du$ is evaluated at $u=g(x)$.</p>
+
+    <h4>Example:</h4>
+    <p>Find $\frac{dy}{dx}$ if $y=\sqrt{x^{3}+5x}$.</p>
+    <p><strong>Solution:</strong>
+    Let $u = x^3+5x$. Then $y = \sqrt{u} = u^{1/2}$.
+    $\frac{dy}{du} = \frac{1}{2}u^{-1/2} = \frac{1}{2\sqrt{u}}$
+    $\frac{du}{dx} = 3x^2+5$
+    Using the chain rule, $\frac{dy}{dx}=\frac{dy}{du}\cdot\frac{du}{dx}$:
+    $y^{\prime}=\frac{1}{2\sqrt{x^{3}+5x}}(x^{3}+5x)^{\prime}=\frac{1}{2\sqrt{x^{3}+5x}}(3x^{2}+5)$</p>
+
+    <hr class="section-divider">
+
+    <h2>Summary: Basic Rules of Differentiation (Differentiation Toolbox I)</h2>
+    <p>This section summarizes special cases for "x" and general cases for a function "u" (chain rule applications).</p>
+    <ol>
+        <li>If $f(x)=c$ (constant function), then $f^{\prime}(x)=0$.</li>
+        <li><strong>Constant times function Rule:</strong> $(cf)^{\prime}(x)=cf^{\prime}(x)$ for any real $c$.</li>
+        <li><strong>Sum/Difference Rule:</strong> $(f(x)\pm g(x))^{\prime}=f^{\prime}(x)\pm g^{\prime}(x)$ for any two differentiable functions $f$ and $g$.</li>
+        <li><strong>Product Rule:</strong> $(f(x)\cdot g(x))^{\prime}=f(x)\cdot g^{\prime}(x)+f^{\prime}(x)\cdot g(x)$ for any two differentiable functions $f$ and $g$.</li>
+        <li><strong>Quotient Rule:</strong> $\left(\frac{f(x)}{g(x)}\right)^{\prime}=\frac{g(x)\cdot f^{\prime}(x)-f(x)\cdot g^{\prime}(x)}{[g(x)]^{2}}$ for any two differentiable functions $f$ and $g$ such that $g(x)\ne0$.</li>
+        <li><strong>Chain Rule:</strong> If $f(u)$ is a differentiable function, where $u(x)$ itself is a differentiable function of $x$, then $(f(u))^{\prime}=\frac{d}{dx}f(u)=f^{\prime}(u)\cdot u^{\prime}(x).$</li>
+        <li><strong>Power Rule:</strong> If $f(x)=x^n$, then $f'(x)=nx^{n-1}$. Or generally, if $f(x)=u^n$, then $f'(x)=nu^{n-1}u'(x)$.</li>
+        <li><strong>Square Root Rule:</strong> If $f(x)=\sqrt{x}$, then $f'(x)=\frac{1}{2\sqrt{x}}$. Or generally, if $f(x)=\sqrt{u}$, then $f'(x)=\frac{1}{2\sqrt{u}}u'(x)$.</li>
+        <li><strong>Exponential Rule:</strong> If $f(x)=a^x$, then $f'(x)=a^x \ln a$. Or generally, if $f(x)=a^u$, then $f'(x)=a^u \ln a \cdot u'(x)$.</li>
+        <li><strong>Special case for Exponential Rule:</strong> If $f(x)=e^x$, then $f'(x)=e^x$. This is the reason why the number $e$ was chosen as the universal base; the respective exponential function is the only function in mathematics that remains unaffected by differentiation. Or generally, if $f(x)=e^u$, then $f'(x)=e^u \cdot u'(x)$.</li>
+        <li><strong>Logarithmic Rule:</strong> If $f(x)=\log_a x$, then $f'(x)=\frac{1}{x \ln a}$. Or generally, if $f(x)=\log_a u$, then $f'(x)=\frac{1}{u \ln a} u'(x)$.</li>
+        <li><strong>Special case for Logarithmic Rule:</strong> If $f(x)=\ln x$, then $f'(x)=\frac{1}{x}$. Or generally, if $f(x)=\ln u$, then $f'(x)=\frac{1}{u} u'(x)$.</li>
+    </ol>
+    <p><strong>Homework:</strong> Prove the derivative of the exponential function and general exponential function by chain rule and by definition. Can you find another function whose derivative gives the same function?</p>
+
+    <hr class="section-divider">
+
+    <h2>The Rate of Change of a Function as the Derivative</h2>
+    <p>Given a function $f(x)$:
+    If $x$ moves from $a$ to $a+h$, the change in $x$: $\Delta x = (a+h) - a = h$.
+    Then, the corresponding change in $f(x)$: $\Delta y = f(a+h) - f(a)$.</p>
+
+    <p><strong>I - The Average Rate of Change of $f(x)$ on $[a, a+h]$ (or for 2 points “a” & “a+h”):</strong>
+    Is defined as:
+    $$Average~Rate~of~Change = \frac{\Delta y}{\Delta x} = \frac{f(a+h)-f(a)}{h}$$</p>
+
+    <p><strong>II - The instantaneous rate of change of $f(x)$ at a point “a”:</strong>
+    Is obtained when “the point Q moves to P” i.e., “as $\Delta x = h \rightarrow 0$”.
+    Is defined by:
+    $$Instantaneous~Rate~of~Change = \lim_{h\rightarrow 0} \frac{f(a+h)-f(a)}{h} = f'(a)$$</p>
+
+    <h4>Example: Velocity Calculation</h4>
+    <p>If the distance (in meters) traveled by a moving object as a function of time (in seconds) is given by: $s(t) = 2t^2 + 3$.
+    Find the average velocity of the object during the first three seconds, and its instantaneous velocity in the third second.</p>
+    <p><strong>Solution:</strong>
+    For average velocity during the first three seconds ($t=0$ to $t=3$):
+    $s(0) = 2(0)^2 + 3 = 3$
+    $s(3) = 2(3)^2 + 3 = 2(9) + 3 = 18 + 3 = 21$
+    Average velocity $= \frac{s(3)-s(0)}{3-0} = \frac{21-3}{3} = \frac{18}{3} = 6$ meters/second.</p>
+    <p>The instantaneous velocity as a function of time is the derivative of $s(t)$:
+    $v(t) = s'(t) = \frac{d}{dt}(2t^2+3) = 4t$.
+    Therefore, the instantaneous velocity in the third second ($t=3$) is:
+    $v(3) = 4(3) = 12$ meters/second.</p>
+
+    <p>Thank you</p>
+
+</body>
+</html>

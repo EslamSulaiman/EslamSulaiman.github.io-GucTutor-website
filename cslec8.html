@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSEN102 Introduction to Computer Science: Lecture 8 Summary</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                packages: {'[+]': ['ams']}
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+</head>
+<body class="lecture-page">
+    <h1>CSEN102 Introduction to Computer Science: Lecture 8: Attributes of Algorithms and Measuring Efficiency</h1>
+
+    <p class="intro-text">
+        This lecture for CSEN102: Introduction to Computer Science, given by Milad Ghantous, PhD, delves into the attributes that define good algorithms and methods for measuring their efficiency.
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>8.1 Desirable Attributes of Algorithms</h2>
+    <p>Beyond simply providing a correct solution, an effective algorithm should possess several key attributes:</p>
+    <ul>
+        <li><strong>Correctness:</strong> The algorithm must produce the correct output for all valid inputs and meet the problem's specifications. This is the most fundamental attribute.</li>
+        <li><strong>Clarity and Readability:</strong> The algorithm should be easy to understand and follow, both for the person who wrote it and for others. This is crucial for maintenance and collaboration.</li>
+        <li><strong>Efficiency:</strong> The algorithm should use computational resources (time and space) as effectively as possible. This is often quantified by its time complexity and space complexity.</li>
+        <li><strong>Finiteness:</strong> As previously discussed, an algorithm must terminate after a finite number of steps.</li>
+        <li><strong>Generality:</strong> An algorithm should be designed to solve a class of problems rather than just a single, specific instance.</li>
+        <li><strong>Robustness:</strong> The algorithm should handle unexpected or invalid inputs gracefully, without crashing or producing nonsensical results.</li>
+        <li><strong>Maintainability:</strong> It should be easy to modify, update, and fix issues in the algorithm over time.</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>8.2 Measuring Algorithm Efficiency</h2>
+    <p>Measuring an algorithm's efficiency typically involves assessing how its performance (time taken or space used) scales with the size of the input. This is often done using "Big O" notation.</p>
+
+    <h3>1. Time Complexity:</h3>
+    <p>Refers to the amount of time an algorithm takes to complete as a function of the length of its input. It's not about actual time (which varies by hardware) but about the number of elementary operations performed.</p>
+    <ul>
+        <li><strong>Counting Operations:</strong> One way to analyze time complexity is to count the number of basic operations (e.g., arithmetic operations, comparisons, assignments) an algorithm performs.</li>
+        <li><strong>Worst-Case, Best-Case, Average-Case:</strong>
+            <ul>
+                <li><strong>Worst-Case:</strong> The maximum number of operations an algorithm might perform for a given input size. This is usually what we focus on for guarantees.</li>
+                <li><strong>Best-Case:</strong> The minimum number of operations.</li>
+                <li><strong>Average-Case:</strong> The expected number of operations for typical inputs.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>2. Space Complexity:</h3>
+    <p>Refers to the amount of memory space an algorithm needs to run to completion as a function of the length of its input. This includes both the input data storage and any auxiliary space used by the algorithm.</p>
+
+    <hr class="section-divider">
+
+    <h2>8.3 Asymptotic Analysis and Big O Notation (O-notation)</h2>
+    <p>Asymptotic analysis describes the limiting behavior of an algorithm as the input size grows very large. Big O notation is a mathematical notation that describes the upper bound of an algorithm's running time or space requirements.</p>
+
+    <h3>Common Time Complexities (from fastest to slowest):</h3>
+    <ul>
+        <li><strong>O(1) - Constant Time:</strong> The time taken is independent of the input size. (e.g., accessing an array element by index).</li>
+        <li><strong>O(log n) - Logarithmic Time:</strong> The time increases very slowly with the input size. Often seen in algorithms that divide the problem into smaller halves (e.g., binary search).</li>
+        <li><strong>O(n) - Linear Time:</strong> The time taken grows proportionally to the input size. (e.g., traversing a list once).</li>
+        <li><strong>O(n log n) - Linearithmic Time:</strong> Common in efficient sorting algorithms (e.g., Merge Sort, Quick Sort).</li>
+        <li><strong>O(n^2) - Quadratic Time:</strong> The time grows quadratically with the input size. Often involves nested loops processing all pairs of elements (e.g., simple sorting algorithms like Bubble Sort, selection sort).</li>
+        <li><strong>O(2^n) - Exponential Time:</strong> The time doubles with each additional input. Very inefficient for even moderately sized inputs (e.g., some brute-force algorithms).</li>
+        <li><strong>O(n!) - Factorial Time:</strong> The time grows extremely rapidly. Impractical for most real-world problems.</li>
+    </ul>
+
+    <h3>Why Big O Notation?</h3>
+    <ul>
+        <li>It provides a high-level understanding of an algorithm's performance.</li>
+        <li>It allows us to compare algorithms independently of hardware or specific programming language.</li>
+        <li>It focuses on the dominant term in the growth rate, ignoring constant factors and lower-order terms.</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>8.4 Practical Considerations for Efficiency</h2>
+    <p>While theoretical efficiency (Big O) is important, practical considerations also play a role:</p>
+    <ul>
+        <li><strong>Constant Factors:</strong> For small input sizes, an algorithm with a higher Big O but a smaller constant factor might perform better.</li>
+        <li><strong>Memory Hierarchy:</strong> How an algorithm accesses memory (e.g., cache performance) can affect its actual running time.</li>
+        <li><strong>Input Distribution:</strong> Average-case performance might be more relevant than worst-case for typical inputs.</li>
+    </ul>
+
+    <p>Thank you</p>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics 101 Lecture 5: Dynamics – Forces and Newton's First Law</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                packages: {'[+]': ['ams']}
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="lecture-page">
+    <h1>Physics 101 Lecture 5: Dynamics – Forces and Newton's First Law</h1>
+
+    <p class="intro-text">
+        This lecture introduces the fundamental concept of force and its relationship with the motion of objects, primarily focusing on Newton's First Law of Motion. We will explore different types of forces and how to analyze them.
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>5.1 Introduction to Force</h2>
+    <p>A <strong>force</strong> is defined as a push or a pull that tends to change the state of motion of an object. This means a force is required to initiate movement of an object at rest or to alter the velocity (speed or direction) of a moving object.</p>
+
+    <hr class="section-divider">
+
+    <h2>5.2 Net Force and Acceleration</h2>
+    <p>An object will only accelerate if the <strong>net force</strong> (the vector sum of all forces) acting on it is not zero. If the net force is zero, the object's acceleration is zero, and its velocity remains constant. This condition is known as <strong>equilibrium</strong>, where the body is either at rest or moving with uniform velocity in a straight line.</p>
+
+    <hr class="section-divider">
+
+    <h2>5.3 Classes of Forces</h2>
+    <p>Forces can be broadly categorized into two main types:</p>
+    <ul>
+        <li><strong>Contact Forces:</strong> These forces result from direct physical contact between interacting objects.
+            <ul>
+                <li><em>Example:</em> Pushing a box, pulling a spring, kicking a football.</li>
+            </ul>
+        </li>
+        <li><strong>Field Forces (Non-Contact Forces):</strong> These forces act through empty space, without the need for physical contact between objects.
+            <ul>
+                <li><em>Examples:</em> Gravitational force (e.g., Earth's pull on an apple), electric force between charged particles, magnetic forces.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>5.4 Resultant of a Force System</h2>
+    <p>When multiple forces act simultaneously at the same point on a body, their combined effect is equivalent to a single force called the <strong>resultant force</strong> or <strong>net force</strong>. This resultant force is the vector sum of all individual forces.</p>
+    <h3>Formulas for Resultant Force:</h3>
+    <ul>
+        <li>For two forces $\vec{F_1}$ and $\vec{F_2}$, the resultant $\vec{F}_{net}$ is:
+            \[ \vec{F}_{net} = \vec{F_1} + \vec{F_2} \]
+            (This is a vector sum, meaning both magnitude and direction are considered.)
+        </li>
+    </ul>
+    <h3>Steps for Calculating Net Force for Multiple Forces:</h3>
+    <ol>
+        <li><strong>Resolve Each Force into Components:</strong> Break down each force vector into its horizontal (x) and vertical (y) components.
+            <ul>
+                <li><em>Example:</em> For a force $F$ acting at an angle $\theta$ with the positive x-axis:
+                    \[ F_x = F \cos\theta \]
+                    \[ F_y = F \sin\theta \]
+                </li>
+            </ul>
+        </li>
+        <li><strong>Sum Components:</strong> Calculate the x and y components of the net force by summing the respective components of all individual forces:
+            \[ (\Sigma F_x)_{net} = \sum F_{ix} \]
+            \[ (\Sigma F_y)_{net} = \sum F_{iy} \]
+        </li>
+        <li><strong>Calculate Magnitude of Net Force:</strong> Use the Pythagorean theorem to find the magnitude of the net force:
+            \[ F_{net} = \sqrt{(\Sigma F_x)_{net}^2 + (\Sigma F_y)_{net}^2} \]
+        </li>
+    </ol>
+
+    <hr class="section-divider">
+
+    <h2>5.5 Force and Inertia</h2>
+    <p><strong>Inertia</strong> is an intrinsic property of an object that describes its tendency to resist changes in its state of motion. The <strong>mass ($m$)</strong> of a body is a direct quantitative measure of its inertia. A body with larger mass possesses greater inertia, meaning it requires a greater force to produce the same acceleration, or it resists changes in its motion more effectively when subjected to the same force for the same duration.</p>
+    <p>Newton's laws of motion precisely describe the quantitative relationship between force, mass, and the resulting changes in motion.</p>
+
+    <hr class="section-divider">
+
+    <h2>5.6 Newton's First Law of Motion (Law of Inertia)</h2>
+    <p>Newton's First Law states: "A body at rest remains at rest, and a body in uniform motion in a straight line continues in that motion, unless acted upon by an unbalanced external force."</p>
+    <p>This law establishes the concept of <strong>equilibrium</strong>: if the net force acting on a body is zero, its acceleration is zero, and its velocity remains constant (which includes the case of being at rest).</p>
+    <h3>Mathematical Representation:</h3>
+    <ul>
+        <li>If $\vec{F}_{net} = 0$, then $\vec{a} = 0$.</li>
+        <li>In component form for three-dimensional space, this means:
+            \[ \Sigma F_x = 0 \]
+            \[ \Sigma F_y = 0 \]
+            \[ \Sigma F_z = 0 \]
+        </li>
+    </ul>
+
+</body>
+</html>

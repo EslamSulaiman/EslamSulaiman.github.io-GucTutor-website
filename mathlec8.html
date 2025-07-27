@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATH103 for Engineering: Lecture #8 Summary</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']], // Defines how inline math is delimited
+                packages: {'[+]': ['ams']} // Explicitly load ams package for commands like \mathbb
+            },
+            svg: {
+                fontCache: 'global' // Optimizes font loading
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+</head>
+<body class="lecture-page">
+    <h1>MATH103 for Engineering: Lecture #8 Summary</h1>
+
+    <p class="intro-text">
+        This lecture continues Chapter 2 of MATH103 for Engineering, focusing on the applications of limits: continuity of functions.
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>Chapter 2: Applications of Limits: Continuity of Functions</h2>
+
+    <h3>Continuity at a Point</h3>
+    <p><strong>Definition:</strong>
+    <ul>
+        <li><strong>Interior Point:</strong> A function $y=f(x)$ is continuous at an interior point $c$ of its domain if $lim_{x\rightarrow c}f(x)=f(c)$.</li>
+        <li><strong>Endpoint:</strong> A function $y=f(x)$ is continuous at a left endpoint $a$ or a right endpoint $b$ of its domain if $lim_{x\rightarrow a^{+}}f(x)=f(a)$ or $lim_{x\rightarrow b^{-}}f(x)=f(b),$ respectively.</li>
+    </ul></p>
+
+    <h3>Continuity Test</h3>
+    <p>A function $f(x)$ is continuous at $x=c$ if and only if it meets the following three conditions:
+    <ol>
+        <li>$f(c)$ exists (c lies in the domain of f)</li>
+        <li>$lim_{x\rightarrow c}f(x)$ exists (f has a limit as $x\rightarrow c$)</li>
+        <li>$lim_{x\rightarrow c}f(x)=f(c)$ (the limit equals the function value)</li>
+    </ol></p>
+
+    <h4>Example: Computational Example</h4>
+    <p>Discuss the continuity of the function $f(x)=e^{-|x|}$ at the point $x=0$.</p>
+    <p><strong>Solution:</strong> The given function can be redefined as:
+    $f(x)=e^{-|x|}=\begin{cases}e^{x},&if~x<0\\ e^{-x},&if~x\ge0\end{cases}$</p>
+    <p>At $x=0$, we test the three conditions of continuity:
+    <ol>
+        <li>$f(0)=e^{0}=1$, by the definition of the function.</li>
+        <li>We study the limit of the function as x approaches 0:
+            $lim_{x\rightarrow0^{-}}f(x)=lim_{x\rightarrow0^{-}}e^{x}=1,$
+            $lim_{x\rightarrow0^{+}}f(x)=lim_{x\rightarrow0^{+}}e^{-x}=1$
+            $\Rightarrow lim_{x\rightarrow0}f(x)=1$</li>
+        <li>Since $lim_{x\rightarrow0}f(x)=1=f(0),$ it follows that $f(x)$ is continuous at $x=0$.</li>
+    </ol></p>
+
+    <hr class="section-divider">
+
+    <h2>Relation between Limits and Continuity</h2>
+    <p>A function is not continuous at a point $x=a,$ if one of the following happens:
+    <ul>
+        <li>$f(a)$ is not defined.</li>
+        <li>$f(a)$ is defined, BUT, $lim_{x\rightarrow a} f(x)$ does not exist.</li>
+        <li>$f(a)$ is defined AND $lim_{x\rightarrow a} f(x)$ exists, BUT they are Not equal.</li>
+    </ul></p>
+
+    <h4>Graphical Example:</h4>
+    <p>Discuss all types of limits for the shown function at the points 0, 1, 2, 3, and 4.</p>
+    <p>The graph illustrates various scenarios:
+    <ul>
+        <li>At a certain point (e.g., $x=0$), there might be no limit from the left.</li>
+        <li>At another point (e.g., $x=1$), the limit from the left is different from the limit from the right.</li>
+        <li>At a point where the function is continuous (e.g., $x=2, 3$), the limit from the left equals the limit from the right.</li>
+        <li>At another point (e.g., $x=4$), there might be no limit from the right.</li>
+    </ul></p>
+
+    <hr class="section-divider">
+
+    <h2>Types of Discontinuities</h2>
+
+    <h3>(1) Removable Discontinuity</h3>
+    <p>A function $f$ is said to have a removable discontinuity at a point $x=a$, if the limit of $f$ exists as $x$ tends to $a$, such that either $f$ is not defined at $x=a$ or defined differently.</p>
+    <p><strong>Examples of Removable Discontinuities at $x=0$:</strong></p>
+    <ul>
+        <li>Function: $f(x)=\begin{cases}x+1&if~x\ne0\\ 2&if~x=0\end{cases}$
+            Here, $f(0)=2$ is defined, but $lim_{x\rightarrow0}f(x)=1$, so the limit does not equal the function value.</li>
+        <li>Function: $f(x)=\frac{sin~x}{x}$
+            Here, $f(0)$ is not defined, but $lim_{x\rightarrow0}\frac{sin~x}{x}=1$.</li>
+    </ul>
+
+    <h3>(2) Jump Discontinuity</h3>
+    <p>A function has a jump discontinuity at a point $x=a$, if both the left limit and the right limit at $x=a$ exist but they are not equal.</p>
+    <p><strong>Example:</strong> $f(x)=\begin{cases}0,&x<0\\ 1,&x\ge0\end{cases}$
+    At $x=0$, $lim_{x\rightarrow0^{-}}f(x)=0$ and $lim_{x\rightarrow0^{+}}f(x)=1$. Since these are not equal, $f(x)$ has a jump discontinuity at $x=0$.</p>
+    <p><strong>Exercise:</strong> Discuss the continuity of: $f(x)=\frac{|x|}{x}$ at $x=0$.</p>
+
+    <h3>(3) Infinite Discontinuity</h3>
+    <p>A function has an infinite discontinuity at a point $x=a$, if at least one of the left or right sided limits (or both) at $x=a$ equals $\pm\infty$.</p>
+    <p><strong>Example:</strong> $g(x)=\frac{1}{(x+3)^{2}}$
+    At $x=-3$, $lim_{x\rightarrow-3}\frac{1}{(x+3)^{2}}=lim_{x\rightarrow-3^{\prime}}\frac{1}{(x+3)^{2}}=\infty$. Thus, $g(x)$ has an infinite discontinuity at $x=-3$.</p>
+    <p><strong>Another Example:</strong> $f(x)=[\begin{matrix}1,&x\le0\\ \frac{1}{x},&x>0\end{matrix}]$
+    At $x=0$, $lim_{x\rightarrow0^{-}}f(x)=1$ and $lim_{x\rightarrow0^{+}}f(x)=\infty$. Thus, $f(x)$ has an infinite discontinuity at $x=0$.</p>
+    <p><strong>Exercise:</strong> Discuss the continuity of: $f(x)=\frac{1}{x+5}$ at $x=-5$.</p>
+
+    <hr class="section-divider">
+
+    <h2>Summary of the Types of Discontinuities</h2>
+    <ul>
+        <li>If $lim_{x\rightarrow a}f(x)$ exists: At $x=a$, $f$ has a **Removable discontinuity**. This occurs whether $f(a)$ is defined or not, or defined differently.</li>
+        <li>If $lim_{x\rightarrow a^{+}}f(x)=L$ (a number) and $lim_{x\rightarrow a^{-}}f(x)=M$ (a number), and $L\ne M$: At $x=a$, $f$ has a **Jump discontinuity**.</li>
+        <li>If one of the limits $lim_{x\rightarrow a^{+}}f(x)$ or $lim_{x\rightarrow a^{-}}f(x)$ equals $\pm\infty$: At $x=a$, $f$ has an **Infinite discontinuity**.</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>Continuity on a Domain</h2>
+    <p>A function is continuous on a closed interval $[a, b]$ if it is continuous at all interior points as well as continuous at the two-end points $a, b$.</p>
+    <p>This involves understanding continuity from the right at the left endpoint ($a$), two-sided continuity at interior points ($c$), and continuity from the left at the right endpoint ($b$).</p>
+
+    <h4>Example:</h4>
+    <p>Discuss continuity of the shown function on the closed interval $[0, 4]$.</p>
+    <p>The figure illustrates a function that is continuous on $[0, 4]$ except at $x=1$, $x=2$, and $x=4$.
+    <ul>
+        <li>There is a jump discontinuity at $x=1$.</li>
+        <li>There are removable discontinuities at $x=2$ and $x=4$.</li>
+    </ul></p>
+
+    <hr class="section-divider">
+
+    <h2>Properties of Continuous Functions</h2>
+    <p>If the functions $f$ and $g$ are continuous at $x=c$, then the following combinations are continuous at $x=c$:</p>
+    <ol>
+        <li><strong>Sums:</strong> $f+g$</li>
+        <li><strong>Differences:</strong> $f-g$</li>
+        <li><strong>Products:</strong> $f \cdot g$</li>
+        <li><strong>Constant multiples:</strong> $k \cdot f$, for any number $k$</li>
+        <li><strong>Quotients:</strong> $f/g$ provided $g(c) \ne 0$</li>
+        <li><strong>Powers:</strong> $f^{r/s}$, provided it is defined on an open interval containing $c$, where $r$ and $s$ are integers</li>
+    </ol>
+    <p>Any polynomial function is continuous on $\mathfrak{R}$ (the whole real line).</p>
+
+    <h4>Theorem 10: Composite of Continuous Functions</h4>
+    <p>If $f$ is continuous at $c$ and $g$ is continuous at $f(c)$, then the composite $g \circ f$ is continuous at $c$.</p>
+
+    <h4>Example: Discuss the continuity of each of the following functions on its domain:</h4>
+    <p>Consider a rational function, for instance, $f(x) = \frac{polynomial_1}{polynomial_2}$.</p>
+    <p><strong>Solution:</strong>
+    <ol>
+        <li>On $]-\infty, -3[$ and on $]-3, \infty[$, the function is a quotient of two polynomials, so it is continuous.</li>
+        <li>At $x = -3$, we examine the three conditions of continuity at a point. If, for example, $f(-3) = -5$, it is defined.</li>
+        <li>From the above, we can conclude that $f$ is continuous on $\mathfrak{R}-\{-3\}$.</li>
+    </ol></p>
+
+    <h4>Computational exercise:</h4>
+    <p>For what value of the constant $c$ is the function $f(x)$ continuous for all values of $x$? Example: $c = \frac{1}{3}$.</p>
+
+    <h4>Challenging problem:</h4>
+    <p>This function is continuous for all real values of $x$.</p>
+
+    <hr class="section-divider">
+
+    <h2>The Intermediate Value Theorem (I.V.T.)</h2>
+    <p>Notice that we can have more than one value of $c$.</p>
+    <p><strong>Importance of the continuity of the function:</strong> The opposite figure shows that if the function is discontinuous at at least one point, then the conclusion of the theorem may be false.</p>
+
+    <h3>Important Application: “Corollary of the I.V.T.”</h3>
+    <p>If $f(x)$ is:
+    <ol>
+        <li>continuous on $[a, b]$, and</li>
+        <li>$f(a)$ and $f(b)$ have different signs.</li>
+    </ol>
+    Then, there is at least one point $c$ in $]a, b[$ for which $f(c) = 0$.</p>
+
+    <h4>Example:</h4>
+    <p>Show that the equation: $x^3 – x – 1 = 0$ has at least one solution between $x = 1$ and $x = 2$.</p>
+    <p><strong>Solution:</strong> Let $f(x) = x^3 – x – 1$.
+    It is clear that $f$ is continuous on the interval $[1, 2]$.
+    Also, $f(1) = -1 < 0$ and $f(2) = 5 > 0$.
+    Therefore, by using the above corollary, the equation $x^3 – x – 1 = 0$ has at least one solution between $x = 1$ and $x = 2$.</p>
+
+    <h4>Practical problem:</h4>
+    <p>Use the intermediate value theorem to show that among all circles with radius no larger than 10 cm., there is one whose area is $200cm^2$.</p>
+    <p><strong>Solution:</strong> The area $A(r)$ of a circle with radius $r$ is given by $A(r) = \pi r^2$.
+    Since $A(r)$ is a continuous function on the interval $[0, 10]$ and for $r = 0$, $A(r) = 0$, and for $r = 10$, $A(r) = 100\pi \approx 314$.
+    Since $200$ lies between $0$ and $314$, by the intermediate value theorem, there is an $r$ between $0$ and $10$ such that $A(r) = 200$.
+    </p>
+    <p>Thank you</p>
+
+</body>
+</html>

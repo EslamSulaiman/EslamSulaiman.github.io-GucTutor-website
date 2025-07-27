@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSEN102 Introduction to Computer Science: Lecture 6 Summary</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                packages: {'[+]': ['ams']}
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+</head>
+<body class="lecture-page">
+    <h1>CSEN102 Introduction to Computer Science: Lecture 6: More Lists in Python</h1>
+
+    <p class="intro-text">
+        This lecture for CSEN102: Introduction to Computer Science, given by Milad Ghantous, PhD, is a continuation of the topic of lists, with a specific focus on their implementation and usage in Python.
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>6.1 Review of Lists</h2>
+    <p>As discussed in previous lectures, a list (or array in some languages) is a data structure used to store a collection of items. In Python, lists are versatile and can hold items of different data types, making them powerful for various programming tasks.</p>
+    <ul>
+        <li>Lists are ordered collections of items.</li>
+        <li>Each item in a list has an index, starting from 0.</li>
+        <li>Lists in Python are mutable, meaning their contents can be changed after creation.</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>6.2 Creating Lists in Python</h2>
+    <p>Lists in Python are created by placing all the items (elements) inside square brackets `[]`, separated by commas.</p>
+
+    <h3>Empty List:</h3>
+    <pre><code>my_list = []
+</code></pre>
+
+    <h3>List with Integers:</h3>
+    <pre><code>numbers = [1, 2, 3, 4, 5]
+</code></pre>
+
+    <h3>List with Mixed Data Types:</h3>
+    <p>Python lists can contain elements of different data types within the same list.</p>
+    <pre><code>mixed_list = [1, "hello", 3.14, True]
+</code></pre>
+
+    <h3>Nested Lists:</h3>
+    <p>A list can also contain other lists as elements, creating nested structures (like a 2D array).</p>
+    <pre><code>nested_list = [1, 2, [3, 4]]
+</code></pre>
+
+    <hr class="section-divider">
+
+    <h2>6.3 Accessing Elements in Python Lists</h2>
+    <p>Elements in a Python list are accessed using indexing. Positive indices start from 0 for the first element, and negative indices can be used to access elements from the end of the list (-1 for the last element).</p>
+
+    <h3>Positive Indexing:</h3>
+    <pre><code>my_list = ['p', 'y', 't', 'h', 'o', 'n']
+print(my_list[0]) # Output: p
+print(my_list[2]) # Output: t
+</code></pre>
+
+    <h3>Negative Indexing:</h3>
+    <pre><code>my_list = ['p', 'y', 't', 'h', 'o', 'n']
+print(my_list[-1]) # Output: n
+print(my_list[-3]) # Output: h
+</code></pre>
+
+    <h3>Slicing Lists:</h3>
+    <p>You can access a range of elements in a list using the slicing operator `[:]`.</p>
+    <pre><code>my_list = ['p', 'y', 't', 'h', 'o', 'n']
+print(my_list[1:4]) # Output: ['y', 't', 'h']
+print(my_list[:3])  # Output: ['p', 'y', 't']
+print(my_list[3:])  # Output: ['h', 'o', 'n']
+</code></pre>
+
+    <hr class="section-divider">
+
+    <h2>6.4 Modifying Lists</h2>
+    <p>Since Python lists are mutable, you can change their elements, add new ones, or remove existing ones.</p>
+
+    <h3>Changing Elements:</h3>
+    <pre><code>my_list = [1, 2, 3]
+my_list[0] = 5
+print(my_list) # Output: [5, 2, 3]
+</code></pre>
+
+    <h3>Adding Elements:</h3>
+    <ul>
+        <li><strong><code>append()</code>:</strong> Adds an element to the end of the list.
+            <pre><code>my_list.append(4)
+print(my_list) # Output: [5, 2, 3, 4]
+            </code></pre>
+        </li>
+        <li><strong><code>insert()</code>:</strong> Inserts an element at a specified index.
+            <pre><code>my_list.insert(1, 10)
+print(my_list) # Output: [5, 10, 2, 3, 4]
+            </code></pre>
+        </li>
+    </ul>
+
+    <h3>Removing Elements:</h3>
+    <ul>
+        <li><strong><code>del</code> statement:</strong> Deletes an element at a specific index or a slice.
+            <pre><code>del my_list[1]
+print(my_list) # Output: [5, 2, 3, 4]
+            </code></pre>
+        </li>
+        <li><strong><code>remove()</code>:</strong> Removes the first occurrence of a specified value.
+            <pre><code>my_list.remove(3)
+print(my_list) # Output: [5, 2, 4]
+            </code></pre>
+        </li>
+        <li><strong><code>pop()</code>:</strong> Removes and returns the element at a specified index (or the last element if no index is given).
+            <pre><code>last_element = my_list.pop()
+print(my_list) # Output: [5, 2]
+print(last_element) # Output: 4
+            </code></pre>
+        </li>
+        <li><strong><code>clear()</code>:</strong> Removes all items from the list.
+            <pre><code>my_list.clear()
+print(my_list) # Output: []
+            </code></pre>
+        </li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>6.5 List Methods (Common Built-in Functions)</h2>
+    <p>Python lists have several built-in methods for common operations.</p>
+    <ul>
+        <li><strong><code>len()</code>:</strong> Returns the number of elements in the list.
+            <pre><code>numbers = [1, 2, 3]
+print(len(numbers)) # Output: 3
+            </code></pre>
+        </li>
+        <li><strong><code>sort()</code>:</strong> Sorts the items of the list in ascending order by default.
+            <pre><code>numbers = [3, 1, 2]
+numbers.sort()
+print(numbers) # Output: [1, 2, 3]
+            </code></pre>
+        </li>
+        <li><strong><code>reverse()</code>:</strong> Reverses the order of elements in the list.
+            <pre><code>numbers = [1, 2, 3]
+numbers.reverse()
+print(numbers) # Output: [3, 2, 1]
+            </code></pre>
+        </li>
+        <li><strong><code>count()</code>:</strong> Returns the number of times a specified value appears in the list.
+            <pre><code>my_list = [1, 2, 2, 3]
+print(my_list.count(2)) # Output: 2
+            </code></pre>
+        </li>
+        <li><strong><code>index()</code>:</strong> Returns the index of the first occurrence of a specified value.
+            <pre><code>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSEN102 Introduction to Computer Science: Lecture 4 Summary</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                packages: {'[+]': ['ams']}
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+</head>
+<body class="lecture-page">
+    <h1>CSEN102 Introduction to Computer Science: Lecture 4</h1>
+
+    <p class="intro-text">
+        This lecture for CSEN102: Introduction to Computer Science, given by Milad Ghantous, PhD, covers fundamental programming constructs including conditional statements and loops.
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>4.1 Control Structures: Overview</h2>
+    <p>Control structures are fundamental to programming as they dictate the flow of execution in a program. They allow programs to make decisions, repeat actions, and respond to various conditions.</p>
+
+    <h3>Types of Control Structures:</h3>
+    <ul>
+        <li><strong>Sequence:</strong> Instructions are executed one after another in the order they appear. This is the default flow.</li>
+        <li><strong>Selection (Conditional Statements):</strong> Allows the program to choose between different paths of execution based on a condition.</li>
+        <li><strong>Repetition (Loops):</strong> Allows a block of code to be executed multiple times.</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>4.2 Selection Statements (Conditionals)</h2>
+    <p>Conditional statements allow a program to perform different actions based on whether a specified condition evaluates to true or false. They are essential for decision-making within programs.</p>
+
+    <h3>1. If Statement:</h3>
+    <p>Executes a block of code only if a condition is true.</p>
+    <pre><code>if (condition) {
+    // code to execute if condition is true
+}
+</code></pre>
+
+    <h3>2. If-Else Statement:</h3>
+    <p>Executes one block of code if the condition is true and another block if the condition is false.</p>
+    <pre><code>if (condition) {
+    // code to execute if condition is true
+} else {
+    // code to execute if condition is false
+}
+</code></pre>
+
+    <h3>3. If-Else If-Else Statement (Nested Conditionals):</h3>
+    <p>Allows for multiple conditions to be checked in sequence.</p>
+    <pre><code>if (condition1) {
+    // code for condition1
+} else if (condition2) {
+    // code for condition2
+} else {
+    // code if none of the above conditions are met
+}
+</code></pre>
+
+    <h3>4. Switch Statement (or equivalent):</h3>
+    <p>Provides a way to select one of many code blocks to be executed. Often used when comparing a single variable against multiple discrete values.</p>
+    <pre><code>switch (variable) {
+    case value1:
+        // code if variable matches value1
+        break;
+    case value2:
+        // code if variable matches value2
+        break;
+    default:
+        // code if variable does not match any case
+}
+</code></pre>
+
+    <h3>Logical Operators:</h3>
+    <p>Used to combine or modify conditions:</p>
+    <ul>
+        <li><code>AND</code> (&&): Both conditions must be true.</li>
+        <li><code>OR</code> (||): At least one condition must be true.</li>
+        <li><code>NOT</code> (!): Reverses the logical state of the condition.</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>4.3 Repetition Statements (Loops)</h2>
+    <p>Loops allow a block of code to be executed repeatedly until a certain condition is met or a specified number of times.</p>
+
+    <h3>1. While Loop:</h3>
+    <p>Repeats a block of code as long as a condition is true. The condition is checked before each iteration.</p>
+    <pre><code>while (condition) {
+    // code to repeat
+}
+</code></pre>
+
+    <h3>2. Do-While Loop:</h3>
+    <p>Similar to a while loop, but the code block is executed at least once before the condition is checked. The condition is checked after each iteration.</p>
+    <pre><code>do {
+    // code to repeat
+} while (condition);
+</code></pre>
+
+    <h3>3. For Loop:</h3>
+    <p>Repeats a block of code a specific number of times. It is typically used when the number of iterations is known beforehand.</p>
+    <pre><code>for (initialization; condition; increment/decrement) {
+    // code to repeat
+}
+</code></pre>
+
+    <h3>Loop Control Statements:</h3>
+    <ul>
+        <li><code>break;</code>: Terminates the loop immediately.</li>
+        <li><code>continue;</code>: Skips the rest of the current iteration and proceeds to the next iteration of the loop.</li>
+    </ul>
+
+    <p>Thank you</p>
+
+</body>
+</html>

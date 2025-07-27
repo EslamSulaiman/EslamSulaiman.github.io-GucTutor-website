@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics 101 Lecture 13: Angular Momentum</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                packages: {'[+]': ['ams']}
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="lecture-page">
+    <h1>Physics 101 Lecture 13 (Chapter 11): Angular Momentum</h1>
+
+    <p class="intro-text">
+        This lecture, presented by Dr. Ahmed Maarouf, delves into the concept of angular momentum, starting with a revisit of torque as a vector quantity and introducing the vector (cross) product. It then defines angular momentum for a particle and a system of particles, deriving its relationship with torque. The lecture also covers the conservation of angular momentum and provides illustrative examples.
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>Torque - Revisited</h2>
+    <p>
+        Torque ($\vec{\tau}$) is defined as the vector (cross) product of the position vector ($\vec{r}$) from the pivot to the point of action of the force and the force vector ($\vec{F}$).
+        \[ \vec{\tau} \equiv \vec{r} \times \vec{F} \]
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>Vector (Cross) Product</h2>
+    <p>
+        For any two vectors $\vec{A}$ and $\vec{B}$, their vector (cross) product is defined as $\vec{C} = \vec{A} \times \vec{B}$.
+    </p>
+    <h3>Magnitude:</h3>
+    <p>
+        The magnitude of vector $\vec{C}$ is given by:
+        \[ C = AB \sin\theta \]
+        Where $\theta$ is the angle between $\vec{A}$ and $\vec{B}$.
+    </p>
+    <h3>Direction:</h3>
+    <p>
+        The direction of $\vec{C}$ is perpendicular to the plane formed by $\vec{A}$ and $\vec{B}$. It is determined using the right-hand rule.
+    </p>
+    <h3>Properties of the Vector (Cross) Product:</h3>
+    <ol>
+        <li>**Non-commutative:** The order of multiplication matters.
+            \[ \vec{A} \times \vec{B} = -\vec{B} \times \vec{A} \]
+        </li>
+        <li>**Parallel Vectors:** If $\vec{A}$ is parallel to $\vec{B}$ ($\theta=0^\circ$ or $180^\circ$), then $\vec{A} \times \vec{B} = 0$. This implies $\vec{A} \times \vec{A} = 0$.
+        </li>
+        <li>**Perpendicular Vectors:** If $\vec{A}$ is perpendicular to $\vec{B}$ ($\theta=90^\circ$), then $|\vec{A} \times \vec{B}|= AB$.
+        </li>
+        <li>**Distributive Law:** The vector product obeys the distributive law.
+            \[ \vec{A} \times (\vec{B} + \vec{C}) = \vec{A} \times \vec{B} + \vec{A} \times \vec{C} \]
+        </li>
+        <li>**Derivative:** The derivative of a vector product with respect to time (or any other variable) is:
+            \[ \frac{d}{dt}(\vec{A} \times \vec{B}) = \frac{d\vec{A}}{dt} \times \vec{B} + \vec{A} \times \frac{d\vec{B}}{dt} \]
+        </li>
+    </ol>
+    <h3>Cross Products of Unit Vectors:</h3>
+    <ul>
+        <li>$\hat{i} \times \hat{i} = \hat{j} \times \hat{j} = \hat{k} \times \hat{k} = 0$</li>
+        <li>$\hat{i} \times \hat{j} = -\hat{j} \times \hat{i} = \hat{k}$</li>
+        <li>$\hat{j} \times \hat{k} = -\hat{k} \times \hat{j} = \hat{i}$</li>
+        <li>$\hat{k} \times \hat{i} = -\hat{i} \times \hat{k} = \hat{j}$</li>
+    </ul>
+    <p>
+        The cross product of any two vectors $\vec{A} = A_x\hat{i} + A_y\hat{j} + A_z\hat{k}$ and $\vec{B} = B_x\hat{i} + B_y\hat{j} + B_z\hat{k}$ can be expressed in determinant form:
+        \[ \vec{A} \times \vec{B} = (A_yB_z - A_zB_y)\hat{i} + (A_zB_x - A_xB_z)\hat{j} + (A_xB_y - A_yB_x)\hat{k} \]
+    </p>
+    <h3>Example: Cross Product Calculation</h3>
+    <p>
+        Given $\vec{A} = 2\hat{i} + 3\hat{j}$ and $\vec{B} = -\hat{i} + 2\hat{j}$, find $\vec{A} \times \vec{B}$ and verify that $\vec{A} \times \vec{B} = -\vec{B} \times \vec{A}$.
+    </p>
+    <p>
+        **Calculation of $\vec{A} \times \vec{B}$:**
+        \[ \vec{A} \times \vec{B} = (2\hat{i} + 3\hat{j}) \times (-\hat{i} + 2\hat{j}) \]
+        \[ = 2\hat{i} \times (-\hat{i}) + 2\hat{i} \times 2\hat{j} + 3\hat{j} \times (-\hat{i}) + 3\hat{j} \times 2\hat{j} \]
+        \[ = 0 + 4(\hat{i} \times \hat{j}) - 3(\hat{j} \times \hat{i}) + 0 \]
+        \[ = 4\hat{k} - 3(-\hat{k}) = 4\hat{k} + 3\hat{k} = 7\hat{k} \]
+    </p>
+    <p>
+        **Calculation of $\vec{B} \times \vec{A}$:**
+        \[ \vec{B} \times \vec{A} = (-\hat{i} + 2\hat{j}) \times (2\hat{i} + 3\hat{j}) \]
+        \[ = (-\hat{i}) \times 2\hat{i} + (-\hat{i}) \times 3\hat{j} + 2\hat{j} \times 2\hat{i} + 2\hat{j} \times 3\hat{j} \]
+        \[ = 0 - 3(\hat{i} \times \hat{j}) + 4(\hat{j} \times \hat{i}) + 0 \]
+        \[ = -3\hat{k} + 4(-\hat{k}) = -3\hat{k} - 4\hat{k} = -7\hat{k} \]
+    </p>
+    <p>
+        As verified, $\vec{A} \times \vec{B} = -\vec{B} \times \vec{A}$.
+    </p>
+    <h3>Example: Torque Calculation</h3>
+    <p>
+        A force $\vec{F} = (2.00\hat{i} + 3.00\hat{j}) \, \text{N}$ is applied to an object pivoted about the z-axis, at a point $\vec{r} = (4.00\hat{i} + 5.00\hat{j}) \, \text{m}$. Find the torque applied.
+    </p>
+    <p>
+        **Calculation of $\vec{\tau}$:**
+        \[ \vec{\tau} = \vec{r} \times \vec{F} = (4.00\hat{i} + 5.00\hat{j}) \, \text{m} \times (2.00\hat{i} + 3.00\hat{j}) \, \text{N} \]
+        \[ = [ (4.00)(2.00)(\hat{i} \times \hat{i}) + (4.00)(3.00)(\hat{i} \times \hat{j}) + (5.00)(2.00)(\hat{j} \times \hat{i}) + (5.00)(3.00)(\hat{j} \times \hat{j}) ] \, \text{N}\cdot\text{m} \]
+        \[ = [ 0 + 12.0\hat{k} - 10.0\hat{k} + 0 ] \, \text{N}\cdot\text{m} \]
+        \[ = 2.0\hat{k} \, \text{N}\cdot\text{m} \]
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>Angular Momentum</h2>
+    <p>
+        The angular momentum ($\vec{L}$) of a particle about an axis is a vector quantity that is perpendicular to both the particle's position vector ($\vec{r}$) relative to the axis and its linear momentum ($\vec{p}$).
+        \[ \vec{L} \equiv \vec{r} \times \vec{p} \]
+    </p>
+    <p>
+        The SI units of angular momentum are $\text{kg} \cdot \text{m}^2/\text{s}$.
+        The magnitude of angular momentum is:
+        \[ L = mvr \sin\phi \]
+        Where $m$ is the mass, $v$ is the speed, $r$ is the distance from the axis, and $\phi$ is the angle between $\vec{r}$ and $\vec{p}$.
+    </p>
+    <p>
+        Angular momentum can be defined even if the particle is not moving in a circular path. A particle moving in a straight line has angular momentum about any axis displaced from its path.
+    </p>
+    <h3>Relationship between Torque and Angular Momentum:</h3>
+    <p>
+        From Newton's Second Law for linear motion ($\sum \vec{F} = d\vec{p}/dt$), it can be derived that the net external torque on a system is equal to the time rate of change of its angular momentum.
+        \[ \sum\vec{\tau} = \frac{d\vec{L}}{dt} \]
+        This is the rotational analog of Newton's Second Law and is the mathematical representation of the angular momentum version of the non-isolated system model.
+    </p>
+    <p>
+        We can also express this as the **angular impulse-angular momentum theorem**:
+        \[ \Delta \vec{L} = \int_{t_i}^{t_f} \sum \vec{\tau}_{ext} dt \]
+    </p>
+    <h3>Angular Momentum of a System of Particles:</h3>
+    <p>
+        For a system of particles, the total angular momentum about some axis is the vector sum of the angular momenta of individual particles.
+        The sum of internal torques within a system is zero (due to Newton's Third Law). Therefore, the net torque on a system is due to external forces only.
+    </p>
+    <h3>Angular Momentum of a Rigid Object:</h3>
+    <p>
+        For a rigid object rotating about a fixed axis with angular speed $\omega$, its angular momentum ($\vec{L}$) is related to its moment of inertia ($I$):
+        \[ \vec{L} = I\vec{\omega} \]
+    </p>
+    <h3>Example: Angular Momentum of a Particle in Circular Motion</h3>
+    <p>
+        A particle of mass $m$ moves in the $xy$-plane in a circular path of radius $r$ with velocity $\vec{v}$. Find the magnitude and direction of its angular momentum relative to an axis through the origin O.
+    </p>
+    <p>
+        **Analysis:** In circular motion, the position vector $\vec{r}$ is always perpendicular to the linear momentum vector $\vec{p}$ (or velocity $\vec{v}$). Thus, the angle $\phi$ between $\vec{r}$ and $\vec{p}$ is $90^\circ$.
+    </p>
+    <p>
+        **Magnitude:**
+        \[ L = mvr \sin(90^\circ) = mvr \]
+    </p>
+    <p>
+        **Direction:** Using the right-hand rule, if the particle is moving counterclockwise in the $xy$-plane, the direction of $\vec{L}$ is out of the page (along the positive z-axis). While the direction of the linear momentum $\vec{p}$ changes, the direction of the angular momentum $\vec{L}$ is constant.
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>Conservation of Angular Momentum</h2>
+    <p>
+        If a system experiences no external torque from the environment ($\sum\vec{\tau}_{ext} = 0$), then the total angular momentum of the system is conserved.
+        \[ \vec{L}_i = \vec{L}_f \]
+        For a system where the moment of inertia changes, this implies:
+        \[ I_i\omega_i = I_f\omega_f = \text{constant} \]
+    </p>
+    <p>
+        This is one of the fundamental conservation laws in physics, alongside conservation of energy and linear momentum.
+    </p>
+    <h3>Key points on Conservation Laws:</h3>
+    <ul>
+        <li>A system can be isolated in terms of one conserved quantity but not another (e.g., isolated in momentum but non-isolated in energy, or vice-versa).</li>
+        <li>Collisions are often isolated in terms of momentum but not in terms of kinetic energy.</li>
+    </ul>
+    <h3>Example: Merry-Go-Round and Skater</h3>
+    <p>
+        Consider a person (modeled as a particle) on a rotating merry-go-round (platform). The system (person + platform) is isolated in terms of angular momentum.
+        If the person moves towards the center of the rotating platform, their distance from the axis ($r$) decreases. Since their mass ($m$) is constant, and assuming angular momentum ($L=mvr$ or $L=I\omega$) is conserved, the angular speed ($\omega$) of the system will increase. This is because the moment of inertia ($I$) of the system decreases as the mass moves closer to the rotation axis (for a point mass, $I=mr^2$). To keep $I\omega$ constant, if $I$ decreases, $\omega$ must increase.
+    </p>
+    <p>
+        A skater grabs a pole and swings around it rapidly.
+    </p>
+    <p>
+        (i) What would be her angular momentum relative to the pole at the instant she is a distance $d$ from the pole if she were skating directly toward it at speed $v$?
+        **Answer:** (a) zero. If she skates directly toward the pole, her position vector $\vec{r}$ and momentum vector $\vec{p}$ are anti-parallel (or parallel), so $\phi = 180^\circ$ (or $0^\circ$). Since $L = mvr \sin\phi$, and $\sin(180^\circ) = 0$, the angular momentum is zero.
+    </p>
+    <p>
+        (ii) What would be her angular momentum relative to the pole at the instant she is a distance $d$ from the pole if she were skating at speed $v$ along a straight path that is a perpendicular distance $a$ from the pole?
+        **Answer:** (c) $mva$. In this case, $a$ represents the perpendicular distance (moment arm) from the axis to the line of action of her momentum. This corresponds to $r \sin\phi$ in the general formula $L = mvr \sin\phi$. Thus, $L = mva$.
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>Gyroscope in a Spacecraft</h2>
+    <p>
+        In a spacecraft, a gyroscope can be used for attitude control based on the principle of angular momentum conservation. Initially, the angular momentum of the spacecraft about its center of mass is zero. When a gyroscope inside is set into rotation, it acquires a non-zero angular momentum. To conserve the total angular momentum of the system (spacecraft + gyroscope), the spacecraft will rotate in the direction opposite to that of the gyroscope, ensuring the total angular momentum remains zero.
+    </p>
+
+</body>
+</html>

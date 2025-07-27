@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics 101 Lecture 16: Fluid Mechanics</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                packages: {'[+]': ['ams']}
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="lecture-page">
+    <h1>Physics 101 Lecture 16 (Chapter 14): Fluid Mechanics</h1>
+
+    <p class="intro-text">
+        This lecture, presented by Dr. Nermeen Serag, introduces the fundamental concepts of fluid mechanics, covering states of matter, pressure, its variation with depth, Pascal's Law, and Archimedes's Principle. It also discusses types of fluid flow, viscosity, and ideal fluid flow, culminating in the equation of continuity and an introduction to Bernoulli's Equation.
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>States of Matter and Fluids</h2>
+    <ul>
+        <li>**Solid:** Has a definite volume and shape.</li>
+        <li>**Liquid:** Has a definite volume but not a definite shape.</li>
+        <li>**Gas (unconfined):** Has neither a definite volume nor shape.</li>
+        <li>**Fluids:** A collection of randomly arranged molecules held together by weak cohesive forces and forces from container walls. Both liquids and gases are fluids.</li>
+        <li>**Fluid Statics:** Describes fluids at rest.</li>
+        <li>**Fluid Dynamics:** Describes fluids in motion.</li>
+        <li>Fluids do not sustain shearing or tensile stresses. The only stress on an object in a static fluid tends to compress it from all sides.</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>Pressure</h2>
+    <p>
+        The pressure $P$ of a fluid at a given level is the ratio of the force to the area:
+        \[ P \equiv \frac{F}{A} \]
+    </p>
+    <ul>
+        <li>Pressure is a scalar quantity, proportional to the magnitude of the force.</li>
+        <li>If pressure varies over an area, an infinitesimal force $dF$ on an area $dA$ is $dF = P \, dA$.</li>
+        <li>The SI unit of pressure is the pascal (Pa): $1 \, \text{Pa} = 1 \, \text{N/m}^2$.</li>
+        <li>At any point on the surface of an object, the force exerted by the fluid is perpendicular to the object's surface.</li>
+        <li>**Density ($\rho$):** Defined as the mass per unit volume of a substance. Density values vary slightly with temperature because volume is temperature-dependent.</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>Variation of Pressure with Depth</h2>
+    <p>
+        For a parcel of fluid in equilibrium, the net force on it is zero. Considering forces due to pressure and gravity, the pressure $P$ at a depth $h$ below a point where the pressure is $P_o$ is given by:
+        \[ P = P_o + \rho g h \]
+        Where $\rho$ is the fluid density and $g$ is the acceleration due to gravity.
+    </p>
+    <ul>
+        <li>If the liquid is open to the atmosphere, $P_o$ is the atmospheric pressure.
+            Typical atmospheric pressure: $P_o = 1.00 \, \text{atm} = 1.013 \times 10^5 \, \text{Pa}$.</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>Pascal's Law</h2>
+    <p>
+        Pascal's Law states that "a change in the pressure applied to a fluid is transmitted undiminished to every point of the fluid and to the walls of the container, provided that the liquid is incompressible".
+    </p>
+    <p>
+        This means that for a hydraulic system, the pressure at two points within the fluid connected by a pipe is equal:
+        \[ P_1 = P_2 \]
+        \[ \frac{F_1}{A_1} = \frac{F_2}{A_2} \]
+        Where $F_1$ and $F_2$ are forces applied over areas $A_1$ and $A_2$ respectively.
+    </p>
+    <h3>Example: Car Lifts (Hydraulic Press)</h3>
+    <p>
+        A practical application of Pascal's Law is the hydraulic press, such as a car lift. A small input force ($F_1$) on a small area ($A_1$) can produce a much greater output force ($F_2$) on a larger area ($A_2$).
+    </p>
+    <p>
+        The volume of liquid displaced must be equal on both sides:
+        \[ A_1 \Delta x_1 = A_2 \Delta x_2 \]
+        Combining this with Pascal's Law, the work done on both sides is equal:
+        \[ F_1 \Delta x_1 = F_2 \Delta x_2 \]
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>Buoyant Force and Archimedes's Principle</h2>
+    <p>
+        The **buoyant force ($\vec{B}$)** is the upward force exerted by a fluid on any immersed object.
+    </p>
+    <ul>
+        <li>When a parcel of fluid is in equilibrium, there must be an upward force (buoyant force) to balance its downward gravitational force.</li>
+        <li>The magnitude of the buoyant force equals the weight of the fluid displaced by the object. This is known as **Archimedes's Principle**.
+            \[ B = m_{fluid}g = \rho_{fluid}V_{object}g \]
+            Here, $m_{fluid}$ is the mass of the displaced fluid, $\rho_{fluid}$ is the fluid density, and $V_{object}$ (or $V_{disp}$) is the volume of the object immersed in the fluid (which is equal to the volume of fluid displaced).
+        </li>
+    </ul>
+    <h3>Archimedes's Principle: Totally Submerged Object</h3>
+    <p>
+        For an object totally submerged in a fluid:
+    </p>
+    <ul>
+        <li>The volume of fluid displaced ($V_{disp}$) is equal to the volume of the object ($V_{obj}$).</li>
+        <li>Upward buoyant force: $B = \rho_{fluid}gV_{obj}$.</li>
+        <li>Downward gravitational force: $F_g = M_object g = \rho_{obj}gV_{obj}$.</li>
+        <li>Net force: $B - F_g = (\rho_{fluid} - \rho_{obj})gV_{obj}$.</li>
+        <li>If $\rho_{obj} < \rho_{fluid}$, the object accelerates upward (floats).</li>
+        <li>If $\rho_{obj} > \rho_{fluid}$, the object sinks.</li>
+        <li>If $\rho_{obj} = \rho_{fluid}$, the object remains in equilibrium (hovers).</li>
+        <li>The direction of motion of an object in a fluid is determined solely by the densities of the fluid and the object.</li>
+    </ul>
+    <h3>Archimedes's Principle: Floating Object</h3>
+    <p>
+        For a floating object, its density is less than that of the fluid.
+    </p>
+    <ul>
+        <li>The object is in static equilibrium and only partially submerged.</li>
+        <li>The upward buoyant force is balanced by the downward force of gravity.</li>
+        <li>The volume of fluid displaced corresponds to the volume of the object beneath the fluid level.</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>Types of Fluid Flow</h2>
+    <ul>
+        <li>**Laminar (Steady) Flow:** Each fluid particle follows a smooth, non-crossing path, and all particles arriving at a given point have the same velocity.</li>
+        <li>**Turbulent Flow:** An irregular flow characterized by small whirlpool-like regions, occurring when fluid particles exceed a critical speed.</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>Viscosity</h2>
+    <p>
+        Viscosity characterizes the degree of internal friction within a fluid. This internal friction causes resistance between adjacent layers of fluid moving relative to each other, converting kinetic energy into internal energy.
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>Ideal Fluid Flow</h2>
+    <p>
+        To simplify fluid analysis, four assumptions are made for ideal fluid flow:
+    </p>
+    <ul>
+        <li>**Non-viscous:** Internal friction is neglected, meaning an object moving through the fluid experiences no viscous forces.</li>
+        <li>**Steady Flow:** All particles passing through a point have the same velocity.</li>
+        <li>**Incompressible:** The density of the fluid remains constant.</li>
+        <li>**Irrotational:** The fluid has no angular momentum about any point.</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>Equation of Continuity</h2>
+    <p>
+        For an incompressible fluid, the volume flow rate ($Av$) is constant along a pipe:
+        \[ A_1 v_1 = A_2 v_2 = \text{constant} \]
+        Where $A$ is the cross-sectional area and $v$ is the fluid speed.
+    </p>
+    <ul>
+        <li>The speed is high where the tube is constricted (small $A$), and low where the tube is wide (large $A$).</li>
+        <li>The product $Av$ is also called the volume flux or flow rate.</li>
+        <li>This equation implies that the volume of fluid entering one end of a tube in a given time equals the volume leaving the other end, assuming no leaks.</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>Bernoulli's Equation</h2>
+    <p>
+        Daniel Bernoulli (1700-1782), a Swiss physicist, published "Hydrodynamica" in 1738, dealing with equilibrium, pressure, and speed in fluids. His principle is used to produce a partial vacuum in chemical laboratories.
+    </p>
+    <p>
+        Bernoulli's Equation is derived from the work-energy theorem applied to fluid flow. Considering the work done by pressure changes and changes in kinetic and potential energy:
+        \[ (P_1 - P_2)V = \left(\frac{1}{2}mv_2^2 - \frac{1}{2}mv_1^2\right) + (mgy_2 - mgy_1) \]
+        Using $\rho = m/V$, this can be rearranged to the more common form of Bernoulli's Equation.
+    </p>
+
+</body>
+</html>

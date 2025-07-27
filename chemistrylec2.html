@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHEM 102 Lecture 2: Quantum Numbers and Electronic Configuration</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                packages: {'[+]': ['ams']}
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="lecture-page">
+    <h1>CHEM 102 Lecture 2: Quantum Numbers and Electronic Configuration</h1>
+
+    <p class="intro-text">
+        This lecture introduces the concept of quantum numbers as the "address" of an electron within an atom and explains how these numbers determine the electronic configuration of elements.
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>2.1 Quantum Numbers: The Electron's "Address"</h2>
+    <p>Quantum numbers are a set of numerical values that describe the probable location and energy of an electron in an atom. There are four main quantum numbers:</p>
+
+    <h3>2.1.1 Principal Quantum Number (\(n\))</h3>
+    <ul>
+        <li>Describes the **main energy level** or shell of an electron.</li>
+        <li>Can be any positive integer (1, 2, 3, ...).</li>
+        <li>Higher \(n\) values indicate higher energy levels and larger average distance from the nucleus.</li>
+    </ul>
+
+    <h3>2.1.2 Azimuthal (Angular Momentum) Quantum Number (\(l\))</h3>
+    <ul>
+        <li>Describes the **shape of the electron orbital** within a given energy level.</li>
+        <li>Values range from 0 to \(n-1\).</li>
+        <li>Each value of \(l\) corresponds to a specific subshell (s, p, d, f):
+            <ul>
+                <li>\(l = 0\): s orbital (spherical shape)</li>
+                <li>\(l = 1\): p orbital (dumbbell shape)</li>
+                <li>\(l = 2\): d orbital (more complex shapes)</li>
+                <li>\(l = 3\): f orbital (even more complex shapes)</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>2.1.3 Magnetic Quantum Number (\(m_l\))</h3>
+    <ul>
+        <li>Describes the **orientation of the orbital in space**.</li>
+        <li>Values range from \(-l\) to \(+l\), including 0.</li>
+        <li>For a given \(l\), there are \((2l + 1)\) possible values of \(m_l\), which corresponds to the number of orbitals in that subshell.
+            <ul>
+                <li>If \(l = 0\) (s subshell), \(m_l = 0\) (1 s orbital).</li>
+                <li>If \(l = 1\) (p subshell), \(m_l = -1, 0, 1\) (3 p orbitals).</li>
+                <li>If \(l = 2\) (d subshell), \(m_l = -2, -1, 0, 1, 2\) (5 d orbitals).</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>2.1.4 Spin Quantum Number (\(m_s\))</h3>
+    <ul>
+        <li>Describes the **intrinsic angular momentum (spin)** of an electron.</li>
+        <li>Can only have two values: \(+1/2\) (spin up) or \(-1/2\) (spin down).</li>
+        <li>The Pauli Exclusion Principle states that no two electrons in an atom can have the same set of four quantum numbers. This means an atomic orbital can hold a maximum of two electrons, and they must have opposite spins.</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>2.2 Electronic Configuration</h2>
+    <p>Electronic configuration is the distribution of electrons of an atom or molecule (or other physical structure) in atomic or molecular orbitals. It describes how electrons are arranged in the various energy levels and subshells around the nucleus.</p>
+
+    <h3>Rules for Filling Orbitals:</h3>
+    <ul>
+        <li><strong>Aufbau Principle:</strong> Electrons fill orbitals starting with the lowest energy level first.</li>
+        <li><strong>Hund's Rule:</strong> For degenerate orbitals (orbitals of the same energy, e.g., the three p orbitals), electrons fill each orbital singly before any one orbital gets a second electron. All singly occupied orbitals have electrons with the same spin.</li>
+        <li><strong>Pauli Exclusion Principle:</strong> An atomic orbital can hold a maximum of two electrons, and these two electrons must have opposite spins.</li>
+    </ul>
+
+    <h3>Examples of Electronic Configuration:</h3>
+    <ul>
+        <li><strong>Hydrogen (H):</strong> 1 electron &rightarrow; \(1s^1\)</li>
+        <li><strong>Helium (He):</strong> 2 electrons &rightarrow; \(1s^2\)</li>
+        <li><strong>Carbon (C):</strong> 6 electrons &rightarrow; \(1s^2 2s^2 2p^2\)</li>
+        <li><strong>Oxygen (O):</strong> 8 electrons &rightarrow; \(1s^2 2s^2 2p^4\)</li>
+        <li><strong>Sodium (Na):</strong> 11 electrons &rightarrow; \(1s^2 2s^2 2p^6 3s^1\) or \([Ne] 3s^1\) (shorthand notation)</li>
+    </ul>
+
+    <p>Understanding quantum numbers and electronic configuration is fundamental for predicting chemical properties, reactivity, and the periodic trends of elements.</p>
+
+</body>
+</html>

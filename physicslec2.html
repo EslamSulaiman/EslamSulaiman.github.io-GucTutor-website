@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics 101 Lecture 2: Motion in One Dimension</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                packages: {'[+]': ['ams']}
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="lecture-page">
+    <h1>Physics 101 Lecture 2: Motion in One Dimension</h1>
+
+    <p class="intro-text">
+        This lecture introduces the fundamental concepts of kinematics, focusing on describing motion in a straight line without considering the forces causing that motion.
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>2.1 Kinematics: Describing Motion</h2>
+    <p>Kinematics is the branch of mechanics that describes the motion of points, bodies, and systems of bodies without considering the mass of each or the forces that caused the motion.</p>
+
+    <hr class="section-divider">
+
+    <h2>2.2 Position, Displacement, and Distance</h2>
+
+    <h3>2.2.1 Position (\(x\))</h3>
+    <ul>
+        <li>Refers to the location of an object at a particular time relative to a chosen origin.</li>
+        <li>It is a vector quantity (has both magnitude and direction).</li>
+    </ul>
+
+    <h3>2.2.2 Displacement (\(\Delta x\))</h3>
+    <ul>
+        <li>Defined as the change in position of an object: \(\Delta x = x_f - x_i\), where \(x_f\) is the final position and \(x_i\) is the initial position.</li>
+        <li>It is a vector quantity, indicating both how far an object has moved from its starting point and in what direction.</li>
+    </ul>
+
+    <h3>2.2.3 Distance</h3>
+    <ul>
+        <li>The total length of the path traveled by an object, regardless of direction.</li>
+        <li>It is a scalar quantity (only has magnitude).</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>2.3 Speed and Velocity</h2>
+
+    <h3>2.3.1 Average Velocity (\(v_{avg}\))</h3>
+    <ul>
+        <li>Defined as the displacement divided by the time interval over which the displacement occurred: \(v_{avg} = \frac{\Delta x}{\Delta t}\).</li>
+        <li>It is a vector quantity, indicating both the rate of motion and its direction.</li>
+    </ul>
+
+    <h3>2.3.2 Average Speed</h3>
+    <ul>
+        <li>Defined as the total distance traveled divided by the total time taken.</li>
+        <li>It is a scalar quantity.</li>
+    </ul>
+
+    <h3>2.3.3 Instantaneous Velocity (\(v\))</h3>
+    <ul>
+        <li>The velocity of an object at a specific instant in time. It is the limit of the average velocity as the time interval approaches zero: \(v = \lim_{\Delta t \to 0} \frac{\Delta x}{\Delta t} = \frac{dx}{dt}\).</li>
+    </ul>
+
+    <h3>2.3.4 Instantaneous Speed</h3>
+    <ul>
+        <li>The magnitude of the instantaneous velocity.</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>2.4 Acceleration</h2>
+
+    <h3>2.4.1 Average Acceleration (\(a_{avg}\))</h3>
+    <ul>
+        <li>Defined as the change in velocity divided by the time interval: \(a_{avg} = \frac{\Delta v}{\Delta t}\).</li>
+        <li>It is a vector quantity, indicating the rate at which velocity changes.</li>
+    </ul>
+
+    <h3>2.4.2 Instantaneous Acceleration (\(a\))</h3>
+    <ul>
+        <li>The acceleration of an object at a specific instant in time: \(a = \lim_{\Delta t \to 0} \frac{\Delta v}{\Delta t} = \frac{dv}{dt}\).</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>2.5 Constant Acceleration Equations</h2>
+    <p>For motion with constant acceleration, a set of equations can be used to relate displacement, velocity, acceleration, and time:</p>
+    <ul>
+        <li>\(v = v_0 + at\)</li>
+        <li>\(\Delta x = v_0 t + \frac{1}{2} at^2\)</li>
+        <li>\(v^2 = v_0^2 + 2a \Delta x\)</li>
+        <li>\(\Delta x = \frac{1}{2}(v_0 + v)t\)</li>
+    </ul>
+    <p>where \(v_0\) is the initial velocity, \(v\) is the final velocity, \(a\) is the constant acceleration, \(t\) is the time interval, and \(\Delta x\) is the displacement.</p>
+
+    <hr class="section-divider">
+
+    <h2>2.6 Free Fall Acceleration</h2>
+    <p>A special case of constant acceleration is free fall, where the only force acting on an object is gravity. Near the Earth's surface, the acceleration due to gravity (\(g\)) is approximately \(9.8 \ m/s^2\) (directed downwards). All objects in free fall experience this same acceleration, regardless of their mass (neglecting air resistance).</p>
+
+    <p>Understanding motion in one dimension is a foundational step for analyzing more complex movements in two or three dimensions relevant to various engineering problems.</p>
+
+</body>
+</html>

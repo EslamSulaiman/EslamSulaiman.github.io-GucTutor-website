@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATH103 for Engineering: Lecture #6 Summary</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']], // Defines how inline math is delimited
+                packages: {'[+]': ['ams']} // Explicitly load ams package for commands like \mathbb
+            },
+            svg: {
+                fontCache: 'global' // Optimizes font loading
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+</head>
+<body class="lecture-page">
+    <h1>MATH103 for Engineering: Lecture #6 Summary</h1>
+
+    <p class="intro-text">
+        This lecture continues Chapter 1 of MATH103 for Engineering, focusing on hyperbolic functions and their inverse functions, then transitions to Chapter 2: Limits of functions. 
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>Chapter 1: Basics: Types of Functions (Continued)</h2>
+
+    <h3>8. Hyperbolic Functions & Their Inverse Functions</h3>
+    <p>This section explores the meaning, definition, and applications of hyperbolic functions, simulating trigonometric functions. </p>
+
+    <h4>Hyperbolic Sine of x: $sinh~x=\frac{e^{x}-e^{-x}}{2}$ </h4>
+    <ul>
+        <li><strong>Domain ($D_f$)</strong>: $\mathfrak{R}$ (all real numbers) </li>
+        <li><strong>Range ($R_f$)</strong>: $\mathfrak{R}$ (all real numbers) </li>
+        <li>It is a 1-1 function. </li>
+        <li>$Sin~h(0)=0$ </li>
+    </ul>
+
+    <h4>Hyperbolic Cosine of x: $cosh~x=\frac{e^{x}+e^{-x}}{2}$ </h4>
+    <ul>
+        <li><strong>Domain ($D_f$)</strong>: $\mathfrak{R}$ (all real numbers) </li>
+        <li><strong>Range ($R_f$)</strong>: $[1,\infty[$ (all real numbers greater than or equal to 1) </li>
+        <li>It is not a 1-1 function. </li>
+        <li>$cosh(0)=1$ </li>
+    </ul>
+
+    <h4>The Remaining Hyperbolic Functions </h4>
+    <ul>
+        <li><strong>Hyperbolic Tangent</strong>: $tanh~x=\frac{sinh~x}{cosh~x}=\frac{e^{x}-e^{-x}}{e^{x}+e^{-x}}$ 
+            <ul>
+                <li>Range: $-1 < tanh~x < 1$ </li>
+            </ul>
+        </li>
+        <li><strong>Hyperbolic Cotangent</strong>: $coth~x=\frac{cosh~x}{sinh~x}=\frac{e^{x}+e^{-x}}{e^{x}-e^{-x}}$ </li>
+        <li><strong>Hyperbolic Secant</strong>: $sech~x=\frac{1}{cosh~x}=\frac{2}{e^{x}+e^{-x}}$ 
+            <ul>
+                <li>Range: $0 < sech~x \le 1$ </li>
+            </ul>
+        </li>
+        <li><strong>Hyperbolic Cosecant</strong>: $csch~x=\frac{1}{sinh~x}=\frac{2}{e^{x}-e^{-x}}$ </li>
+    </ul>
+
+    <h3>Basic Identities for Hyperbolic Functions </h3>
+    <p>These identities can be proven using the basic definitions of $sinh~x$ and $cosh~x$.</p>
+    <ul>
+        <li>$cosh^{2}x-sinh^{2}x=1$ </li>
+        <li>$sinh~2x=2~sinh~x~cosh~x$ </li>
+        <li>$cosh~2x=cosh^{2}x+sinh^{2}x$ </li>
+        <li>$cosh^{2}x=\frac{cosh~2x+1}{2}$ </li>
+        <li>$sinh^{2}x=\frac{cosh~2x-1}{2}$ </li>
+        <li>$tanh^{2}x=1-sech^{2}x$ </li>
+        <li>$coth^{2}x=1+csch^{2}x$ </li>
+    </ul>
+    <p><strong>Proof Example ($cosh^{2}(x)-sinh^{2}(x)=1$)</strong>: 
+    $LHS = cosh^{2}(x)-sinh^{2}(x)$ 
+    $=(\frac{e^{x}+e^{-x}}{2})^{2}-(\frac{e^{x}-e^{-x}}{2})^{2}$ 
+    $=\frac{1}{4}(e^{2x}+2+e^{-2x})-\frac{1}{4}(e^{2x}-2+e^{-2x})$ 
+    $=\frac{1}{4}(2+2) = 1 = RHS$ </p>
+
+    <h3>Inverse Hyperbolic Functions </h3>
+    <p>It is important to remember the graphs of all inverse hyperbolic functions. </p>
+    <ul>
+        <li>$sech^{-1}x=cosh^{-1}\frac{1}{x}$ </li>
+        <li>$csch^{-1}x=sinh^{-1}\frac{1}{x}$ </li>
+        <li>$coth^{-1}x=tanh^{-1}\frac{1}{x}$ </li>
+    </ul>
+
+    <h4>Key Relations to Prove (Homework) </h4>
+    <ul>
+        <li>$sinh^{-1}x=ln(x+\sqrt{x^{2}+1})$ </li>
+        <li>$cosh^{-1}x=ln(x+\sqrt{x^{2}-1}),x\ge1$ </li>
+        <li>$tanh^{-1}x=\frac{1}{2}ln\frac{1+x}{1-x},-1<x<1$ </li>
+    </ul>
+
+    <p><strong>Proof Example ($sinh^{-1}(x)=ln(x+\sqrt{x^{2}+1})$)</strong>: 
+    Let $y=sinh^{-1}x \Rightarrow x=sinh~y$ 
+    By definition of $sinh~y$, $x=\frac{e^{y}-e^{-y}}{2}$ 
+    Multiply by $e^y$: $2xe^{y}=e^{2y}-1$ 
+    Rearrange into a quadratic equation for $e^y$: $(e^{y})^{2}-2xe^{y}-1=0$ 
+    Using the quadratic formula: $e^{y}=\frac{2x\pm\sqrt{4x^{2}+4}}{2} = \frac{2x\pm2\sqrt{x^{2}+1}}{2}$ 
+    Thus, $e^{y}=x+\sqrt{x^{2}+1}$ (the negative sign is rejected because $e^y$ must be positive) 
+    Taking the natural logarithm of both sides: $y=ln(x+\sqrt{x^{2}+1})$ 
+    Therefore, $sinh^{-1}x=ln(x+\sqrt{x^{2}+1})$ </p>
+
+    <hr class="section-divider">
+
+    <h2>Chapter 2: Limits of Functions </h2>
+    <h3>Main Objectives </h3>
+    <p>This chapter aims to:</p>
+    <ul>
+        <li>Introduce the concept of the limit of a function. </li>
+        <li>Explain why limits are needed in real-world problems (e.g., measuring volcano temperature). </li>
+        <li>Study the laws and techniques of limits. </li>
+        <li>Introduce the Squeeze (Sandwich) Theorem and its simple applications. </li>
+    </ul>
+
+    <h3>Motivation – Concept of Limit </h3>
+    <p>Consider the function $f(x) = x^2 + x - 2$. Examining values of $x$ near 2: </p>
+    <table>
+        <thead>
+            <tr>
+                <th>x</th>
+                <th>f(x)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1.9</td>
+                <td>3.710</td>
+            </tr>
+            <tr>
+                <td>1.95</td>
+                <td>3.853</td>
+            </tr>
+            <tr>
+                <td>1.99</td>
+                <td>3.970</td>
+            </tr>
+            <tr>
+                <td>1.995</td>
+                <td>3.985</td>
+            </tr>
+            <tr>
+                <td>1.999</td>
+                <td>3.997</td>
+            </tr>
+            <tr>
+                <td>2.1</td>
+                <td>4.310</td>
+            </tr>
+            <tr>
+                <td>2.05</td>
+                <td>4.153</td>
+            </tr>
+            <tr>
+                <td>2.01</td>
+                <td>4.030</td>
+            </tr>
+            <tr>
+                <td>2.005</td>
+                <td>4.015</td>
+            </tr>
+            <tr>
+                <td>2.001</td>
+                <td>4.003</td>
+            </tr>
+        </tbody>
+    </table>
+    <p><strong>Conclusion</strong>: The value of $f(x) = x^2 + x - 2$ approaches the number 4 as $x$ approaches 2 from both sides. This is written as: $\lim_{x \to 2} (x^2 + x - 2) = 4$ </p>
+
+    <h3>Formal Definition of Limit </h3>
+    <p>We say that the limit of $f(x)$ equals $L$ as $x$ approaches $a$, if the values of $x$ are sufficiently close to $a$ on either side, but not necessarily equal to $a$, causing the values of $f(x)$ to be very close to a unique number $L$. </p>
+
+    <h3>Techniques of Limits </h3>
+    <ol>
+        <li><strong>Direct Substitution</strong>: This is the first method to try. </li>
+        <li><strong>If the limit results in an indeterminate form (e.g., $\frac{0}{0}$)</strong>: 
+            <ol type="i">
+                <li>Cancel the zero factor by: 
+                    <ol type="a">
+                        <li>Factorizing both numerator and denominator. </li>
+                        <li>Multiplying by the conjugate. </li>
+                    </ol>
+                </li>
+                <li>This also applies to cases involving "tan". </li>
+            </ol>
+        </li>
+        <li><strong>Squeezing "Sandwich" Theorem</strong> </li>
+        <li><strong>Limits at infinity</strong> </li>
+        <li><strong>L'Hopital's Rule</strong> (to be covered after differentiation) </li>
+    </ol>
+    <p>Note: The value of the function at a specific point (e.g., $x=1$) does not affect the value of the limit as $x$ approaches that point. </p>
+
+</body>
+</html>

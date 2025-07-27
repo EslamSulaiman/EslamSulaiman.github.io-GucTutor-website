@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATH103 for Engineering: Lecture #14 Summary</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']], // Defines how inline math is delimited
+                packages: {'[+]': ['ams']} // Explicitly load ams package for commands like \mathbb
+            },
+            svg: {
+                fontCache: 'global' // Optimizes font loading
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+</head>
+<body class="lecture-page">
+    <h1>MATH103 for Engineering: Lecture #14 Summary</h1>
+
+    <p class="intro-text">
+        This lecture continues Chapter 3 of MATH103 for Engineering, focusing on the applications of limits: differentiation of functions, specifically logarithmic differentiation, implicit differentiation, and linearization.
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>Chapter 3: Applications of Limits: Differentiation of Functions</h2>
+
+    <h3>Applications of Differentiation</h3>
+    <p>This lecture covers the following applications of differentiation:</p>
+    <ol type="a">
+        <li>Logarithmic differentiation</li>
+        <li>Challenging problem.</li>
+        <li>Implicit differentiation.</li>
+        <li>Linearization of a function.</li>
+        <li>The Differential of a function.</li>
+        <li>L'Hôpital's rule.</li>
+        <li>Extrema & Inflection points, Optimization & Curve sketching.</li>
+    </ol>
+
+    <hr class="section-divider">
+
+    <h2>a. Logarithmic Differentiation</h2>
+    <p>The derivatives of functions of the form $y = f(x)^{g(x)}$ where both $f(x)$ and $g(x)$ are non-constant functions cannot be found using the simple power rule or exponential rule. Logarithmic differentiation is used for these types of functions, as well as products or quotients involving many terms.</p>
+    <p><strong>Steps:</strong></p>
+    <ol>
+        <li>Take the natural logarithm on both sides of the equation.</li>
+        <li>Use logarithm properties to simplify the right side of the equation.</li>
+        <li>Differentiate both sides with respect to $x$.</li>
+        <li>Solve for $\frac{dy}{dx}$.</li>
+    </ol>
+
+    <h4>Example 1: Find $y^{\prime}$ if $y=x^{\sin x}$.</h4>
+    <p><strong>Solution:</strong>
+    Given $y=x^{\sin x}$. Take $\ln$ on both sides:
+    $\ln y = \ln(x^{\sin x}) \Rightarrow \ln y = (\sin x)(\ln x)$
+    Differentiate implicitly with respect to $x$:
+    $\frac{1}{y}y^{\prime} = (\sin x)\left(\frac{1}{x}\right) + (\cos x)(\ln x)$
+    $y^{\prime} = y\left[\frac{\sin x}{x} + (\cos x)(\ln x)\right]$
+    Substitute $y=x^{\sin x}$:
+    $y^{\prime} = x^{\sin x}\left[\frac{\sin x}{x} + (\cos x)(\ln x)\right]$</p>
+
+    <h4>Example 2: Find $y^{\prime}$ if $y=(\ln x)^{\tan x}$.</h4>
+    <p><strong>Solution:</strong>
+    Given $y=(\ln x)^{\tan x}$. Take $\ln$ on both sides:
+    $\ln y = \ln((\ln x)^{\tan x}) \Rightarrow \ln y = (\tan x)(\ln(\ln x))$
+    Differentiate implicitly with respect to $x$:
+    $\frac{1}{y}y^{\prime} = (\tan x)\left(\frac{1}{\ln x}\cdot\frac{1}{x}\right) + (\sec^{2}x)(\ln(\ln x))$
+    $y^{\prime} = y\left[\frac{\tan x}{x\ln x} + (\sec^{2}x)(\ln(\ln x))\right]$
+    Substitute $y=(\ln x)^{\tan x}$:
+    $y^{\prime} = (\ln x)^{\tan x}\left[\frac{\tan x}{x\ln x} + (\sec^{2}x)(\ln(\ln x))\right]$</p>
+
+    <hr class="section-divider">
+
+    <h2>b. Challenging problem (Application):</h2>
+    <p>This section is for a challenging problem. The image shows a graph of a function and its derivative. The problem asks to identify points related to where the derivative is positive, negative, or zero based on the function's graph.</p>
+
+    <hr class="section-divider">
+
+    <h2>c. Implicit Differentiation</h2>
+    <p>An equation in $x$ and $y$ is said to define $y$ implicitly as a function of $x$ if the graph of the equation is also the graph of the function. To find $\frac{dy}{dx}$ for such relations, we use implicit differentiation.</p>
+    <p><strong>Steps:</strong></p>
+    <ol>
+        <li>Differentiate both sides of the equation with respect to $x$. Remember that $y$ is a function of $x$, so apply the Chain Rule when differentiating terms involving $y$.</li>
+        <li>Solve the resulting equation for $\frac{dy}{dx}$.</li>
+    </ol>
+
+    <h4>Example 1: Find $y^{\prime}$ for $x^{2}+y^{2}=16$.</h4>
+    <p><strong>Solution:</strong>
+    Given $x^{2}+y^{2}=16$. Differentiate with respect to $x$:
+    $2x+2y\frac{dy}{dx}=0$
+    $2y\frac{dy}{dx}=-2x$
+    $\frac{dy}{dx}=-\frac{x}{y}$</p>
+
+    <h4>Example 2: Find the equation of the tangent line to the curve $x^{2}+xy+y^{2}=7$ at the point $(1,2)$.</h4>
+    <p><strong>Solution:</strong>
+    First, find the derivative $\frac{dy}{dx}$ using implicit differentiation:
+    $2x + (1\cdot y + x\cdot\frac{dy}{dx}) + 2y\frac{dy}{dx} = 0$
+    $2x+y+x\frac{dy}{dx}+2y\frac{dy}{dx}=0$
+    $(x+2y)\frac{dy}{dx}=-2x-y$
+    $\frac{dy}{dx}=\frac{-2x-y}{x+2y}$
+    Now, evaluate the slope at $(1,2)$:
+    $m = \left.\frac{dy}{dx}\right|_{(1,2)} = \frac{-2(1)-2}{1+2(2)}=\frac{-4}{5}$
+    The equation of the tangent line (point-slope form $y-y_1=m(x-x_1)$):
+    $y-2=-\frac{4}{5}(x-1)$
+    $5(y-2)=-4(x-1)$
+    $5y-10=-4x+4$
+    $4x+5y=14$</p>
+
+    <hr class="section-divider">
+
+    <h2>d. Linearization of a Function</h2>
+    <p>The linearization of $f(x)$ at $x=a$ is the equation of the tangent line to the curve $y=f(x)$ at the point $(a, f(a))$.
+    The linearization is given by the formula:
+    $$L(x)=f(a)+f^{\prime}(a)(x-a)$$</p>
+
+    <h4>Example 1: Find the linearization of $f(x)=\sqrt{x}$ at $x=4$.</h4>
+    <p><strong>Solution:</strong>
+    Given $f(x)=\sqrt{x}$ and $a=4$.
+    First, find $f(a)$ and $f^{\prime}(a)$:
+    $f(4)=\sqrt{4}=2$
+    $f^{\prime}(x)=\frac{1}{2\sqrt{x}} \Rightarrow f^{\prime}(4)=\frac{1}{2\sqrt{4}}=\frac{1}{4}$
+    Now use the linearization formula:
+    $L(x)=f(a)+f^{\prime}(a)(x-a)$
+    $L(x)=2+\frac{1}{4}(x-4)$
+    $L(x)=2+\frac{1}{4}x-1$
+    $L(x)=\frac{1}{4}x+1$</p>
+
+    <h4>Example 2: Use linearization to approximate $\sqrt{4.1}$.</h4>
+    <p><strong>Solution:</strong>
+    Using the linearization from Example 1, $L(x)=\frac{1}{4}x+1$.
+    We want to approximate $\sqrt{4.1}$, so $x=4.1$.
+    $\sqrt{4.1} \approx L(4.1) = \frac{1}{4}(4.1)+1 = 1.025+1 = 2.025$</p>
+    <p>The actual value of $\sqrt{4.1}$ is approximately $2.02484567...$, so the approximation is very close.</p>
+
+    <p>Thank you</p>
+
+</body>
+</html>

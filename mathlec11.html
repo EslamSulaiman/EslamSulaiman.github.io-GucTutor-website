@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATH103 for Engineering: Lecture #11 Summary</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']], // Defines how inline math is delimited
+                packages: {'[+]': ['ams']} // Explicitly load ams package for commands like \mathbb
+            },
+            svg: {
+                fontCache: 'global' // Optimizes font loading
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+</head>
+<body class="lecture-page">
+    <h1>MATH103 for Engineering: Lecture #11 Summary</h1>
+
+    <p class="intro-text">
+        This lecture continues Chapter 3 of MATH103 for Engineering, focusing on the applications of limits: differentiation of functions.
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>Chapter 3: Applications of Limits: Differentiation of Functions</h2>
+
+    <h3>Derivative of Functions: Methods Overview</h3>
+    <p>This section provides an overview of the derivative methods covered or to be covered:</p>
+    <ol>
+        <li>By Definition.</li>
+        <li>Power function rule.</li>
+        <li>Square root function rule.</li>
+        <li>Absolute value function rule.</li>
+        <li>Product of two functions rule.</li>
+        <li>Quotient of two functions rule.</li>
+        <li>Exponential function rule.</li>
+        <li>Logarithmic function rule.</li>
+        <li>Trigonometric functions rules and their inverses.</li>
+        <li>Hyperbolic functions rules and their inverses.</li>
+    </ol>
+
+    <hr class="section-divider">
+
+    <h2>9. Derivative of the Trigonometric Functions</h2>
+    <p>The derivative of the sine function is the cosine function:
+    $$\frac{d}{dx}(\sin x)=\cos x.$$</p>
+    <p>The derivative of the cosine function is the negative of the sine function:
+    $$\frac{d}{dx}(\cos x)=-\sin x$$</p>
+
+    <h3>Derivatives of the Other Trigonometric Functions:</h3>
+    <ul>
+        <li>$\frac{d}{dx}(\tan x)=\sec^{2}x$</li>
+        <li>$\frac{d}{dx}(\sec x)=\sec x \tan x$</li>
+        <li>$\frac{d}{dx}(\cot x)=-\csc^{2}x$</li>
+        <li>$\frac{d}{dx}(\csc x)=-\csc x \cot x$</li>
+    </ul>
+
+    <p><strong>Homework:</strong> Let $y=\tan x \Rightarrow y=\frac{\sin x}{\cos x}$.
+    Prove that $y^{\prime}=\frac{\cos x[\sin x]^{\prime}-\sin x[\cos x]^{\prime}}{\cos^{2}x} = \frac{\cos^{2}x+\sin^{2}x}{\cos^{2}x} = \frac{1}{\cos^{2}x}=\sec^{2}x$.</p>
+
+    <hr class="section-divider">
+
+    <h2>Exercise: Prove that $\frac{d}{dx}(\sin x)=\cos x$</h2>
+    <p><strong>Proof:</strong> Given $f(x)=\sin x \Rightarrow f(x+h)=\sin(x+h)$
+    $$f^{\prime}(x)=\lim_{h\rightarrow0}\frac{f(x+h)-f(x)}{h}=\lim_{h\rightarrow0}\frac{\sin(x+h)-\sin x}{h}$$
+    Using the sum identity for sine: $\sin(A+B) = \sin A \cos B + \cos A \sin B$
+    $$=\lim_{h\rightarrow0}\frac{\sin x \cos(h)+\cos x \sin(h)-\sin x}{h}$$
+    We know from Lecture 7 that $\lim_{h\rightarrow0}\frac{\sin(h)}{h}=1$ and $\lim_{h\rightarrow0}\frac{1-\cos(h)}{h}=0$ (which implies $\lim_{h\rightarrow0}\frac{\cos(h)-1}{h}=0$).
+    $$=\lim_{h\rightarrow0}\frac{\sin x(\cos(h)-1)+\cos x \sin(h)}{h}$$
+    $$=\lim_{h\rightarrow0}\frac{\sin x(\cos(h)-1)}{h}+\lim_{h\rightarrow0}\frac{\cos x \sin(h)}{h}$$
+    $$=\sin x \cdot \lim_{h\rightarrow0}\frac{\cos(h)-1}{h}+\cos x \cdot \lim_{h\rightarrow0}\frac{\sin(h)}{h}$$
+    $$=\sin x \cdot 0+\cos x \cdot 1=\cos x$$
+    So, $\frac{d}{dx}(\sin x)=\cos x$.</p>
+
+    <hr class="section-divider">
+
+    <h2>Examples</h2>
+    <p>Find $y^{\prime}$ if:</p>
+    <p>1. $y=\sqrt{x}+\tan x$
+        <br><strong>Solution:</strong> $y^{\prime}=\frac{1}{2\sqrt{x}}+\sec^{2}x$</p>
+    <p>2. $y=x^{2}\sin x$
+        <br><strong>Solution:</strong> $y^{\prime}=x^{2}\cos x+2x\sin x$</p>
+    <p>3. $y=\frac{\sin x}{1+\cos x}$
+        <br><strong>Solution:</strong>
+        $$y^{\prime}=\frac{(1+\cos x)(\sin x)^{\prime}-\sin x(1+\cos x)^{\prime}}{(1+\cos x)^{2}}$$
+        $$=\frac{(1+\cos x)\cos x-\sin x(-\sin x)}{(1+\cos x)^{2}}$$
+        $$=\frac{\cos x+\cos^{2}x+\sin^{2}x}{(1+\cos x)^{2}}$$
+        $$=\frac{\cos x+1}{(1+\cos x)^{2}}=\frac{1}{1+\cos x}$$
+    </p>
+    <p><strong>Notice:</strong> When dealing with the derivatives of trigonometric functions, all the used angles must be in radians measure and not in the degree measure.</p>
+    <p><strong>Example:</strong> Find $y^{\prime}$ if: $y=\csc^{3}(\sqrt{1-4x})\cdot\sqrt{x^{2}+\ln(7x)}$</p>
+
+    <hr class="section-divider">
+
+    <h2>10. Derivative of Hyperbolic Functions</h2>
+    <ul>
+        <li>$\frac{d}{dx}(\sinh x)=\cosh x$</li>
+        <li>$\frac{d}{dx}(\cosh x)=\sinh x$</li>
+        <li>$\frac{d}{dx}(\tanh x)=\text{sech}^{2}x$</li>
+        <li>$\frac{d}{dx}(\coth x)=-\text{csch}^{2}x$</li>
+        <li>$\frac{d}{dx}(\text{sech} x)=-\text{sech} x \tanh x$</li>
+        <li>$\frac{d}{dx}(\text{csch} x)=-\text{csch} x \coth x$</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>Exercise: Prove that $\frac{d}{dx}(\sinh x)=\cosh x$</h2>
+    <p><strong>Proof:</strong> Given $f(x)=\sinh x \Rightarrow f(x+h)=\sinh(x+h)$
+    $$f^{\prime}(x)=\lim_{h\rightarrow0}\frac{f(x+h)-f(x)}{h}=\lim_{h\rightarrow0}\frac{\sinh(x+h)-\sinh x}{h}$$
+    Using the sum identity for hyperbolic sine: $\sinh(A+B) = \sinh A \cosh B + \cosh A \sinh B$
+    $$=\lim_{h\rightarrow0}\frac{\sinh x \cosh(h)+\cosh x \sinh(h)-\sinh x}{h}$$
+    $$=\lim_{h\rightarrow0}\frac{\sinh x(\cosh(h)-1)+\cosh x \sinh(h)}{h}$$
+    Using the limits $\lim_{h\rightarrow0}\frac{\sinh(h)}{h}=1$ and $\lim_{h\rightarrow0}\frac{\cosh(h)-1}{h}=0$:
+    $$=\lim_{h\rightarrow0}\frac{\sinh x(\cosh(h)-1)}{h}+\lim_{h\rightarrow0}\frac{\cosh x \sinh(h)}{h}$$
+    $$=\sinh x \cdot \lim_{h\rightarrow0}\frac{\cosh(h)-1}{h}+\cosh x \cdot \lim_{h\rightarrow0}\frac{\sinh(h)}{h}$$
+    $$=\sinh x \cdot 0+\cosh x \cdot 1=\cosh x$$
+    So, $\frac{d}{dx}(\sinh x)=\cosh x$.</p>
+    <p><strong>Alternative Proofs:</strong>
+    $$\frac{d}{dx}(\sinh x)=\frac{d}{dx}\left[\frac{e^{x}-e^{-x}}{2}\right]=\frac{e^{x}-e^{-x}(-1)}{2}=\frac{e^{x}+e^{-x}}{2}=\cosh x$$
+    $$\frac{d}{dx}(\tanh x)=\frac{d}{dx}\left[\frac{\sinh x}{\cosh x}\right]=\frac{\cosh x(\sinh x)^{\prime}-\sinh x(\cosh x)^{\prime}}{\cosh^{2}x}=\frac{\cosh^{2}x-\sinh^{2}x}{\cosh^{2}x}=\frac{1}{\cosh^{2}x}=\text{sech}^{2}x$$
+    $$\frac{d}{dx}(\text{sech} x)=\frac{d}{dx}\left[\frac{1}{\cosh x}\right]=\frac{d}{dx}[\cosh x]^{-1}=-[\cosh x]^{-2}\cdot\sinh x=-\frac{1}{\cosh x}\frac{\sinh x}{\cosh x}=-\text{sech} x \tanh x$$</p>
+
+    <hr class="section-divider">
+
+    <h2>Summary for the Derivatives of Trigonometric & Hyperbolic Functions (in terms of $u(x)$ - Chain Rule)</h2>
+    <ul>
+        <li>$\frac{d}{dx}(\sin u)=\cos u \cdot u^{\prime}$</li>
+        <li>$\frac{d}{dx}(\sinh u)=\cosh u \cdot u^{\prime}$</li>
+        <li>$\frac{d}{dx}(\cos u)=-\sin u \cdot u^{\prime}$</li>
+        <li>$\frac{d}{dx}(\cosh u)=\sinh u \cdot u^{\prime}$</li>
+        <li>$\frac{d}{dx}(\tan u)=\sec^{2}u \cdot u^{\prime}$</li>
+        <li>$\frac{d}{dx}(\tanh u)=\text{sech}^{2}u \cdot u^{\prime}$</li>
+        <li>$\frac{d}{dx}(\cot u)=-\csc^{2}u \cdot u^{\prime}$</li>
+        <li>$\frac{d}{dx}(\coth u)=-\text{csch}^{2}u \cdot u^{\prime}$</li>
+        <li>$\frac{d}{dx}(\sec u)=\sec u \tan u \cdot u^{\prime}$</li>
+        <li>$\frac{d}{dx}(\text{sech} u)=-\text{sech} u \tanh u \cdot u^{\prime}$</li>
+        <li>$\frac{d}{dx}(\csc u)=-\csc u \cot u \cdot u^{\prime}$</li>
+        <li>$\frac{d}{dx}(\text{csch} u)=-\text{csch} u \coth u \cdot u^{\prime}$</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>Practical Examples on the Chain Rule</h2>
+    <p>Find $\frac{dy}{dx}$ if:</p>
+    <p>1. $y=4 \cos x^{3}$
+        <br><strong>Solution:</strong> $\frac{dy}{dx}=(-4 \sin x^{3}) \cdot [3x^{2}]=-12x^{2}\sin x^{3}$</p>
+    <p>2. $y=\sqrt{x^{3}+\csc x}$
+        <br><strong>Solution:</strong> $\frac{dy}{dx}=\left(\frac{1}{2\sqrt{x^{3}+\csc x}}\right)\cdot [3x^{2}-\csc x \cot x]$</p>
+    <p>3. $y=\sin\sqrt{1+\cos 2x}$
+        <br><strong>Solution:</strong>
+        $$\frac{dy}{dx}=\cos(\sqrt{1+\cos 2x}) \cdot \left[\frac{1}{2\sqrt{1+\cos 2x}}\cdot(-\sin 2x)\cdot(2)\right]$$
+        $$=-\frac{\cos(\sqrt{1+\cos 2x})\cdot(\sin 2x)}{\sqrt{1+\cos 2x}}$$</p>
+    <p>4. $y=\tan(4x^{3}+x)$
+        <br><strong>Solution:</strong> $\frac{dy}{dx}=\sec^{2}(4x^{3}+x)\cdot[12x^{2}+1]$</p>
+
+    <hr class="section-divider">
+
+    <h2>Challenging Exercise / Example</h2>
+    <p>This section mentions a challenging exercise or example, possibly related to the Weierstrass function, which is continuous everywhere but differentiable nowhere. This slide is for reading only as "Knowledge".</p>
+
+    <hr class="section-divider">
+
+    <h2>Midterm Exam Information</h2>
+    <ul>
+        <li>A formula sheet for the Midterm is available on CMS.</li>
+        <li>A Midterm Revision sheet was posted.</li>
+        <li>The Midterm exam will cover:
+            <ul>
+                <li>All 11 Lectures (lectures 1 to 11)</li>
+                <li>All 4 Worksheets (worksheets 1 to 4)</li>
+                <li>All 4 Homework sheets (home 1 to 4)</li>
+                <li>Quiz 1</li>
+                <li>Midterm Revision Sheet.</li>
+            </ul>
+        </li>
+    </ul>
+    <p>Thank you. I wish you all the best in the Midterm Exam. RABENA MA3KOM.</p>
+
+</body>
+</html>

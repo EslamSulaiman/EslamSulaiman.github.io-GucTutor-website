@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics 101 Lecture 15: Elasticity</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                packages: {'[+]': ['ams']}
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="lecture-page">
+    <h1>Physics 101 Lecture 15: Elasticity</h1>
+
+    <p class="intro-text">
+        This lecture, presented by Dr. Amr Aboshousha, covers the concept of elasticity, how to describe deformation using stress and strain, and introduces the various types of elastic moduli, including Young's Modulus, Shear Modulus, and Bulk Modulus. It also discusses the stress-strain curve and its implications for material behavior.
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>Elasticity</h2>
+    <p>
+        Elasticity is the ability of a material to recover its original shape after the deforming external force is removed. This property is notably observed in metallic materials and metallic springs.
+    </p>
+    <p>
+        All materials are deformable to some extent. It is possible to change the size and/or shape of an object by applying external deforming forces. Internal forces within the material resist this deformation and strive to restore the material's original shape, which is the essence of elasticity.
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>How to Describe Deformation: Stress and Strain</h2>
+    <p>
+        Deformation is typically described by two quantities:
+    </p>
+    <ul>
+        <li>**Stress ($\sigma$):** The effect or action causing deformation. It is proportional to the force causing the deformation. Quantitatively, it is defined as the external force acting on the object per unit cross-sectional area.
+            \[ \sigma = \frac{F}{A} \]
+        </li>
+        <li>**Strain:** The result of deformation. It is the relative change in dimensions of the object due to the applied stress.
+        </li>
+    </ul>
+    <p>
+        Various types of deformation include compression, tension, bending, torsion, and shearing.
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>Elastic Modulus</h2>
+    <p>
+        The elastic modulus is the ratio between the stress and the strain.
+        \[ \text{elastic modulus} = \frac{\text{stress}}{\text{strain}} \]
+    </p>
+    <ul>
+        <li>For sufficiently small stresses, the stress is directly proportional to the strain.</li>
+        <li>It depends on the specific material being deformed and the nature of the deformation.</li>
+        <li>In general, the elastic modulus relates what is done to a solid object (the stress) to how that object responds (the strain), indicating how elastic the material is.</li>
+        <li>Different types of deformation have unique elastic moduli.</li>
+    </ul>
+
+    <h3>Three Types of Moduli:</h3>
+    <ul>
+        <li>**Young's Modulus ($Y$):** Measures the resistance of a solid to a change in its length (either stretching or compression).
+            Tensile stress is the ratio of the magnitude of the external force ($F$) to the cross-sectional area ($A$). Tensile strain is the ratio of the change in length ($\Delta L$) to the original length ($L_0$).
+            \[ Y = \frac{\text{tensile stress}}{\text{tensile strain}} = \frac{F/A}{\Delta L/L_0} \]
+            The units for Young's Modulus are N/m². Young's modulus is the same for both elongation (extension) and compression cases.
+        </li>
+        <li>**Shear Modulus ($S$):** Measures the resistance to motion of planes within a solid parallel to each other (deformation in shape). This occurs when a tangential force ($F$) acts parallel to one face of an object, while the opposite face is fixed.
+            Shear stress is $F/A$, where $F$ is the tangential force and $A$ is the area of the sheared face. Shear strain is $\Delta x/h$, where $\Delta x$ is the horizontal distance the sheared face moves and $h$ is the height of the object.
+            \[ S = \frac{\text{shear stress}}{\text{shear strain}} = \frac{F/A}{\Delta x/h} \]
+            The units for Shear Modulus are N/m². For small deformations, no change in volume occurs with shear deformation.
+        </li>
+        <li>**Bulk Modulus ($B$):** Measures the resistance of solids or liquids to changes in their volume when a uniform force is applied perpendicularly over their entire surface.
+            Volume stress is defined as the ratio of the magnitude of the total force ($F$) exerted on the surface to the area ($A$) of the surface, also known as pressure. Volume strain is the ratio of the change in volume ($\Delta V$) to the original volume ($V_0$).
+            \[ B = \frac{\text{volume stress}}{\text{volume strain}} = -\frac{F/A}{\Delta V/V_0} = -\frac{\Delta P}{\Delta V/V_0} \]
+            The negative sign indicates that an increase in pressure (positive $\Delta P$) results in a decrease in volume (negative $\Delta V$). Both solids and liquids possess a bulk modulus.
+        </li>
+    </ul>
+    <h3>Compressibility:</h3>
+    <p>
+        The compressibility of a material is the inverse of its bulk modulus.
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>Stress vs. Strain Curve</h2>
+    <p>
+        Experiments show that for certain stresses, the stress is directly proportional to the strain. This region is known as the **elastic behavior** part of the curve.
+    </p>
+    <ul>
+        <li>**Elastic Limit:** This is the maximum stress that can be applied to a substance before it becomes permanently deformed.</li>
+        <li>**Plastic Deformation:** When the stress exceeds the elastic limit, the substance undergoes permanent deformation, and the curve is no longer a straight line.</li>
+        <li>**Breaking Point:** With additional stress beyond the plastic deformation region, the material will ultimately break.</li>
+    </ul>
+
+</body>
+</html>
