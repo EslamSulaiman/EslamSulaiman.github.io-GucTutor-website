@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHEM 102 Lecture 12: Gases Properties and Behavior</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                packages: {'[+]': ['ams']}
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="lecture-page">
+    <h1>CHEM 102 Lecture 12: Gases Properties and Behavior</h1>
+
+    <p class="intro-text">
+        This lecture, part of CHEM 102, explores the fundamental properties and behaviors of gases, which are essential for understanding various chemical and physical phenomena.
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>Learning Outcomes</h2>
+    <p>By the end of this lecture, students should be able to:</p>
+    <ul>
+        <li>Identify characteristics of gases.</li>
+        <li>Understand the behavior of gases.</li>
+        <li>Gain insight into pressure and units of pressure.</li>
+        <li>Understand the Gas laws.</li>
+        <li>Understand the Ideal Gas Law.</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>Characteristics of Gases</h2>
+    <p>Gases exhibit several unique characteristics that differentiate them from liquids and solids:</p>
+    <ul>
+        <li>Gases expand to fill the volume of any container and will exert pressure.
+            <br><em>Example:</em> If you release a small amount of perfume in one corner of a room, its scent will eventually spread to fill the entire room.
+        </li>
+        <li>Gases are highly compressible when pressure is applied.
+            <br><em>Example:</em> Pumping up a bicycle tire involves compressing air into a smaller volume within the tire.
+        </li>
+        <li>Gases have much lower densities than solids or liquids.
+            <br><em>Example:</em> A helium balloon floats because the density of helium gas inside it is less than the density of the surrounding air.
+        </li>
+        <li>Gases change volume dramatically with changing temperature.
+            <br><em>Example:</em> A hot air balloon rises when the air inside it is heated, causing it to expand and become less dense.
+        </li>
+        <li>Gases mix with one another readily and thoroughly.
+            <br><em>Example:</em> Air itself is a mixture of several gases like nitrogen, oxygen, argon, and carbon dioxide, which are uniformly distributed.
+        </li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>Pressure and Units of Pressure</h2>
+    <p>Pressure is defined as the amount of force applied to an area:</p>
+    \[ P = \frac{F}{A} \]
+    <p>Atmospheric pressure is the weight of air per unit of area.</p>
+
+    <h3>Calculating Atmospheric Pressure:</h3>
+    <p>To calculate the magnitude of atmospheric pressure, consider that the force exerted by any object is the product of its mass and its acceleration. For atmospheric pressure, the force (F) is given by F = mg, where 'm' is the mass of the air column and 'g' is the acceleration due to gravity (approximately 9.8 m/s²).</p>
+    <p>If a column of air with a 1 m² cross-section, extending through the atmosphere, has a mass of 10,000 kg, the gravitational force exerted on this column would be:</p>
+    \[ F = 10,000 \, \text{kg} \times 9.8 \, \text{m/s}^2 = 1 \times 10^5 \, \text{kg} \cdot \text{m/s}^2 = 1 \times 10^5 \, \text{N} \]
+    <p>Where 'N' (Newton) is the SI unit for force, equal to 1 kg·m/s².</p>
+
+    <h3>Units of Pressure:</h3>
+    <p>The SI unit for pressure is the Pascal (Pa), defined as one Newton per square meter (N/m²). Other common units include millimeters of mercury (mmHg) or torr, and atmospheres (atm).</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Unit</th>
+                <th>Conversion</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>**Pascal (Pa)**</td>
+                <td>1 Pa = 1 N/m²</td>
+            </tr>
+            <tr>
+                <td>**Standard Atmosphere (atm)**</td>
+                <td>1 atm = 101325 Pa</td>
+            </tr>
+            <tr>
+                <td>**Millimeters of Mercury (mmHg) / Torr**</td>
+                <td>1 atm = 760 mmHg = 760 torr</td>
+            </tr>
+            <tr>
+                <td>**Bar**</td>
+                <td>1 bar = 10⁵ Pa = 100 kPa</td>
+            </tr>
+        </tbody>
+    </table>
+    <p>Standard atmospheric pressure is the typical pressure at sea level, sufficient to support a column of mercury 760 mm high.</p>
+
+    <h4>Examples of Unit Conversion:</h4>
+    <ul>
+        <li>**Convert 0.357 atm to torr:**
+            \[ 0.357 \, \text{atm} \times \frac{760 \, \text{torr}}{1 \, \text{atm}} = 271.32 \, \text{torr} \]
+        </li>
+        <li>**Convert 6.6 × 10⁻² torr to atmospheres:**
+            \[ 6.6 \times 10^{-2} \, \text{torr} \times \frac{1 \, \text{atm}}{760 \, \text{torr}} \approx 8.68 \times 10^{-5} \, \text{atm} \]
+        </li>
+        <li>**Convert 147.2 kPa to torr:**
+            <p>First, convert kPa to atm, then atm to torr:</p>
+            \[ 147.2 \, \text{kPa} \times \frac{1 \, \text{atm}}{101.325 \, \text{kPa}} \times \frac{760 \, \text{torr}}{1 \, \text{atm}} \approx 1104.1 \, \text{torr} \]
+        </li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>Variables Affecting Gas Pressure</h2>
+    <p>In a gaseous system, pressure can be changed by altering three main variables:</p>
+    <ul>
+        <li>**Volume:** Increasing or decreasing the volume of the container.
+            <br><em>Example:</em> Squeezing a balloon decreases its volume and increases the pressure inside.
+        </li>
+        <li>**Temperature:** Increasing or decreasing the temperature of the gas.
+            <br><em>Example:</em> Heating a sealed aerosol can increases the internal pressure, which is why such cans carry warnings about high temperatures.
+        </li>
+        <li>**Number of Molecules:** Increasing or decreasing the number of molecules in the container.
+            <br><em>Example:</em> Adding more air to a car tire increases the number of gas molecules and thus the pressure.
+        </li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>The Gas Laws</h2>
+    <p>To define the physical condition, or state, of a gas, four variables are needed: temperature (T), pressure (P), volume (V), and amount of gas (n, usually expressed in moles). The relationships among these variables are known as the gas laws.</p>
+
+    <h3>A. Boyle’s Law: The Pressure-Volume Relationship</h3>
+    <p>British chemist Robert Boyle investigated the quantitative relationship between the pressure of a gas and its volume. Boyle's Law states that the volume of a fixed quantity of gas at constant temperature is inversely proportional to the pressure.</p>
+    \[ P \propto \frac{1}{V} \quad \text{or} \quad PV = k \]
+    <p>Where 'k' is a constant. This means that as pressure increases, volume decreases, and vice-versa, assuming constant temperature and number of moles.</p>
+    <p><em>Example:</em> When an inflated balloon is released at Earth's surface and rises, it expands because the atmospheric pressure decreases at higher altitudes. This is a direct application of Boyle's Law.</p>
+
+    <h3>B. Charles’s Law: The Temperature-Volume Relationship</h3>
+    <p>French scientist Jacques Charles discovered the relationship between the temperature and volume of a gas. Charles's Law states that the volume of a fixed amount of gas at constant pressure is directly proportional to its absolute temperature.</p>
+    \[ V \propto T \quad \text{or} \quad \frac{V}{T} = k \]
+    <p>Where 'k' is a proportionality constant and 'T' must be in Kelvin. A plot of V versus T will yield a straight line. If extrapolated, the line passes through -273°C (0 Kelvin), at which point the gas is predicted to have zero volume. However, all gases liquefy or solidify before reaching this temperature.</p>
+    <p><em>Example:</em> An inflated balloon expands when heated and shrinks when cooled, demonstrating the direct relationship between volume and temperature.</p>
+
+    <h3>C. Gay-Lussac’s Law: The Pressure-Temperature Relationship</h3>
+    <p>Gay-Lussac's Law states that the pressure and absolute temperature (K) of a gas are directly related at constant mass and volume.</p>
+    \[ P \propto T \quad \text{or} \quad \frac{P}{T} = k \]
+    <p><em>Example:</em> A pressure cooker uses this principle; by sealing the lid, the volume of steam is kept constant, and as the temperature increases, so does the pressure, leading to faster cooking. </p>
+
+    <h3>D. Avogadro’s Principle: The Quantity-Volume Relationship</h3>
+    <p>Avogadro’s Hypothesis, proposed by Amedeo Avogadro, states that equal volumes of gases at the same temperature and pressure contain equal numbers of molecules. This means the volume of a gas at constant temperature and pressure is directly proportional to the number of moles (n) of the gas.</p>
+    \[ V \propto n \quad \text{or} \quad V = kn \]
+    <p><em>Example:</em> If you double the amount of gas in a flexible container (like a balloon) at constant temperature and pressure, the volume of the balloon will double.</p>
+
+    <hr class="section-divider">
+
+    <h2>Ideal-Gas Equation</h2>
+    <p>The three gas laws (Boyle's, Charles's, and Avogadro's) can be combined into a single, comprehensive equation known as the Ideal Gas Law. This law relates all four variables (P, V, n, T) that define the state of a gas:</p>
+    <ul>
+        <li>V ∝ 1/P (Boyle’s law, constant n, T)</li>
+        <li>V ∝ T (Charles’s law, constant n, P)</li>
+        <li>V ∝ n (Avogadro’s law, constant P, T)</li>
+    </ul>
+    <p>Combining these proportionalities yields:</p>
+    \[ V \propto \frac{nT}{P} \]
+    <p>Introducing a constant of proportionality, R (the universal gas constant), we get the Ideal Gas Equation:</p>
+    \[ PV = nRT \]
+    <p>Where:</p>
+    <ul>
+        <li>**P:** gas pressure (in atm)</li>
+        <li>**V:** volume (in L)</li>
+        <li>**n:** number of moles of gas present</li>
+        <li>**T:** temperature (in K)</li>
+        <li>**R:** universal gas constant (0.08206 L·atm·mol⁻¹·K⁻¹)</li>
+    </ul>
+
+    <h3>Exercise 1: Calculating Moles of Gas</h3>
+    <p>Calcium carbonate, CaCO₃(s), the principal compound in limestone, decomposes upon heating to CaO(s) and CO₂(g). A sample of CaCO₃ is decomposed, and the carbon dioxide is collected in a 250-mL flask. After decomposition is complete, the gas has a pressure of 1.3 atm at a temperature of 31 °C. How many moles of CO₂ gas were generated?</p>
+    <p>**Solution:**</p>
+    <p>Using the Ideal Gas Law, PV = nRT, we can solve for n:</p>
+    <p>Given:</p>
+    <ul>
+        <li>V = 250 mL = 0.250 L</li>
+        <li>P = 1.3 atm</li>
+        <li>T = 31 °C + 273 = 304 K</li>
+        <li>R = 0.08206 L·atm·mol⁻¹·K⁻¹</li>
+    </ul>
+    <p>Rearrange the formula to solve for n: \( n = \frac{PV}{RT} \)</p>
+    \[ n = \frac{(1.3 \, \text{atm})(0.250 \, \text{L})}{(0.08206 \, \text{L} \cdot \text{atm} \cdot \text{mol}^{-1} \cdot \text{K}^{-1})(304 \, \text{K})} \]
+    \[ n = \frac{0.325}{24.94784} \approx 0.0130 \, \text{mol of CO}_2 \]
+
+    <h3>Exercise 2: Calculating Pressure Inside a Tennis Ball</h3>
+    <p>Tennis balls are usually filled with either air or N₂ gas to a pressure above atmospheric pressure to increase their bounce. If a tennis ball has a volume of 144 cm³ and contains 0.33 g of N₂ gas, what is the pressure inside the ball at 24 °C?</p>
+    <p>**Solution:**</p>
+    <p>First, convert the given values to the appropriate units:</p>
+    <ul>
+        <li>Volume (V): 144 cm³ = 0.144 L</li>
+        <li>Mass of N₂: 0.33 g</li>
+        <li>Temperature (T): 24 °C + 273 = 297 K</li>
+    </ul>
+    <p>Next, calculate the number of moles (n) of N₂ gas. The molar mass of N₂ is 2 × 14.01 g/mol = 28.02 g/mol.</p>
+    \[ n = \frac{0.33 \, \text{g}}{28.02 \, \text{g/mol}} \approx 0.01178 \, \text{mol} \]
+    <p>Now, use the Ideal Gas Law, PV = nRT, to solve for P:</p>
+    \[ P = \frac{nRT}{V} \]
+    \[ P = \frac{(0.01178 \, \text{mol})(0.08206 \, \text{L} \cdot \text{atm} \cdot \text{mol}^{-1} \cdot \text{K}^{-1})(297 \, \text{K})}{0.144 \, \text{L}} \]
+    \[ P = \frac{0.2878}{0.144} \approx 1.9999 \, \text{atm} \]
+    \[ P \approx 2.00 \, \text{atm} \]
+
+</body>
+</html>

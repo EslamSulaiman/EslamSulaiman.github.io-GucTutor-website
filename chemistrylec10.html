@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHEM 102 Lecture 10: Semiconductors</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                packages: {'[+]': ['ams']}
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="lecture-page">
+    <h1>CHEM 102 Lecture 10: Semiconductors</h1>
+
+    <p class="intro-text">
+        This lecture delves into the fascinating world of semiconductors, materials that form the backbone of modern electronics. Understanding their unique electrical properties is crucial for grasping how devices like computers and communication systems function.
+    </p>
+
+    <hr class="section-divider">
+
+    <h2>Importance of Semiconductors</h2>
+    <p>Semiconductors are pervasive in almost every electronic device we use today.</p>
+    <ul>
+        <li>**Ubiquitous Devices:** From personal computers and multimedia systems to networking equipment and communication devices, semiconductors are fundamental components.</li>
+        <li>**Foundation of Modern Industry:** The entire electronic industry relies heavily on semiconductors due to our advanced ability to precisely control their electrical properties.</li>
+        <li>**Future Possibilities:** A solid understanding of the chemistry behind semiconductors is essential not only for comprehending current circuit elements but also for exploring future technological advancements and their inherent limitations.
+            <br><em>Example:</em> Innovations in artificial intelligence and quantum computing heavily depend on new semiconductor materials and designs.
+        </li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>Electrical Properties of Materials</h2>
+    <p>The suitability of a material for a specific electrical engineering application is determined by its intrinsic electrical properties. Key electrical properties include:</p>
+    <ul>
+        <li>**Resistivity ($\Omega \cdot \text{m}$):** A measure of how strongly a material opposes the flow of electric current. A higher resistivity means a poorer conductor.</li>
+        <li>**Conductivity ($\Omega \cdot \text{m})^{-1}$):** The inverse of resistivity, indicating how easily current flows through a material. Higher conductivity means a better conductor.</li>
+    </ul>
+    <h3>Classification by Conductivity:</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Conductivity ($\Omega \cdot \text{m})^{-1}$</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>**Conductors**</td>
+                <td>$> 10^7$</td>
+            </tr>
+            <tr>
+                <td>**Semiconductors**</td>
+                <td>$10^{-4} - 10^6$</td>
+            </tr>
+            <tr>
+                <td>**Insulators**</td>
+                <td>$< 10^{-10}$</td>
+            </tr>
+        </tbody>
+    </table>
+    <p><em>Examples:</em></p>
+    <ul>
+        <li>**Conductors:** Copper (Cu) used in wires, Gold (Au) in high-end connectors. These materials have a "sea" of freely moving electrons.</li>
+        <li>**Insulators:** Rubber used in electrical wire coatings, Glass in electrical insulators. These materials strongly resist electron flow.</li>
+        <li>**Semiconductors:** Silicon (Si) and Germanium (Ge), which are the focus of this lecture due to their tunable conductivity.</li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>Electrons in Solid Materials: Band Theory</h2>
+    <p>To understand semiconductors, we need to consider how electrons behave within crystalline solids. A crystalline solid is defined by atoms covalently bonded in an ordered, symmetrical arrangement.</p>
+
+    <h3>Electron States and Energy Bands:</h3>
+    <ul>
+        <li>**Electron Clouds and Discrete Energy Levels:** Electrons orbit the nucleus in discrete energy levels or "clouds". Adding energy can excite an electron to a higher energy level.</li>
+        <li>**Valence Electrons:** These are the outermost electrons, most loosely bound to the nucleus, and are crucial for bonding and electrical properties.</li>
+        <li>**Delocalized Electrons in Solids:** In crystalline solids, electrons are often delocalized, meaning they can move throughout the entire crystal, orbiting around various atoms. This forms discrete energy bands.</li>
+    </ul>
+
+    <h3>Conduction and Valence Bands:</h3>
+    <p>The electrical properties of a material are explained by the arrangement and energy separation of its electron bands:</p>
+    <ul>
+        <li>**Valence Band (VB):** This band contains the valence electrons that are still bound to atoms. In an insulator or semiconductor at 0 Kelvin, the valence band is completely filled.</li>
+        <li>**Conduction Band (CB):** This band represents higher energy states where electrons can move freely, thus conducting electricity.</li>
+        <li>**Band Gap:** The energy difference between the top of the valence band and the bottom of the conduction band.
+            <ul>
+                <li>**Conductors:** Have an overlap between the valence and conduction bands, allowing electrons to move easily.
+                    <br><em>Example:</em> Metals like aluminum, where electrons can freely jump between bands.
+                </li>
+                <li>**Insulators:** Have a large band gap, making it very difficult for electrons to jump from the valence band to the conduction band.
+                    <br><em>Example:</em> Diamond, which is an excellent electrical insulator.
+                </li>
+                <li>**Semiconductors:** Possess a small band gap. With a moderate amount of energy (like thermal energy or light), electrons can be excited from the valence band to the conduction band.
+                    <br><em>Example:</em> Silicon, where a small energy input (e.g., from light in a solar cell) can promote electrons to the conduction band.
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3>Electron and Hole Movement:</h3>
+    <ul>
+        <li>When an electron gains enough energy to move into the conduction band, it leaves behind an empty space in the valence band called a **hole**.</li>
+        <li>A hole carries a positive charge.</li>
+        <li>Current can be carried by both moving electrons in the conduction band and by the movement of these positively charged holes in the valence band. Holes typically move in the opposite direction to electrons.
+            <br><em>Example:</em> In a semiconductor, if an electron moves to fill a hole, it effectively makes the hole appear to move in the opposite direction.
+        </li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>Doping: n-type and p-type Semiconductors</h2>
+    <p>The electrical properties of intrinsic (pure) semiconductors can be significantly altered through a process called **doping**. Doping involves intentionally adding impurities to the semiconductor material.</p>
+    <ul>
+        <li>**n-type semiconductor:** Created by doping a pure semiconductor (like Silicon) with an element that has more valence electrons (a donor impurity), such as Phosphorus (P) or Arsenic (As). These extra electrons are loosely bound and easily move into the conduction band, increasing conductivity by providing free electrons.
+            <br><em>Example:</em> Silicon doped with Phosphorus makes Silicon a better conductor due to excess free electrons.
+        </li>
+        <li>**p-type semiconductor:** Created by doping a pure semiconductor with an element that has fewer valence electrons (an acceptor impurity), such as Boron (B) or Gallium (Ga). These impurities create "holes" in the valence band, which act as positive charge carriers, increasing conductivity by promoting hole movement.
+            <br><em>Example:</em> Silicon doped with Boron introduces electron deficiencies, leading to a surplus of holes that can carry current.
+        </li>
+    </ul>
+
+    <hr class="section-divider">
+
+    <h2>The p-n Junction and Depletion Layer</h2>
+    <p>A crucial concept in semiconductor devices is the **p-n junction**, formed when a p-type semiconductor is joined with an n-type semiconductor. At this junction, free electrons from the n-type side and holes from the p-type side combine. This combination depletes both electrons and holes near the junction, creating a region known as the **depletion layer** or "space charge".</p>
+    <ul>
+        <li>**Depletion Layer Characteristics:** This region is depleted of mobile charge carriers and contains fixed, oppositely charged ions, creating an internal electric field (built-in E).</li>
+        <li>**Forward Bias:** When an external voltage is applied in the forward direction (positive to p-type, negative to n-type), it helps electrons overcome the barrier of the depletion region. This leads to a significant current flow with very small resistance.
+            <br><em>Example:</em> This is how a simple diode allows current to flow in one direction but blocks it in the reverse direction, crucial for converting AC to DC power.
+        </li>
+        <li>**Reverse Bias:** Applying voltage in the reverse direction increases the width of the depletion layer, increasing resistance and preventing current flow (or allowing only a very small leakage current).</li>
+    </ul>
+    <p>Understanding these principles is fundamental to the design and function of countless electronic components, from simple diodes and transistors to complex integrated circuits (microchips) that power our digital world.</p>
+
+</body>
+</html>
